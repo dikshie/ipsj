@@ -7,58 +7,6 @@ Huang, C., Wang, A., Li, J. and Ross, K.~W.: Understanding hybrid CDN-P2P: why
   Audio and Video}, NOSSDAV '08, New York, NY, USA, ACM, pp.\ 75--80 (online),
   \doi{10.1145/1496046.1496064} (2008).
 
-\bibitem{4772628}
-Jiang, H., Li, J., Li, Z. and Liu, J.: Efficient hierarchical content
-  distribution using P2P technology, {\em Networks, 2008. ICON 2008. 16th IEEE
-  International Conference on}, pp.\ 1 --6 (online),
-  \doi{10.1109/ICON.2008.4772628} (2008).
-
-\bibitem{Yin:2009:DDH:1631272.1631279}
-Yin, H., Liu, X., Zhan, T., Sekar, V., Qiu, F., Lin, C., Zhang, H. and Li, B.:
-  Design and deployment of a hybrid CDN-P2P system for live video streaming:
-  experiences with LiveSky, {\em Proceedings of the 17th ACM international
-  conference on Multimedia}, MM '09, New York, NY, USA, ACM, pp.\ 25--34
-  (online), \doi{10.1145/1631272.1631279} (2009).
-
-\bibitem{Misra:2010:IPS:1811099.1811064}
-Misra, V., Ioannidis, S., Chaintreau, A. and Massouli{\'e}, L.: Incentivizing
-  peer-assisted services: a fluid shapley value approach, {\em SIGMETRICS
-  Perform. Eval. Rev.},  Vol.~38, No.~1, pp.\ 215--226 (online),
-  \doi{10.1145/1811099.1811064} (2010).
-
-\bibitem{Cha:2008:NTP:1855641.1855646}
-Cha, M., Rodriguez, P., Moon, S. and Crowcroft, J.: On next-generation
-  telco-managed P2P TV architectures, {\em Proceedings of the 7th international
-  conference on Peer-to-peer systems}, IPTPS'08, Berkeley, CA, USA, USENIX
-  Association, pp.\ 5--5 (online),
-  \urle{http://dl.acm.org/citation.cfm?id=1855641.1855646} (2008).
-
-\bibitem{Labovitz:2010:IIT:2043164.1851194}
-Labovitz, C., Iekel-Johnson, S., McPherson, D., Oberheide, J. and Jahanian, F.:
-  Internet inter-domain traffic, {\em SIGCOMM Comput. Commun. Rev.},  Vol.~41,
-  No.~4, pp.~-- (online),
-  \urle{http://dl.acm.org/citation.cfm?id=2043164.1851194} (2010).
-
-\bibitem{cdni}
-IETF: CDN Interconnect IETF Working Group (2013).
-\newblock Available on \url{https://datatracker.ietf.org/wg/cdni/}.
-
-\bibitem{oceanproject}
-Project, O.: Open Content Aware Networks (2013).
-\newblock Available on \url{http://www.itc-ocean.eu}.
-
-\bibitem{Krishnan:2009:MBE:1644893.1644917}
-Krishnan, R., Madhyastha, H.~V., Srinivasan, S., Jain, S., Krishnamurthy, A.,
-  Anderson, T. and Gao, J.: Moving beyond end-to-end path information to
-  optimize CDN performance, {\em Proceedings of the 9th ACM SIGCOMM conference
-  on Internet measurement conference}, IMC '09, New York, NY, USA, ACM, pp.\
-  190--201 (online), \doi{10.1145/1644893.1644917} (2009).
-
-\bibitem{dispute}
-: Comcast and Level peering dispute,
-  http://www.internap.com/2010/12/02/peering-disputes-comcast-level-3-and-you/
-  (2010).
-
 \bibitem{Yin:2010:LEC:1823746.1823750}
 Yin, H., Liu, X., Zhan, T., Sekar, V., Qiu, F., Lin, C., Zhang, H. and Li, B.:
   LiveSky: Enhancing CDN with P2P, {\em ACM Trans. Multimedia Comput. Commun.
@@ -69,6 +17,12 @@ Yin, H., Liu, X., Zhan, T., Sekar, V., Qiu, F., Lin, C., Zhang, H. and Li, B.:
 Xu, K., Zhong, Y. and He, H.: Can P2P Technology Benefit Eyeball ISPs? A
   Cooperative Profit Distribution Answer, {\em CoRR},  Vol.~abs/1212.4915
   (2012).
+
+\bibitem{Misra:2010:IPS:1811099.1811064}
+Misra, V., Ioannidis, S., Chaintreau, A. and Massouli{\'e}, L.: Incentivizing
+  peer-assisted services: a fluid shapley value approach, {\em SIGMETRICS
+  Perform. Eval. Rev.},  Vol.~38, No.~1, pp.\ 215--226 (online),
+  \doi{10.1145/1811099.1811064} (2010).
 
 \bibitem{federation}
 Cisco: CDN Federation (2012).
@@ -84,8 +38,19 @@ KAMIYAMA, N., MORI, T., KAWAHARA, R. and HASEGAWA, H.: Optimally Designing
   ISP-Operated CDN, {\em IEICE Transactions on Communications},  Vol.~E96.B,
   No.~3, pp.\ 790--801 (2013).
 
+\bibitem{cdni}
+IETF: CDN Interconnect IETF Working Group (2013).
+\newblock Available on \url{https://datatracker.ietf.org/wg/cdni/}.
+
 \bibitem{figaro}
 : Figaro Project, http://www.ict-figaro.eu/ (2012).
+
+\bibitem{Cha:2008:NTP:1855641.1855646}
+Cha, M., Rodriguez, P., Moon, S. and Crowcroft, J.: On next-generation
+  telco-managed P2P TV architectures, {\em Proceedings of the 7th international
+  conference on Peer-to-peer systems}, IPTPS'08, Berkeley, CA, USA, USENIX
+  Association, pp.\ 5--5 (online),
+  \urle{http://dl.acm.org/citation.cfm?id=1855641.1855646} (2008).
 
 \bibitem{Jiang:2012:OMD:2413176.2413193}
 Jiang, W., Ioannidis, S., Massouli{\'e}, L. and Picconi, F.: Orchestrating

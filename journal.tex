@@ -66,44 +66,44 @@ On the other hand, data center where CDN server placed faces costs for powering 
 The Uptime Institute, a global data center authority, surveyed 1100 data center owners and operators on 2012, reported that 55\% organizations must increase budget 10\% than 2011.  
 30\% of organizations will run out of data center capacity (power, cooling, space, and network) in the end of 2012. 
 More than 50\% organizations surveyed reported that saving energy is major priority.
+The increases in energy cost and the demand due to growth of traffic urges the data center operators and owners to look for ways to reduce energy usage in the years to come.
+Although reducing energy consumption can effectively reduce overall cost, this will limit the capacity growth and scalability of the service provisioning.
+Alternatively, the data center and be revamped by relocating some services to end-host computers or peers.
+Peers contribute their communication, storage, and computation resources to exchange data and provide services while the data center performs central administration and authentication as well as backend processing.
+P2P network, formed by peers offer flexibility and scalability in service delivery.
+Therefore, P2P services can assist and enhance data center.
 
+In this paper, we study the energy consumption of hybrid CDN-P2P.  
+It has been known that CDN energy consumption is better than P2P architecture, unfortunately that model only think small part of problem energy consumption (devices/hardwares).
+To be fair, we also need to change paradigm that to see if we also can relax power budget of data center by utilizing P2P.   
+If we can move part of computation resource from CDN in data center to P2P, then we can relax power budget of data center for hardware dan cooling. 
 
-
-
-\section{Motivation}\label{motivation}
+The rest of this paper is organized as follows. Section 2 provides an overview of data center model and energy model.  
+In section 3, we will present result and analysis.  
+In section 4, we verified our model using traces from LiveSky hybrid CDN-P2P network.
+Section 5 will conclude this paper. 
 
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[scale=0.4]{graphs/business-relationship.eps}
 \end{center}
-\caption{Complex relationship of entities in Internet.
-The data flow from content producer to content provider. 
-Content producer such as movies companies send their movies to content provider for example: Netflix and Hulu.
-Content providers then deliver the movies using CDN or they also can use their upstream provider.
-Depends on routing and peering policy, data from CDN can flow directly to ISP or flow to ISP via IXP (Internet Exchange) or via transit network. 
-Flow of data noted by straight arrow and flow of money noted by dash arrow line.
-In current modern Internet topology, content provider and service provider can be merged in on entity, for example: Google.
-Labovitz et al.,\cite{Labovitz:2010:IIT:2043164.1851194} mentioned that the hyper-giant entities such as Google doing massive peering to IXP in order to be closed to ISP. 
-Although CDN is placed close to ISP network, it does not guarantee end-users can get good quality video stream \cite{Krishnan:2009:MBE:1644893.1644917}.
-Other than technical complexity as mentioned before, CDN also faces economic complexity\cite{dispute}.
-Therefore, the future of CDN business is likely to live deeper into ISP networks, more integrated into and interleaved with ISP infrastructures.}
+\caption{In Complex relationship of entities in Internet, 
+CDN mostly placed in data center near to eyeball ISP. 
+If CDN can reach due to business or economic reason, CDN can be placed near to IXP, and will reach eyeball ISP from peering point inside IXP.
+Due to growing traffic of Internet, eyeball ISP want to monetize the traffic therefore the future of CDN business is likely to live deeper into ISP networks, more integrated into and interleaved with ISP infrastructures.}
 \label{fig:businessrelationship}
 \vspace{-2mm}
 \end{figure} 
 
-%\begin{figure}[thb]
-%\begin{center}
-%\includegraphics[scale=0.4]{graphs/two-tier-cdn-topology.eps}
-%\end{center}
-%\caption{Two tier CDN-P2P topology.
-%The CDN proxy maintained by ISP. ISP also has CDN node. CDN node can exchange contents with other CDN node owned by other CDN companies.P2P nodes are ISP's customers %that run P2P software.}
-%\label{fig:twotier}
-%\vspace{-2mm}
-%\end{figure} 
-
-
-
 \section{System Model}\label{system model}
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.3]{graphs/typical-iptv-network.eps}
+\end{center}
+\caption{A typical content delivery architecture.}
+\label{fig:iptv}
+\vspace{-2mm}
+\end{figure} 
 
 \begin{figure}[thb]
 \begin{center}
@@ -111,10 +111,15 @@ Therefore, the future of CDN business is likely to live deeper into ISP networks
 \end{center}
 \caption{A typical data center schematic.
 The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate cool air through a share plenum.}
-\label{fig:twotier}
+\label{fig:datacenter}
 \vspace{-2mm}
 \end{figure} 
 
+CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers. 
+The growing of Internet traffic dominated by video, the energy consumption of a host oriented architecture becomes problematic due to over provisioning factor.
+However, in economy supply chain of video traffic, most ISPs get a little revenue from video traffic thus ISP want to monetize that traffic.
+This situation increase CDN that managed by ISP that placed closer to the network edge and end users.  
+Current delivery architecture is shown in fig.\ref{fig:iptv}.
 
 \subsection{Thermodynamics of Data Center}\label{thermodynamics}
 Data center seek to provision the cooling adequately to extract the heat produce by servers, switches, routers, and other devices.
@@ -131,6 +136,7 @@ The hot air rises sometimes with the aid of fans and a ceiling plenum , and is s
 The cooling units force the hot air past pipes containing cold air or water. 
 The heat from the returning air transfer through the pipes to the cold substance. 
 The heated substance leaves the room and goes to a chiller and cooling unit fans force the cold air back into the floor plenum. 
+Above process is shown in fig.\ref{fig:datacenter}
 
 The efficiency of this cycle depends on several factors, including the conductive substance and the air flow velocity, but it is quantified by coefficient of performance (COP).
 The COP is the ratio of heat removed ($Q$) to the amount of work necessary ($W$) to remove that heat:
@@ -144,9 +150,11 @@ A higher COP indicates a more efficient process, requiring less work to remove a
 
 However, the COP for a cooling cycling is not constant, increasing with the temperature of the air the cooling unit pushes into the plenum.  
 COP value empirically can be computed using \cite{}:
+
 \begin{eqnarray}\label{eqn:copt}
 	COP(T) = 0.0068.T^2 + 0.0008.T + 0.458
 \end{eqnarray}
+
 where $T = T_{sup} + T_{adj}$ and $T_{adj} = T_{safe}^{in}-T_{max}^{in}$. \\
 $T_{sup}$ is temperature supply by cooling unit and $T_{adj}$ is temperature difference between maximum safe server inlet temperature ($T_{safe}^{in}$) and the maximum observed server inlet temperature ($T_{max}^{in}$).
 If $T_{adj}$ is negative, it indicates that a server inlet exceeds maximum safe temperature thus we need to lower $T_{sup}$ to bring the servers back below the system redline level.
@@ -161,17 +169,23 @@ As the target temperature of the air the cooling unit pumps into the floor plenu
 \vspace{-2mm}
 \end{figure} 
 
-
 Cooling cost can be calculated as:
+
 \begin{eqnarray}\label{eqn:cost}
 C = \frac{Q}{COP(T)}
 \end{eqnarray}
+
 Where $Q$ is amount of power the servers and devices consume.
 COP(T) is our COP at $T=T_{sup}+T_{adj}$.
 Currently we assume a uniform $T_{sup}$ from each cooling units due to the complications introduced by non-uniform cold air supply.
 
 
 \subsection{Energy Model}\label{energy model}
+In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
+To do so, we designed a series of model and perform an analysis.
+
+We model hybrid CDN system with three entity groups
+
 Power consumption model
 \begin{equation}
 	power(\lambda) = P_{idle} + (P_{peak}-P_{idle}). l 
@@ -232,24 +246,22 @@ We thank Rodney Van Meter for suggestions.
 
 \begin{biography}
 
-\profile{Joho Taro}{was born in 1970. He received his M.S.\ degree from
- Johoshori University in 1994 and has been engaged in the Information
- Processing Society of Japan since 1994. His research interest is online
- publishing systems. He is a member of the IEEE and ACM\@.}
+\profile{Mohamad Dikshie Fauzie}{was born in 1976.\
+He received a bachelors degree and a master's degree from Institute of Technology Bandung, Indonesia.\
+He is currently a Ph.D candidate at Keio University's Shonan Fujisawa Campus.}
 %
-\profile{Shori Hanako}{was born in 1960. She received her M.E.\ and
- Ph.D.\ from Johoshori University in 1984 and 1987, respectively. She
- became an associate professor at Gakkai University in 1992 and a
- professor at Johoshori University in 1997. Her current research
- interest is online publishing systems. She received the Kiyasu Kinen
- award in 2010. She is a Board Member of the IPSJ and a member of the
- IEICE, IEEE-CS, and ACM\@.} 
+\profile{Achmad Husni Thamrin}{is Assistant Professor at Keio University.\ 
+He is a graduate of Keio University, Graduate School of Media and Governance (Ph.D 2005, MMG, 2002).\
+His research interests include multicast, Internet over broadcast media, and peer-to-peer networks.} 
 %
-\profile{Gakkai Jiro}{was born in 1970. He received his M.S.\ degree
- from Johoshori University in 1994 and has been engaged in the
- Information Processing Society of Japan since 1994. His research
- interest is online publishing systems. He is a member of the IEEE and
- ACM\@.}
+\profile{Jun Murai}{was born in March 1955 in Tokyo.\
+Graduated Keio University in 1979, Department of Mathematics, Faculty of Science and Technology.\
+He received his M.S. for Computer Science from Keio University in 1981,
+and received his Ph.D. in Computer Science, Keio University in 1987.\ 
+He specializes in computer science, computer network, and computer 
+communication. He is currently Dean of the Faculty of Environment and Information Studies, Keio University since October 2009.\
+Former Vice-President of Keio University from May 2005 to May 2009.\ 
+He was an Executive Director of the Keio Research Institute at SFC, Keio University from 1999 to 2005.}
 %
 \end{biography}
 \end{document}

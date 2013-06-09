@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  9 JUN 2013 12:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  9 JUN 2013 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -204,17 +204,14 @@ LaTeX Info: Redefining \not on input line 1043.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-(./journal.aux
-
-LaTeX Warning: Label `fig:twotier' multiply defined.
-
-)
+(./journal.aux)
 \openout1 = `journal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 25.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 25.
 
- (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 25.
@@ -287,118 +284,108 @@ LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 7.02292pt on input line 45.
 LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 45.
 
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.78625pt on input line 82.
-LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <9.24873> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 82.
-LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 8.78625pt on input line 82.
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.43452pt on input line 82.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 82.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 82.
- [1
-
-
-]
 File: graphs/business-relationship.eps Graphic file (type eps)
 
 <graphs/business-relationship.eps>
-Overfull \hbox (14.8297pt too wide) in paragraph at lines 91--92
+Overfull \hbox (14.8297pt too wide) in paragraph at lines 88--89
+ [] 
+ []
+
+File: graphs/typical-iptv-network.eps Graphic file (type eps)
+<graphs/typical-iptv-network.eps>
+Overfull \hbox (4.69821pt too wide) in paragraph at lines 101--102
  [] 
  []
 
 File: graphs/datacenter.eps Graphic file (type eps)
 <graphs/datacenter.eps>
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 8.78625pt on input line 125.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <9.24873> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 125.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 8.78625pt on input line 125.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 7.43452pt on input line 125.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 125.
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxr.fd
+File: omstxr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 125.
+ [1
+
+
+]
 File: graphs/cop.eps Graphic file (type eps)
- <graphs/cop.eps> [2] (./journal.bbl
+
+<graphs/cop.eps> [2] (./journal.bbl
 LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 1.
  [3]
 ! Undefined control sequence.
-l.44 \newblock
-               Available on \url{https://datatracker.ietf.org/wg/cdni/}.
-? 
-! Undefined control sequence.
-l.44 \newblock Available on \url
-                                {https://datatracker.ietf.org/wg/cdni/}.
-? 
-! Undefined control sequence.
-l.48 \newblock
-               Available on \url{http://www.itc-ocean.eu}.
-? 
-! Undefined control sequence.
-l.48 \newblock Available on \url
-                                {http://www.itc-ocean.eu}.
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
-[]\OT1/txr/m/n/7.82584 : Com-cast and Level peer-ing dis-pute,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
-\OT1/txr/m/n/7.82584 http://www.internap.com/2010/12/02/peering-disputes-comcas
-t-
- []
-
-! Undefined control sequence.
-l.75 \newblock
+l.29 \newblock
                Available on
 ? 
 ! Undefined control sequence.
-l.76   \url
+l.30   \url
            {http://www.cisco.com/web/about/ac79/docs/sp/CDN-Federation_Phase...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.76 ...com/web/about/ac79/docs/sp/CDN-Federation_
+l.30 ...com/web/about/ac79/docs/sp/CDN-Federation_
                                                   Phase-2-Pilot.pdf}.
 ? 
 ! Extra }, or forgotten $.
-l.76 .../docs/sp/CDN-Federation_Phase-2-Pilot.pdf}
+l.30 .../docs/sp/CDN-Federation_Phase-2-Pilot.pdf}
                                                   .
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.77 
+l.31 
      
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.77 
+l.31 
      
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--77
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 []\OT1/txr/m/n/7.82584 Cisco: CDN Fed-er-a-tion (2012). Avail-able on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--77
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 \OT1/txr/m/n/7.82584 http://www.cisco.com/web/about/ac79/docs/sp/CDN-
  []
 
-) [4] (./journal.aux)
+! Undefined control sequence.
+l.43 \newblock
+               Available on \url{https://datatracker.ietf.org/wg/cdni/}.
+? 
+! Undefined control sequence.
+l.43 \newblock Available on \url
+                                {https://datatracker.ietf.org/wg/cdni/}.
+? 
+)
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[][] \OT1/txr/m/n/9.24873 is As-sis-tant
+ []
 
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[4] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 2249 strings out of 493482
- 29285 string characters out of 3140988
- 79424 words of memory out of 3000000
- 5546 multiletter control sequences out of 15000+200000
+ 2246 strings out of 493482
+ 29222 string characters out of 3140988
+ 78424 words of memory out of 3000000
+ 5542 multiletter control sequences out of 15000+200000
  50818 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,11n,25p,446b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,11n,22p,446b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (4 pages, 32740 bytes).
+Output written on journal.dvi (4 pages, 30712 bytes).
