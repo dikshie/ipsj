@@ -281,59 +281,7 @@ $\gamma_r$ & $1.5 . 10^{-7}$ (J/b)\\\hline
 
 
 
-
-
-
-
-
-
-Energy model for CDN to download a single file is:
-
-\begin{equation}
-\begin{split}
-	E_{cdn} &= \frac{B}{3600}\frac{P_{dsl}}{C_{dsl}^{down}} + \frac{B.n}{D}\frac{P_{sd}}{S_{sd}} + \frac{4.B}{3600}\frac{P_{sr}}{C_{sr}} \\
-	&+ \frac{4.B}{3600} \left( \frac{3.P_{es}}{C_{es}} + \frac{P_g}{C_g} + \frac{2.P_{pe}}{C_{pe}} + \frac{(H+1).P_c}{C_c} + \frac{H.P_{wdm}}{C_{wdm}}  \right)
-\end{split}
-\end{equation}
-
 Considering cooling energy, we can rewrite:  
-
-\begin{equation}
-	E_{total}^{cdn} = E_{cdn}.\left( 1 + \frac{1}{COP(T)} \right)
-\end{equation}
-
-
-Energy for peer-assisted CDN is almost same with CDN, we add peer (set top box factor) and weight factor $\alpha$.
-The model as follows:
-
-\begin{equation}\label{eq:cdn-p2p}
-\begin{split}
-	E_{cdn-p2p} &= \frac{\alpha_1.B}{3600}\frac{P_{dsl}}{C_{dsl}^{down}} + \frac{\alpha_1.B.n}{D}\frac{P_{sd}}{S_{sd}} + \frac{4.B.\alpha_1}{3600}\frac{P_{sr}}{C_{sr}} \\
-	&+ \frac{4.B.\alpha_1}{3600} \left( \frac{3.P_{es}}{C_{es}} + \frac{P_g}{C_g} + \frac{2.P_{pe}}{C_{pe}} + \frac{(H+1).P_c}{C_c} + \frac{H.P_{wdm}}{C_{wdm}}  \right) \\
-	&+ \frac{\alpha_2.B}{3600}\frac{P_{stb}}{C_{srb}} + \frac{\alpha_2.B.n}{D}\frac{P_{stb}}{S_{sdb}}
-\end{split}
-\end{equation}
-
-where $0\le \alpha_1,\alpha_2 \le 1$ and $\alpha_1 + \alpha_2 = 1$.
-The weight factor $\alpha_1$ is the proportion of data flowing through the data center, core network, and metro-access network, $\alpha_2$ is the proportion of data flowing through peers.
-
-To derive total energy considering cooling cost, we rewrite first term and second term of eq.\ref{eq:cdn-p2p} as follows:
-
-\begin{equation}\label{eq:cdn-p2p-hat}
-\begin{split}
-	\hat{E}_{cdn-p2p} &= \frac{\alpha_1.B}{3600}\frac{P_{dsl}}{C_{dsl}^{down}} + \frac{\alpha_1.B.n}{D}\frac{P_{sd}}{S_{sd}} + \frac{4.B.\alpha_1}{3600}\frac{P_{sr}}{C_{sr}} \\
-&+ \frac{4.B.\alpha_1}{3600} \left( \frac{3.P_{es}}{C_{es}} + \frac{P_g}{C_g} + \frac{2.P_{pe}}{C_{pe}} + \frac{(H+1).P_c}{C_c} + \frac{H.P_{wdm}}{C_{wdm}}  \right)
-\end{split}
-\end{equation}
-
-next, the total energy is:
-\begin{equation}\label{eq:cdn-p2p-total}
-\begin{split}
-	E_{total}^{cdn-p2p} &= \hat{E}_{cdn-p2p}.\left( 1 + \frac{1}{COP(T)} \right) \\
-	&+ \frac{\alpha_2.B}{3600}\frac{P_{stb}}{C_{srb}} + \frac{\alpha_2.B.n}{D}\frac{P_{stb}}{S_{sdb}}
-\end{split}
-\end{equation}
-note that only $\hat{E}_{cdn-p2p}$ part get cooling energy, while peers in user's home do not need cooling energy. 
 
 
 
