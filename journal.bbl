@@ -9,22 +9,11 @@ Moore, J., Chase, J., Ranganathan, P. and Sharma, R.: Making scheduling" cool":
   temperature-aware workload placement in data centers, {\em Proceedings of the
   annual conference on USENIX Annual Technical Conference}, pp.\ 5--5 (2005).
 
-\bibitem{5963557}
-Guan, K., Atkinson, G., Kilper, D. and Gulsen, E.: On the Energy Efficiency of
-  Content Delivery Architectures, {\em Communications Workshops (ICC), 2011
-  IEEE International Conference on}, pp.\ 1--6 (online),
-  \doi{10.1109/iccw.2011.5963557} (2011).
-
-\bibitem{baliga2011green}
-Baliga, J., Ayre, R.~W., Hinton, K. and Tucker, R.~S.: Green cloud computing:
-  Balancing energy in processing, storage, and transport, {\em Proceedings of
-  the IEEE},  Vol.~99, No.~1, pp.\ 149--167 (2011).
-
-\bibitem{feldmann2010energy}
-Feldmann, A., Gladisch, A., Kind, M., Lange, C., Smaragdakis, G. and Westphal,
-  F.-J.: Energy trade-offs among content delivery architectures, {\em
-  Telecommunications Internet and Media Techno Economics (CTTE), 2010 9th
-  Conference on}, IEEE, pp.\ 1--6 (2010).
+\bibitem{Nedevschi:2008:HDC:1855610.1855618}
+Nedevschi, S., Ratnasamy, S. and Padhye, J.: Hot data centers vs. cool peers,
+  {\em Proceedings of the 2008 conference on Power aware computing and
+  systems}, HotPower'08, Berkeley, CA, USA, USENIX Association, pp.\ 8--8
+  (online), \urle{http://dl.acm.org/citation.cfm?id=1855610.1855618} (2008).
 
 \bibitem{Cha:2008:NTP:1855641.1855646}
 Cha, M., Rodriguez, P., Moon, S. and Crowcroft, J.: On next-generation

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  14 JUN 2013 14:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  14 JUN 2013 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,24 +375,19 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps>
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 245
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 273
 .
-
-Overfull \hbox (6.67276pt too wide) detected at line 269
- [] 
- []
-
-
-Overfull \hbox (4.34918pt too wide) in paragraph at lines 298--298
+ [3]
+Overfull \hbox (4.34918pt too wide) in paragraph at lines 315--315
 [] 
  []
 
-[3]
-Overfull \hbox (4.34918pt too wide) in paragraph at lines 310--310
+
+Overfull \hbox (4.34918pt too wide) in paragraph at lines 327--327
 [] 
  []
 
-(./journal.bbl
+[4] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -403,69 +398,68 @@ l.5 \newblock Available on \url
                                {http://uptimeinstitute.com/2012-survey-resul...
 
 ? 
-[4]
 ! Undefined control sequence.
-l.62 \newblock
+l.51 \newblock
                Available on
 ? 
 ! Undefined control sequence.
-l.63   \url
+l.52   \url
            {http://www.cisco.com/web/about/ac79/docs/sp/CDN-Federation_Phase...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.63 ...com/web/about/ac79/docs/sp/CDN-Federation_
+l.52 ...com/web/about/ac79/docs/sp/CDN-Federation_
                                                   Phase-2-Pilot.pdf}.
 ? 
 ! Extra }, or forgotten $.
-l.63 .../docs/sp/CDN-Federation_Phase-2-Pilot.pdf}
+l.52 .../docs/sp/CDN-Federation_Phase-2-Pilot.pdf}
                                                   .
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.64 
+l.53 
      
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.64 
+l.53 
      
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 []\OT1/txr/m/n/7.82584 Cisco: CDN Fed-er-a-tion (2012). Avail-able on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 \OT1/txr/m/n/7.82584 http://www.cisco.com/web/about/ac79/docs/sp/CDN-
  []
 
 ! Undefined control sequence.
-l.76 \newblock
+l.65 \newblock
                Available on \url{https://datatracker.ietf.org/wg/cdni/}.
 ? 
 ! Undefined control sequence.
-l.76 \newblock Available on \url
+l.65 \newblock Available on \url
                                 {https://datatracker.ietf.org/wg/cdni/}.
 ? 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 386--386
+Underfull \hbox (badness 10000) in paragraph at lines 419--419
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
 [5] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 2856 strings out of 493482
- 36230 string characters out of 3140988
- 97707 words of memory out of 3000000
- 6136 multiletter control sequences out of 15000+200000
+ 2854 strings out of 493482
+ 36220 string characters out of 3140988
+ 94707 words of memory out of 3000000
+ 6134 multiletter control sequences out of 15000+200000
  50818 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,17n,23p,446b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,17n,23p,446b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (5 pages, 44516 bytes).
+Output written on journal.dvi (5 pages, 43792 bytes).

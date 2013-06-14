@@ -160,6 +160,9 @@ The cooling infrastructure comprises industry standard racks on a raised floor, 
 \label{fig:datacenter}
 \vspace{-2mm}
 \end{figure} 
+Many aspects of thermodynamics involved in data center.  
+In this section, we only focus on relationship between cooling power and hardware temperature.
+
 Data center seek to provision the cooling adequately to extract the heat produce by servers, switches, routers, and other devices.
 Practically, cooling provisioning are done at facilities level.
 Data center operator operate cooling facilities based on power ratings of servers, switches, routers, and other devices often with some additional headroom for risk tolerance. 
@@ -220,54 +223,68 @@ Currently we assume a uniform $T_{sup}$ from each cooling units due to the compl
 \subsection{Energy Model}\label{energy model}
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
 To do so, we designed a series of model and perform an analysis.
-Our energy model is similar to the models used in \cite{5963557,baliga2011green,feldmann2010energy}.
-
+Our energy model is similar to the models used in \cite{Nedevschi:2008:HDC:1855610.1855618}.
 Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
-We also considering content popularity distribution.   
-We assume that content provider has a content catalog of size $F$, ranked from 1 to $F$ based on popularity.   
-$1$ represents the most popular content.
-Letting the total number of requests in a given time duration $t$ will be $R$, the number of requests for content of popularity $k$, $R_k$ follows Zipf distribution as:
 
+The energy consumption for a single request in data center as:
 \begin{equation}
-	R_k = R \frac{k^{-\beta}}{\sum_{k=1}^F k^{-\beta}}
+	E_{d} = E_s
 \end{equation}
 
-A large $\beta$ indicates a relatively small set of very popular content.
-Typical value of $\beta$ range between $0.5$ and $1.0$.
-IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
+while the energy consumption for a single request in network as:
+\begin{equation}
+	E_{d} = d.E_r
+\end{equation}
 
+where $d_s$ is number of hops or the path length.
+
+We introduce the notion of the energy consumed per bit transferred by each servers and routers then measure the per-request consumption by multiplying the per bit consumption with number of bits transferred per request.  
+We define $\delta_s$ and $\delta_r$ work-induced energy consumed per additional bit transferred by a server and router.   
+We also define $\gamma_s$ and $\gamma_r$ is the baseline energy consumed per processed bit.  
+We can express these per-bit work induced consumptions as follows:
+\begin{equation}
+	\delta_s = \frac{(S_{max} - S_{base})}{M_s} 
+\end{equation}
+$S_{base}$ is a server's baseline power consumption.  
+$S_{max}$ is a server's power when operating at maximum capacity.
+$M_s$ is the maximum capacity in bit per second for a server.
+Same formulation also applied for router.  
+\begin{equation}
+	\delta_r = \frac{(R_{max} - R_{base})}{M_R} 
+\end{equation}
+$R_{max}$ is a router power when operating at maximum capacity.
+$R_{base}$ is a router's baseline power consumption.
+$M_R$ is maximum capacity in bit per second for a router.
+
+For baseline energy consumption, we expressed as: 
+\begin{equation}
+\begin{split}
+	\gamma_s &= \frac{S_{base}}{\mu_s.M_s} \\
+	\gamma_r &= \frac{R_{base}}{\mu_r.M_R}
+\end{split}
+\end{equation}
+$\mu_s$ and $\mu_r$ is the average utilization at a server and a router.
 We summarize the notation of the key parameters and its value in table.\ref{tab:parameters}.
 
 \begin{table}[tb]
-\caption{Notation of Key Parameters and Its Value. Capacity in Gbps and Power Consumption in kW.}
+\caption{Notation of Key Parameters and Its Value from \cite{Nedevschi:2008:HDC:1855610.1855618}.}
 \label{tab:parameters}
 \hbox to\hsize{\hfil
-\begin{tabular}{l|l|l|l}\hline\hline
-Location & Equipment & Capacity &  Power\\\hline
-Access & DSLAM & $C_{dsl}^{up}=0.005$ & $P_{dsl}=0.0035$ \\
-& & $C_{dsl}^{down}=0.025$ & per subscriber \\
-Metro & Switch & $C_{es}=320$ & $P_{es}=3.55$ \\
-& BRAS & $C_g=8$ & $P_g=1.1$ \\
-& Edge Router & $C_{pe}=140$ & $P_{ce}=2.7$ \\
-Core & Core Router & $C_c=640$ & $P_c=9.15$ \\
-& WDM & $C_{wdm}=3200$ & $P_{wdm}=22.6$ \\
-Data & L3 Lan Switch & $C_es=320$ & $P_{es}=3.55$ \\
-Center & Edge router & $C_{pe}=140$ & $P_{pe}=2.7$ \\
-& Server & $C_{sr}=0.8$ & $P_{sr}=0.35$ \\
-& Storage & $S_{sd}=604800$ & $P_{sd}=4.9$ \\ 
-Home & Server & $C_{srb}^{up}=0.005$ & $P_{stb}=0.03$ \\
-Set Top & Server & $C_{srb}^{down}=0.025$ & \\
-Box & Storage & $S_{sdb}=2560$ & \\
-- & $D$ & Number of download & \\
-& & per hour & \\
-- & $H$ & Number of hops &  \\
-- & $n$ & Number of replicas & \\
-- & $B_k$ & Size of the $k$-th most &  \\
-& & popular content & \\
-- & $R_k$ & No.of request of the  & \\
-& & $k$-th most popular content & \\\hline
+\begin{tabular}{l|l}\hline\hline
+Symbol & Value\\\hline
+$\delta_s$ & $5.2 . 10^{-8}$ (J/b)\\
+$\gamma_s$ & $6.7 . 10^{-7}$ (J/b)\\
+$\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\
+$\gamma_r$ & $1.5 . 10^{-7}$ (J/b)\\\hline
 \end{tabular}\hfil}
 \end{table}
+
+
+
+
+
+
+
 
 
 Energy model for CDN to download a single file is:
@@ -317,6 +334,22 @@ next, the total energy is:
 \end{split}
 \end{equation}
 note that only $\hat{E}_{cdn-p2p}$ part get cooling energy, while peers in user's home do not need cooling energy. 
+
+
+
+
+We also considering content popularity distribution.   
+We assume that content provider has a content catalog of size $F$, ranked from 1 to $F$ based on popularity.   
+$1$ represents the most popular content.
+Letting the total number of requests in a given time duration $t$ will be $R$, the number of requests for content of popularity $k$, $R_k$ follows Zipf distribution as:
+
+\begin{equation}
+	R_k = R \frac{k^{-\beta}}{\sum_{k=1}^F k^{-\beta}}
+\end{equation}
+
+A large $\beta$ indicates a relatively small set of very popular content.
+Typical value of $\beta$ range between $0.5$ and $1.0$.
+IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 
 
