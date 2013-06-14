@@ -3,6 +3,7 @@
 
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
+\usepackage{amsmath}
 
 \def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
 \def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
@@ -28,8 +29,10 @@
 
 \affiliate{SFC}{Keio University Shonan Fujisawa Campus, 5322 Endo, Fujisawa-shi, Kanagawa 252-0882 Japan}
 
-\author{Dikshie}{SFC}[dikshie@sfc.wide.ad.jp]
-\author{Husni}{SFC}[husni@ai3.net]
+\author{Mohamad Dikshie Fauzie}{SFC}[dikshie@sfc.wide.ad.jp]
+\author{Achmad Husni Thamrin}{SFC}[husni@ai3.net]
+\author{Jun Murai}{SFC}[jun@wide.ad.jp]
+
 
 \begin{abstract}
 This paper presents an analysis of a peer-assisted CDN system, where an ISP manages its own CDN and its users participate in a P2P network to assist content delivery.
@@ -63,25 +66,26 @@ xDSL networks are deployed worldwide, and in some countries, such as Japan, even
 As access bandwidth increases, P2P systems may become more efficient since a peer can contribute much more.
 
 On the other hand, data center where CDN server placed faces costs for powering the data center.
-The Uptime Institute, a global data center authority, surveyed 1100 data center owners and operators on 2012, reported that 55\% organizations must increase budget 10\% than 2011.  
-30\% of organizations will run out of data center capacity (power, cooling, space, and network) in the end of 2012. 
-More than 50\% organizations surveyed reported that saving energy is major priority.
+The Uptime Institute, a global data center authority, surveyed 1100 data center owners and operators on 2012, reported that 55\% organizations must increase budget 10\% than 2011 \cite{uptime}.  
+30\% of organizations will run out of data center capacity (power, cooling, space, and network) in the end of 2012 \cite{uptime}. 
+More than 50\% organizations surveyed reported that saving energy is major priority \cite{uptime}.
 The increases in energy cost and the demand due to growth of traffic urges the data center operators and owners to look for ways to reduce energy usage in the years to come.
 Although reducing energy consumption can effectively reduce overall cost, this will limit the capacity growth and scalability of the service provisioning.
 Alternatively, the data center and be revamped by relocating some services to end-host computers or peers.
 Peers contribute their communication, storage, and computation resources to exchange data and provide services while the data center performs central administration and authentication as well as backend processing.
 P2P network, formed by peers offer flexibility and scalability in service delivery.
 Therefore, P2P services can assist and enhance data center.
+It is not our aim to advocate one system architecture over another.
+Many issue such as manageability, reliability, and ease of deployment must be taken into account when making high level architectural decisions.
 
 In this paper, we study the energy consumption of hybrid CDN-P2P.  
 It has been known that CDN energy consumption is better than P2P architecture, unfortunately that model only think small part of problem energy consumption (devices/hardwares).
 To be fair, we also need to change paradigm that to see if we also can relax power budget of data center by utilizing P2P.   
 If we can move part of computation resource from CDN in data center to P2P, then we can relax power budget of data center for hardware dan cooling. 
 
-The rest of this paper is organized as follows. Section 2 provides an overview of data center model and energy model.  
+The rest of this paper is organized as follows. Section 2 provides an overview of system model, data center model and energy model.  
 In section 3, we will present result and analysis.  
-In section 4, we verified our model using traces from LiveSky hybrid CDN-P2P network.
-Section 5 will conclude this paper. 
+Section 4 will conclude this paper. 
 
 \begin{figure}[tb]
 \begin{center}
@@ -89,22 +93,64 @@ Section 5 will conclude this paper.
 \end{center}
 \caption{In Complex relationship of entities in Internet, 
 CDN mostly placed in data center near to eyeball ISP. 
-If CDN can reach due to business or economic reason, CDN can be placed near to IXP, and will reach eyeball ISP from peering point inside IXP.
-Due to growing traffic of Internet, eyeball ISP want to monetize the traffic therefore the future of CDN business is likely to live deeper into ISP networks, more integrated into and interleaved with ISP infrastructures.}
+If CDN can not reach eyeball ISP due to business or economic reason, CDN can be placed near to IXP or even inside IXP, and CDN will reach eyeball ISP from peering point inside IXP.}
 \label{fig:businessrelationship}
 \vspace{-2mm}
 \end{figure} 
 
-\section{System Model}\label{system model}
+\section{Motivation}\label{motivation}
+In the economic supply chain of video traffic, most ISPs get a little revenue from video traffic thus ISP wants to monetize that traffic.
+the future of CDN business is likely to live deeper into ISP networks, more integrated into and interleaved with ISP infrastructures thus users can get good quality of video.
+The idea of ISP managed CDN has been proposed in recent years.
+The complexity of the CDN business encourage ISP to manage their own CDN rather than allow others to run CDNs on their networks.
+
+CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers fig.\ref{fig:businessrelationship}. 
+The growing of Internet traffic dominated by video, the energy consumption of a host oriented architecture becomes problematic due to over provisioning factor.
+The idea of utilizing the user's computation power to support ISP operation is not new. 
+The figaro project proposed residential gateway as an integrator of different networks and services, becoming an Internet wide distributed content management for a proposed future Internet architecture.  
+In this case, ISP can offload part of workload on their CDN to user's home gateway.  
+By offloading workload, their CDN can relax energy demand thus relaxing data center power budget or relaxing capacity planning for power.
+
+
+
+
+
+\section{System Description}\label{system model}
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.3]{graphs/typical-iptv-network.eps}
+\includegraphics[scale=0.5]{graphs/p2p-cdn.eps}
 \end{center}
-\caption{A typical content delivery architecture.}
+\caption{A typical content delivery architecture with peer assisted.}
 \label{fig:iptv}
 \vspace{-2mm}
 \end{figure} 
 
+Figure \ref{fig:iptv} shows typical CDN with peer assisted.  
+$P_s$ in fig.\ref{fig:iptv} is peers in level 1 or seeders.  
+Seeders get content directly from CDN.  
+$P_l$ in fig.\ref{fig:iptv} is peers in level 2 or leechers.
+Leechers get content from seeders.
+Maximum number of seeders is bounded by maximum CDN's capacity, while maximum number of leechers in level 2 is bounded by number of seeders can support the bitrate.
+Denote number of seeders is $n_s$, number of leechers is $n_l$, $\rho$ is maximum bitrate that supplied by seeders to leechers, and $r=1$ is video bitrate, therefore we have number of leechers that can be supported by seeders is:
+
+\begin{equation}\label{eqn:leecher}
+	\lfloor n_l \rfloor = n_s . \rho
+\end{equation}
+
+Number of seeders that support or upload content to leecher is:
+
+\begin{equation}\label{eqn:seeders-to-leechers}
+	n_{s}^{u} = n_l . \frac{r}{\rho}
+\end{equation}
+
+The illustration as follows, suppose we have video bitrate $r=1$, seeder upload rate $\rho=0.25$, and maximum CDN capacity is $643Mbps$. 
+Maximum number of seeders supported by CDN is $n_s=643$.
+Maximum number leechers supported by seeders is $n_l=160$.  
+Number of seeders that upload content to leechers is $n_{s}^{u}=640$.  
+Therefore we have three seeders that do not need to upload content to leecher. 
+
+
+\subsection{Thermodynamics of Data Center}\label{thermodynamics}
 \begin{figure}[thb]
 \begin{center}
 \includegraphics[scale=0.3]{graphs/datacenter.eps}
@@ -114,19 +160,10 @@ The cooling infrastructure comprises industry standard racks on a raised floor, 
 \label{fig:datacenter}
 \vspace{-2mm}
 \end{figure} 
-
-CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers. 
-The growing of Internet traffic dominated by video, the energy consumption of a host oriented architecture becomes problematic due to over provisioning factor.
-However, in economy supply chain of video traffic, most ISPs get a little revenue from video traffic thus ISP want to monetize that traffic.
-This situation increase CDN that managed by ISP that placed closer to the network edge and end users.  
-Current delivery architecture is shown in fig.\ref{fig:iptv}.
-
-\subsection{Thermodynamics of Data Center}\label{thermodynamics}
 Data center seek to provision the cooling adequately to extract the heat produce by servers, switches, routers, and other devices.
 Practically, cooling provisioning are done at facilities level.
 Data center operator operate cooling facilities based on power ratings of servers, switches, routers, and other devices often with some additional headroom for risk tolerance. 
 The compounded over provisioning of computing and cooling infrastructures can drive up initial and recurring costs. 
-For every watt of power consumed by the computing infrastructure, a modern data center expends another one-half to one watt to power the cooling infrastructure \cite{}.
 
 The cooling cycle of a typical data center operates in the following way:
 Cooling units operate by extracting heat from the data center and pumping cold air into the room, usually through a pressurized floor plenum.
@@ -141,23 +178,23 @@ Above process is shown in fig.\ref{fig:datacenter}
 The efficiency of this cycle depends on several factors, including the conductive substance and the air flow velocity, but it is quantified by coefficient of performance (COP).
 The COP is the ratio of heat removed ($Q$) to the amount of work necessary ($W$) to remove that heat:
 
-\begin{eqnarray}\label{eqn:cop}
+\begin{equation}\label{eqn:cop}
 	COP=\frac{Q}{W}
-\end{eqnarray}
+\end{equation}
 
 Therefore, the work necessary to remove heat is inversely proportional to the COP.  
 A higher COP indicates a more efficient process, requiring less work to remove a constant amount of heat.
 
 However, the COP for a cooling cycling is not constant, increasing with the temperature of the air the cooling unit pushes into the plenum.  
-COP value empirically can be computed using \cite{}:
+COP value empirically can be computed using \cite{moore2005making}:
 
-\begin{eqnarray}\label{eqn:copt}
+\begin{equation}\label{eqn:copt}
 	COP(T) = 0.0068.T^2 + 0.0008.T + 0.458
-\end{eqnarray}
+\end{equation}
 
 where $T = T_{sup} + T_{adj}$ and $T_{adj} = T_{safe}^{in}-T_{max}^{in}$. \\
-$T_{sup}$ is temperature supply by cooling unit and $T_{adj}$ is temperature difference between maximum safe server inlet temperature ($T_{safe}^{in}$) and the maximum observed server inlet temperature ($T_{max}^{in}$).
-If $T_{adj}$ is negative, it indicates that a server inlet exceeds maximum safe temperature thus we need to lower $T_{sup}$ to bring the servers back below the system redline level.
+$T_{sup}$ is temperature supply by cooling unit and $T_{adj}$ is temperature difference between maximum safe hardware inlet temperature ($T_{safe}^{in}$) and the maximum observed hardware inlet temperature ($T_{max}^{in}$).
+If $T_{adj}$ is negative, it indicates that a hardware inlet exceeds maximum safe temperature thus we need to lower $T_{sup}$ to bring the hardwares back below the system redline level.
 
 \begin{figure}[thb]
 \begin{center}
@@ -169,13 +206,13 @@ As the target temperature of the air the cooling unit pumps into the floor plenu
 \vspace{-2mm}
 \end{figure} 
 
-Cooling cost can be calculated as:
+Cooling cost can be calculated as  \cite{moore2005making} :
 
-\begin{eqnarray}\label{eqn:cost}
+\begin{equation}\label{eqn:cost}
 C = \frac{Q}{COP(T)}
-\end{eqnarray}
+\end{equation}
 
-Where $Q$ is amount of power the servers and devices consume.
+Where $Q$ is amount of power the servers and hardwares consume.
 COP(T) is our COP at $T=T_{sup}+T_{adj}$.
 Currently we assume a uniform $T_{sup}$ from each cooling units due to the complications introduced by non-uniform cold air supply.
 
@@ -183,14 +220,108 @@ Currently we assume a uniform $T_{sup}$ from each cooling units due to the compl
 \subsection{Energy Model}\label{energy model}
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
 To do so, we designed a series of model and perform an analysis.
+Our energy model is similar to the models used in \cite{5963557,baliga2011green,feldmann2010energy}.
 
-We model hybrid CDN system with three entity groups
+Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
+We also considering content popularity distribution.   
+We assume that content provider has a content catalog of size $F$, ranked from 1 to $F$ based on popularity.   
+$1$ represents the most popular content.
+Letting the total number of requests in a given time duration $t$ will be $R$, the number of requests for content of popularity $k$, $R_k$ follows Zipf distribution as:
 
-Power consumption model
 \begin{equation}
-	power(\lambda) = P_{idle} + (P_{peak}-P_{idle}). l 
+	R_k = R \frac{k^{-\beta}}{\sum_{k=1}^F k^{-\beta}}
 \end{equation}
-$0 \le l \le 1$ is the server load 
+
+A large $\beta$ indicates a relatively small set of very popular content.
+Typical value of $\beta$ range between $0.5$ and $1.0$.
+IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
+
+We summarize the notation of the key parameters and its value in table.\ref{tab:parameters}.
+
+\begin{table}[tb]
+\caption{Notation of Key Parameters and Its Value. Capacity in Gbps and Power Consumption in kW.}
+\label{tab:parameters}
+\hbox to\hsize{\hfil
+\begin{tabular}{l|l|l|l}\hline\hline
+Location & Equipment & Capacity &  Power\\\hline
+Access & DSLAM & $C_{dsl}^{up}=0.005$ & $P_{dsl}=0.0035$ \\
+& & $C_{dsl}^{down}=0.025$ & per subscriber \\
+Metro & Switch & $C_{es}=320$ & $P_{es}=3.55$ \\
+& BRAS & $C_g=8$ & $P_g=1.1$ \\
+& Edge Router & $C_{pe}=140$ & $P_{ce}=2.7$ \\
+Core & Core Router & $C_c=640$ & $P_c=9.15$ \\
+& WDM & $C_{wdm}=3200$ & $P_{wdm}=22.6$ \\
+Data & L3 Lan Switch & $C_es=320$ & $P_{es}=3.55$ \\
+Center & Edge router & $C_{pe}=140$ & $P_{pe}=2.7$ \\
+& Server & $C_{sr}=0.8$ & $P_{sr}=0.35$ \\
+& Storage & $S_{sd}=604800$ & $P_{sd}=4.9$ \\ 
+Home & Server & $C_{srb}^{up}=0.005$ & $P_{stb}=0.03$ \\
+Set Top & Server & $C_{srb}^{down}=0.025$ & \\
+Box & Storage & $S_{sdb}=2560$ & \\
+- & $D$ & Number of download & \\
+& & per hour & \\
+- & $H$ & Number of hops &  \\
+- & $n$ & Number of replicas & \\
+- & $B_k$ & Size of the $k$-th most &  \\
+& & popular content & \\
+- & $R_k$ & No.of request of the  & \\
+& & $k$-th most popular content & \\\hline
+\end{tabular}\hfil}
+\end{table}
+
+
+Energy model for CDN to download a single file is:
+
+\begin{equation}
+\begin{split}
+	E_{cdn} &= \frac{B}{3600}\frac{P_{dsl}}{C_{dsl}^{down}} + \frac{B.n}{D}\frac{P_{sd}}{S_{sd}} + \frac{4.B}{3600}\frac{P_{sr}}{C_{sr}} \\
+	&+ \frac{4.B}{3600} \left( \frac{3.P_{es}}{C_{es}} + \frac{P_g}{C_g} + \frac{2.P_{pe}}{C_{pe}} + \frac{(H+1).P_c}{C_c} + \frac{H.P_{wdm}}{C_{wdm}}  \right)
+\end{split}
+\end{equation}
+
+Considering cooling energy, we can rewrite:  
+
+\begin{equation}
+	E_{total}^{cdn} = E_{cdn}.\left( 1 + \frac{1}{COP(T)} \right)
+\end{equation}
+
+
+Energy for peer-assisted CDN is almost same with CDN, we add peer (set top box factor) and weight factor $\alpha$.
+The model as follows:
+
+\begin{equation}\label{eq:cdn-p2p}
+\begin{split}
+	E_{cdn-p2p} &= \frac{\alpha_1.B}{3600}\frac{P_{dsl}}{C_{dsl}^{down}} + \frac{\alpha_1.B.n}{D}\frac{P_{sd}}{S_{sd}} + \frac{4.B.\alpha_1}{3600}\frac{P_{sr}}{C_{sr}} \\
+	&+ \frac{4.B.\alpha_1}{3600} \left( \frac{3.P_{es}}{C_{es}} + \frac{P_g}{C_g} + \frac{2.P_{pe}}{C_{pe}} + \frac{(H+1).P_c}{C_c} + \frac{H.P_{wdm}}{C_{wdm}}  \right) \\
+	&+ \frac{\alpha_2.B}{3600}\frac{P_{stb}}{C_{srb}} + \frac{\alpha_2.B.n}{D}\frac{P_{stb}}{S_{sdb}}
+\end{split}
+\end{equation}
+
+where $0\le \alpha_1,\alpha_2 \le 1$ and $\alpha_1 + \alpha_2 = 1$.
+The weight factor $\alpha_1$ is the proportion of data flowing through the data center, core network, and metro-access network, $\alpha_2$ is the proportion of data flowing through peers.
+
+To derive total energy considering cooling cost, we rewrite first term and second term of eq.\ref{eq:cdn-p2p} as follows:
+
+\begin{equation}\label{eq:cdn-p2p-hat}
+\begin{split}
+	\hat{E}_{cdn-p2p} &= \frac{\alpha_1.B}{3600}\frac{P_{dsl}}{C_{dsl}^{down}} + \frac{\alpha_1.B.n}{D}\frac{P_{sd}}{S_{sd}} + \frac{4.B.\alpha_1}{3600}\frac{P_{sr}}{C_{sr}} \\
+&+ \frac{4.B.\alpha_1}{3600} \left( \frac{3.P_{es}}{C_{es}} + \frac{P_g}{C_g} + \frac{2.P_{pe}}{C_{pe}} + \frac{(H+1).P_c}{C_c} + \frac{H.P_{wdm}}{C_{wdm}}  \right)
+\end{split}
+\end{equation}
+
+next, the total energy is:
+\begin{equation}\label{eq:cdn-p2p-total}
+\begin{split}
+	E_{total}^{cdn-p2p} &= \hat{E}_{cdn-p2p}.\left( 1 + \frac{1}{COP(T)} \right) \\
+	&+ \frac{\alpha_2.B}{3600}\frac{P_{stb}}{C_{srb}} + \frac{\alpha_2.B.n}{D}\frac{P_{stb}}{S_{sdb}}
+\end{split}
+\end{equation}
+note that only $\hat{E}_{cdn-p2p}$ part get cooling energy, while peers in user's home do not need cooling energy. 
+
+
+
+
+
 
 \section{Result and Analysis}\label{analysis}
 

@@ -1,5 +1,38 @@
 \begin{thebibliography}{10}
 
+\bibitem{uptime}
+Institute, U.: the 2012 Uptime Institute Data Center Industry Survey.
+\newblock Available on \url{http://uptimeinstitute.com/2012-survey-results}.
+
+\bibitem{moore2005making}
+Moore, J., Chase, J., Ranganathan, P. and Sharma, R.: Making scheduling" cool":
+  temperature-aware workload placement in data centers, {\em Proceedings of the
+  annual conference on USENIX Annual Technical Conference}, pp.\ 5--5 (2005).
+
+\bibitem{5963557}
+Guan, K., Atkinson, G., Kilper, D. and Gulsen, E.: On the Energy Efficiency of
+  Content Delivery Architectures, {\em Communications Workshops (ICC), 2011
+  IEEE International Conference on}, pp.\ 1--6 (online),
+  \doi{10.1109/iccw.2011.5963557} (2011).
+
+\bibitem{baliga2011green}
+Baliga, J., Ayre, R.~W., Hinton, K. and Tucker, R.~S.: Green cloud computing:
+  Balancing energy in processing, storage, and transport, {\em Proceedings of
+  the IEEE},  Vol.~99, No.~1, pp.\ 149--167 (2011).
+
+\bibitem{feldmann2010energy}
+Feldmann, A., Gladisch, A., Kind, M., Lange, C., Smaragdakis, G. and Westphal,
+  F.-J.: Energy trade-offs among content delivery architectures, {\em
+  Telecommunications Internet and Media Techno Economics (CTTE), 2010 9th
+  Conference on}, IEEE, pp.\ 1--6 (2010).
+
+\bibitem{Cha:2008:NTP:1855641.1855646}
+Cha, M., Rodriguez, P., Moon, S. and Crowcroft, J.: On next-generation
+  telco-managed P2P TV architectures, {\em Proceedings of the 7th international
+  conference on Peer-to-peer systems}, IPTPS'08, Berkeley, CA, USA, USENIX
+  Association, pp.\ 5--5 (online),
+  \urle{http://dl.acm.org/citation.cfm?id=1855641.1855646} (2008).
+
 \bibitem{Huang:2008:UHC:1496046.1496064}
 Huang, C., Wang, A., Li, J. and Ross, K.~W.: Understanding hybrid CDN-P2P: why
   limelight needs its own Red Swoosh, {\em Proceedings of the 18th
@@ -44,13 +77,6 @@ IETF: CDN Interconnect IETF Working Group (2013).
 
 \bibitem{figaro}
 : Figaro Project, http://www.ict-figaro.eu/ (2012).
-
-\bibitem{Cha:2008:NTP:1855641.1855646}
-Cha, M., Rodriguez, P., Moon, S. and Crowcroft, J.: On next-generation
-  telco-managed P2P TV architectures, {\em Proceedings of the 7th international
-  conference on Peer-to-peer systems}, IPTPS'08, Berkeley, CA, USA, USENIX
-  Association, pp.\ 5--5 (online),
-  \urle{http://dl.acm.org/citation.cfm?id=1855641.1855646} (2008).
 
 \bibitem{Jiang:2012:OMD:2413176.2413193}
 Jiang, W., Ioannidis, S., Massouli{\'e}, L. and Picconi, F.: Orchestrating
