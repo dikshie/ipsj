@@ -227,13 +227,13 @@ Our energy model is similar to the models used in \cite{Nedevschi:2008:HDC:18556
 Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
 
 The energy consumption for a single request in data center as:
-\begin{equation}
+\begin{equation}\label{eqn:E_d}
 	E_{d} = E_s
 \end{equation}
 
 while the energy consumption for a single request in network as:
-\begin{equation}
-	E_{d} = d.E_r
+\begin{equation}\label{eqn:E_r}
+	E_{r} = d_s.E_r
 \end{equation}
 
 where $d_s$ is number of hops or the path length.
@@ -242,14 +242,14 @@ We introduce the notion of the energy consumed per bit transferred by each serve
 We define $\delta_s$ and $\delta_r$ work-induced energy consumed per additional bit transferred by a server and router.   
 We also define $\gamma_s$ and $\gamma_r$ is the baseline energy consumed per processed bit.  
 We can express these per-bit work induced consumptions as follows:
-\begin{equation}
+\begin{equation}\label{eqn:delta_s}
 	\delta_s = \frac{(S_{max} - S_{base})}{M_s} 
 \end{equation}
 $S_{base}$ is a server's baseline power consumption.  
 $S_{max}$ is a server's power when operating at maximum capacity.
 $M_s$ is the maximum capacity in bit per second for a server.
 Same formulation also applied for router.  
-\begin{equation}
+\begin{equation}\label{eqn:delta_r}
 	\delta_r = \frac{(R_{max} - R_{base})}{M_R} 
 \end{equation}
 $R_{max}$ is a router power when operating at maximum capacity.
@@ -257,7 +257,7 @@ $R_{base}$ is a router's baseline power consumption.
 $M_R$ is maximum capacity in bit per second for a router.
 
 For baseline energy consumption, we expressed as: 
-\begin{equation}
+\begin{equation}\label{eqn:gamma}
 \begin{split}
 	\gamma_s &= \frac{S_{base}}{\mu_s.M_s} \\
 	\gamma_r &= \frac{R_{base}}{\mu_r.M_R}
@@ -279,12 +279,26 @@ $\gamma_r$ & $1.5 . 10^{-7}$ (J/b)\\\hline
 \end{tabular}\hfil}
 \end{table}
 
+Substituting eq.\ref{eqn:gamma}, eq.\ref{eqn:delta_s}, and eq.\ref{eqn:delta_r} to eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r}, we can rewrite eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r} as follows:
+\begin{equation}\label{eqn:E_d dan E_r}
+\begin{split}
+	E_{d} &= (\delta_s + \gamma_s).B \\
+	E_{r} &= d_s.(\delta_r + \gamma_r).B
+\end{split}
+\end{equation}
+Finaly total energy is:
+\begin{equation}\label{eqn:E_t}
+\begin{split}
+	E_{t} &= E_s + E_r  \\
+	E_{t} &= (\delta_s + \gamma_s).B + d_s.(\delta_r + \gamma_r).B
+\end{split}
+\end{equation}
+where $B$ is size of file. 
 
-
-Considering cooling energy, we can rewrite:  
-
-
-
+Considering cooling energy, we can rewrite eq.\ref{eqn:E_t}:
+\begin{equation}
+	\hat{E}_{t} = E_{t}.\left( 1+\frac{1}{COP(T)} \right)
+\end{equation}
 
 We also considering content popularity distribution.   
 We assume that content provider has a content catalog of size $F$, ranked from 1 to $F$ based on popularity.   
@@ -314,37 +328,12 @@ The authors of \cite{Huang:2008:UHC:1496046.1496064} conclude from two real worl
 Yin et al. \cite{Yin:2010:LEC:1823746.1823750} described commercial operation of a peer-assisted CDN in China.  
 LiveSky solved several challenges in the system design, such as dynamic resource scaling of P2P, low startup latency, ease of P2P integration with the existing CDN infrastructure, and network friendliness and upload fairness in the P2P operation.  
 Xu et al.\cite{DBLP:journals/corr/abs-1212-4915} using game theory, showed that the right cooperative profit distribution of P2P can help the ISP to maximize the utility.  
-Their model can easily be implemented in the context of current Internet economic settlements.  
-Misra et al.\cite{Misra:2010:IPS:1811099.1811064} also mentioned the importance of P2P architecture to support content delivery networks.
-The authors use cooperative game theory to formulate simple compensation rules for users who run P2P to support content delivery networks.
-
-The idea of telco- or ISP-managed CDN has been proposed in recent years.  
-The complexity of the CDN business encourage telcos and ISPs to manage their own CDN, rather than allow others to run CDNs on their networks.  
-It has been shown that it is cost effective \cite{federation}\cite{norton2011internet}. 
-Kamiyama et al. \cite{NoriakiKAMIYAMA2013} proposed optimally ISP operated CDN.
-Kamiyama et al. mentioned that, in order to deliver large and rich Internet content to users, ISPs need to put their CDNs in data centers.  
-The locations are limited while the storage is large, making this solution effective, using optimum placement algorithm based on real ISP network topologies.  
-The authors found that inserting a CDN into an ISP's ladder-type network is effective in reducing the hop count, thus reduce total link cost.  
-Cisco has initiated an effort to connect telco- or ISP-managed CDNs to each other, to form a CDN federation \cite{federation} using open standards \cite{cdni}.  
-They argue that the current CDN architecture is not close enough to the users and ISPs can fill this position.
-
-The idea of utilizing the user's computation power to support ISP operation is not new.  The Figaro project \cite{figaro} proposed residential gateway as an integrator of different networks and services, becoming an Internet-wide distributed content management for a proposed future Internet architecture \cite{figaro}.  
-Cha e al.,\cite{Cha:2008:NTP:1855641.1855646} performed trace analysis and found that an IPTV architecture powered by P2P can handle a much larger number of channels, with limited demand for infrastructure compare to IP multicast.  
-Jiang et al. \cite{Jiang:2012:OMD:2413176.2413193} proposed scalable and adaptive content replication and request routing for CDN servers located in users' home gateways.  
-Maki et al.\cite{NaoyaMAKI2012} propose traffic engineering for peer-assisted CDN to control the behavior of clients, and present a solution for optimizing the selection of content files.
-Mathieu et al., \cite{6249305} are using data gathered from France telecom network to calculate reduction of network load if customers are employed as peer-assisted content delivery.
-Our work is same in system model architecture which uses different level of topologies  (Level-0 and Level-1), where in Mathieu et al., \cite{6249305} the authors use different names, which are regional and national. 
-We emphasize that compare to  Mathieu et al., \cite{6249305} our work provides completely different approach.
-Mathieu et al., \cite{6249305} work mostly based on empirical data from France telecom company thus the authors can directly calculate network load caused by video traffic and calculate network load reduction if peer-assisted is employed on customers side,  while our study focus on mathematical model of different admission policies for peers to join peer-assisted CDN and ISP payoff can get from employing peer-assisted CDN.
 
 
 \section{Conclusion and Future Work}\label{conclusion}
 
-This paper presents a scheme for a ISP managed peer-assisted CDN model that estimates lower bound of peers based on a stochastic fluid model and estimate the economic incentive for ISP based on game theory.
-While a higher upload rate from the user nodes acting as seeders is desirable, it should be noted that an ISP should be aware of the implication that offering an economic incentive to too many users in order to get them acting as seeders in the P2P would have an undesirable effect on the ISP's revenue.
-Some areas of improvement that we have identified for future are:
-more work on the stochastic fluid model to include multiple video streaming bitrate and downtime effect of user home gateway and penalty to ISP payoff. 
-We are also very interested to include energy trade off this peer-assisted CDN architecture in order to know how much energy saving by ISP and how much increase of energy at users home gateway side in this architecture.
+In this paper, we compare energy consumption between the peer-assisted CDN architecture and CDN architecture. 
+Integrating peer to peer capability to assist the existing CDN has a great potential to save energy consumption.
 
 
 \begin{acknowledgment}

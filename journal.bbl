@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{uptime}
 Institute, U.: the 2012 Uptime Institute Data Center Industry Survey.
@@ -38,52 +38,6 @@ Yin, H., Liu, X., Zhan, T., Sekar, V., Qiu, F., Lin, C., Zhang, H. and Li, B.:
 \bibitem{DBLP:journals/corr/abs-1212-4915}
 Xu, K., Zhong, Y. and He, H.: Can P2P Technology Benefit Eyeball ISPs? A
   Cooperative Profit Distribution Answer, {\em CoRR},  Vol.~abs/1212.4915
-  (2012).
-
-\bibitem{Misra:2010:IPS:1811099.1811064}
-Misra, V., Ioannidis, S., Chaintreau, A. and Massouli{\'e}, L.: Incentivizing
-  peer-assisted services: a fluid shapley value approach, {\em SIGMETRICS
-  Perform. Eval. Rev.},  Vol.~38, No.~1, pp.\ 215--226 (online),
-  \doi{10.1145/1811099.1811064} (2010).
-
-\bibitem{federation}
-Cisco: CDN Federation (2012).
-\newblock Available on
-  \url{http://www.cisco.com/web/about/ac79/docs/sp/CDN-Federation_Phase-2-Pilot.pdf}.
-
-\bibitem{norton2011internet}
-Norton, W.~B.: {\em The Internet Peering Playbook: Connecting to the Core of
-  the Internet}, DrPeering Press, 2nd edition (2012).
-
-\bibitem{NoriakiKAMIYAMA2013}
-KAMIYAMA, N., MORI, T., KAWAHARA, R. and HASEGAWA, H.: Optimally Designing
-  ISP-Operated CDN, {\em IEICE Transactions on Communications},  Vol.~E96.B,
-  No.~3, pp.\ 790--801 (2013).
-
-\bibitem{cdni}
-IETF: CDN Interconnect IETF Working Group (2013).
-\newblock Available on \url{https://datatracker.ietf.org/wg/cdni/}.
-
-\bibitem{figaro}
-: Figaro Project, http://www.ict-figaro.eu/ (2012).
-
-\bibitem{Jiang:2012:OMD:2413176.2413193}
-Jiang, W., Ioannidis, S., Massouli{\'e}, L. and Picconi, F.: Orchestrating
-  massively distributed CDNs, {\em Proceedings of the 8th international
-  conference on Emerging networking experiments and technologies}, CoNEXT '12,
-  New York, NY, USA, ACM, pp.\ 133--144 (online), \doi{10.1145/2413176.2413193}
-  (2012).
-
-\bibitem{NaoyaMAKI2012}
-MAKI, N., NISHIO, T., SHINKUMA, R., MORI, T., KAMIYAMA, N., KAWAHARA, R. and
-  TAKAHASHI, T.: Traffic Engineering of Peer-Assisted Content Delivery Network
-  with Content-Oriented Incentive Mechanism, {\em IEICE Transactions on
-  Information and Systems},  Vol.~E95.D, No.~12, pp.\ 2860--2869 (2012).
-
-\bibitem{6249305}
-Mathieu, B. and Levene, Y.: Impact of FTTH deployment on live streaming
-  delivery systems, {\em Computers and Communications (ISCC), 2012 IEEE
-  Symposium on}, pp.\ 000259 --000264 (online), \doi{10.1109/ISCC.2012.6249305}
   (2012).
 
 \end{thebibliography}

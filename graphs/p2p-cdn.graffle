@@ -46,7 +46,7 @@
 	<key>Creator</key>
 	<string>ハウジー ムハマドディクシ</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -183,7 +183,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -204,8 +204,8 @@
 			<integer>44</integer>
 			<key>Points</key>
 			<array>
-				<string>{240.05331991298169, 142.79332377421784}</string>
-				<string>{259.28000356571749, 179.87334543558151}</string>
+				<string>{240.05331991298161, 142.79332377421784}</string>
+				<string>{259.28000356571727, 179.8733454355816}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -216,7 +216,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -237,8 +237,8 @@
 			<integer>43</integer>
 			<key>Points</key>
 			<array>
-				<string>{154.85178165606149, 142.68939249811729}</string>
-				<string>{134.4815516772718, 179.97726781072137}</string>
+				<string>{154.85178165606152, 142.68939249811729}</string>
+				<string>{134.48155167727185, 179.97726781072137}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -249,7 +249,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -282,7 +282,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -315,7 +315,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -348,7 +348,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -381,7 +381,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -414,7 +414,7 @@
 					<key>Legacy</key>
 					<true/>
 					<key>TailArrow</key>
-					<string>Arrow</string>
+					<string>0</string>
 				</dict>
 			</dict>
 		</dict>
@@ -725,7 +725,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-06-13 07:46:10 +0000</string>
+	<string>2013-06-14 07:40:02 +0000</string>
 	<key>Modifier</key>
 	<string>ハウジー ムハマドディクシ</string>
 	<key>NotesVisible</key>
