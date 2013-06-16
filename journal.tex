@@ -65,6 +65,10 @@ Broadband network access helps P2P applications to perform better.
 xDSL networks are deployed worldwide, and in some countries, such as Japan, even higher bandwidth fiber to the home (FTTH) already exceeds DSL in market penetration.  In the coming years, FTTH will be massively deployed by network operators throughout the world.  
 As access bandwidth increases, P2P systems may become more efficient since a peer can contribute much more.
 
+In Peer assisted CDN, users can download content from CDN nodes for from other users or peers the content.
+A user may cache the content after download to serve requests from other users
+Due to complexity of behavior of peers, the process should be done in home gateway user where ISP can have control on it. 
+
 On the other hand, data center where CDN server placed faces costs for powering the data center.
 The Uptime Institute, a global data center authority, surveyed 1100 data center owners and operators on 2012, reported that 55\% organizations must increase budget 10\% than 2011 \cite{uptime}.  
 30\% of organizations will run out of data center capacity (power, cooling, space, and network) in the end of 2012 \cite{uptime}. 
@@ -81,9 +85,11 @@ Many issue such as manageability, reliability, and ease of deployment must be ta
 In this paper, we study the energy consumption of hybrid CDN-P2P.  
 It has been known that CDN energy consumption is better than P2P architecture, unfortunately that model only think small part of problem energy consumption (devices/hardwares).
 To be fair, we also need to change paradigm that to see if we also can relax power budget of data center by utilizing P2P.   
-If we can move part of computation resource from CDN in data center to P2P, then we can relax power budget of data center for hardware dan cooling. 
+If we can move part of computation resource from CDN in data center to P2P, then we can relax power budget of data center for hardware and cooling. 
 
-The rest of this paper is organized as follows. Section 2 provides an overview of system model, data center model and energy model.  
+The rest of this paper is organized as follows. 
+Section 2 present motivation of this paper.
+Section 3 provides an overview of system model, data center model and energy model.  
 In section 3, we will present result and analysis.  
 Section 4 will conclude this paper. 
 
@@ -150,7 +156,7 @@ Number of seeders that upload content to leechers is $n_{s}^{u}=640$.
 Therefore we have three seeders that do not need to upload content to leecher. 
 
 
-\subsection{Thermodynamics of Data Center}\label{thermodynamics}
+\subsection{Abstracting Data Center Power}\label{thermodynamics}
 \begin{figure}[thb]
 \begin{center}
 \includegraphics[scale=0.3]{graphs/datacenter.eps}
@@ -160,7 +166,8 @@ The cooling infrastructure comprises industry standard racks on a raised floor, 
 \label{fig:datacenter}
 \vspace{-2mm}
 \end{figure} 
-Many aspects of thermodynamics involved in data center.  
+Many aspects involved in power management in data center and interactions among power management strategies across subsystems grow more complex.
+Five distinct subsystems account for most of a data center's power draw:   server and storage systems, power conditioning equipment, cooling and humidification systems, networking equipment, and lighting/physical security.
 In this section, we only focus on relationship between cooling power and hardware temperature.
 
 Data center seek to provision the cooling adequately to extract the heat produce by servers, switches, routers, and other devices.
@@ -201,7 +208,7 @@ If $T_{adj}$ is negative, it indicates that a hardware inlet exceeds maximum saf
 
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.4]{graphs/cop.eps}
+\includegraphics[scale=0.5]{graphs/cop.eps}
 \end{center}
 \caption{COP curve for the chilled water cooling units from HP Lab utility data center.
 As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases.}
@@ -320,6 +327,37 @@ IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 \section{Result and Analysis}\label{analysis}
 
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.5]{graphs/cdnp2p-1.eps}
+\end{center}
+\caption{1.}
+\label{fig:4-1}
+\vspace{-2mm}
+\end{figure} 
+
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
+\end{center}
+\caption{2.}
+\label{fig:4-2}
+\vspace{-2mm}
+\end{figure} 
+
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.5]{graphs/cdnp2p-3.eps}
+\end{center}
+\caption{3.}
+\label{fig:4-3}
+\vspace{-2mm}
+\end{figure} 
+
+
+
+
+
 
 \section{Related Work} 
 
@@ -327,6 +365,31 @@ Content Distribution Networks with peer assist have been successfully deployed o
 The authors of \cite{Huang:2008:UHC:1496046.1496064} conclude from two real world traces that hybrid CDN-P2P can significantly reduce the cost of content distribution and can scale to cope with the exponential growth of Internet video content.  
 Yin et al. \cite{Yin:2010:LEC:1823746.1823750} described commercial operation of a peer-assisted CDN in China.  
 LiveSky solved several challenges in the system design, such as dynamic resource scaling of P2P, low startup latency, ease of P2P integration with the existing CDN infrastructure, and network friendliness and upload fairness in the P2P operation.  
+The author in \cite{Huang:2007:IVP:1282427.1282396} and \cite{huang2007peer} proposed mechanisms to minimize CDN server bandwidth to make the content distribution cheap.
+They designed different peer prefetching policies of video on demand system in surplus mode while ensuring user quality of experience.
+A similar analysis has been done in \cite{xu2006analysis} for live video streaming system where the authors proposed different limited peer contribution policies to reduce CDN bandwidth requirement and eventually off the distribution process from CDN to P2P system. 
+An ISP friendly rate allocation schemes for a hybrid CDN-P2P video on demand system in \cite{Wang:2008:IRA:1459359.1459397}. 
+These technique try to minimize CDN server bandwidth while reducing ISP unfriendly traffic and maximizing peer prefetching.
+Load on CDN server has been shown to be reduced using this approach while reducing cross ISP traffic.
+Above studies were performed for video on demand or live video streaming.
+While video is the most popular content, the systems can be also for other type contents.
+Moreover while content based services are growing, energy consumption of a content distribution system has not been analyzed.
+
+The idea that utilize ISP controlled home gateway to provide computing and storage services and adopts managed peer-to-peer model is presented in \cite{valancius2009greening}. 
+Valancius et al. \cite{valancius2009greening} show that distributing computing platform in NaDa (Nano Data Center) save at least 20-30\% energy compare to traditional data centers.
+The saving in NaDa comes from underutilizing home gateway, avaoidance of cooling costs, and the reduction of network energy consumption as a result of demand and service co-localization.
+
+The comparison between CDN architecture and peer-to-peer architecture are discussed in \cite{baliga2007energy} and \cite{feldmann2010energy}.
+Both authors in \cite{baliga2007energy} and \cite{feldmann2010energy} agree that CDN architecture is more energy saving compare to peer-to-peer architecture. 
+Another interesting study of energy efficient in content delivery architectures is presented by Guan et al. \cite{5963557}.
+by Guan et al. \cite{5963557} comparing energy efficient of CDN architecture and CCN architecture.
+The authors in \cite{5963557} conclude that CCN is more energy efficient in delivering popular content while the approach with optical bypass is more energy efficient in delivering infrequent accessed content.
+
+To the best our knowledge, the only study that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
+Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the core network around 20-40\% less energy.  
+The authors are focus on energy consumption of different algorithm for minimizing server bandwidth based on popularity of content.  
+Our work is quite different, we take number of peers with static content and dynamic content (popularity) and thinking bigger to the relaxing of capacity data center by considering hardware temperature cost.
+
  
 
 

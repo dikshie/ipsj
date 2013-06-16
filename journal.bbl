@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{uptime}
 Institute, U.: the 2012 Uptime Institute Data Center Industry Survey.
@@ -35,9 +35,55 @@ Yin, H., Liu, X., Zhan, T., Sekar, V., Qiu, F., Lin, C., Zhang, H. and Li, B.:
   Appl.},  Vol.~6, No.~3, pp.\ 16:1--16:19 (online),
   \doi{10.1145/1823746.1823750} (2010).
 
-\bibitem{DBLP:journals/corr/abs-1212-4915}
-Xu, K., Zhong, Y. and He, H.: Can P2P Technology Benefit Eyeball ISPs? A
-  Cooperative Profit Distribution Answer, {\em CoRR},  Vol.~abs/1212.4915
-  (2012).
+\bibitem{Huang:2007:IVP:1282427.1282396}
+Huang, C., Li, J. and Ross, K.~W.: Can internet video-on-demand be profitable?,
+  {\em SIGCOMM Comput. Commun. Rev.},  Vol.~37, No.~4, pp.\ 133--144 (online),
+  \doi{10.1145/1282427.1282396} (2007).
+
+\bibitem{huang2007peer}
+Huang, C., Li, J. and Ross, K.: Peer-assisted VoD: Making internet video
+  distribution cheap, {\em Proc. of IPTPS}, Vol.~7 (2007).
+
+\bibitem{xu2006analysis}
+Xu, D., Kulkarni, S.~S., Rosenberg, C. and Chai, H.-K.: Analysis of a CDN--P2P
+  hybrid architecture for cost-effective streaming media distribution, {\em
+  Multimedia Systems},  Vol.~11, No.~4, pp.\ 383--399 (2006).
+
+\bibitem{Wang:2008:IRA:1459359.1459397}
+Wang, J., Huang, C. and Li, J.: On ISP-friendly rate allocation for
+  peer-assisted VoD, {\em Proceedings of the 16th ACM international conference
+  on Multimedia}, MM '08, New York, NY, USA, ACM, pp.\ 279--288 (online),
+  \doi{10.1145/1459359.1459397} (2008).
+
+\bibitem{valancius2009greening}
+Valancius, V., Laoutaris, N., Massouli{\'e}, L., Diot, C. and Rodriguez, P.:
+  Greening the internet with nano data centers, {\em Proceedings of the 5th
+  international conference on Emerging networking experiments and
+  technologies}, ACM, pp.\ 37--48 (2009).
+
+\bibitem{baliga2007energy}
+Baliga, J., Hinton, K. and Tucker, R.~S.: Energy consumption of the Internet,
+  {\em Optical Internet, 2007 and the 2007 32nd Australian Conference on
+  Optical Fibre Technology. COIN-ACOFT 2007. Joint International Conference
+  on}, IEEE, pp.\ 1--3 (2007).
+
+\bibitem{feldmann2010energy}
+Feldmann, A., Gladisch, A., Kind, M., Lange, C., Smaragdakis, G. and Westphal,
+  F.-J.: Energy trade-offs among content delivery architectures, {\em
+  Telecommunications Internet and Media Techno Economics (CTTE), 2010 9th
+  Conference on}, IEEE, pp.\ 1--6 (2010).
+
+\bibitem{5963557}
+Guan, K., Atkinson, G., Kilper, D. and Gulsen, E.: On the Energy Efficiency of
+  Content Delivery Architectures, {\em Communications Workshops (ICC), 2011
+  IEEE International Conference on}, pp.\ 1--6 (online),
+  \doi{10.1109/iccw.2011.5963557} (2011).
+
+\bibitem{6524219}
+Mandal, U., Lange, C., Gladisch, A. and Mukherjee, B.: Should ISPs adopt hybrid
+  CDN-P2P in IP-over-WDM networks: An energy-efficiency perspective?, {\em
+  Advanced Networks and Telecommuncations Systems (ANTS), 2012 IEEE
+  International Conference on}, pp.\ 6--11 (online),
+  \doi{10.1109/ANTS.2012.6524219} (2012).
 
 \end{thebibliography}
