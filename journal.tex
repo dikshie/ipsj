@@ -35,8 +35,11 @@
 
 
 \begin{abstract}
+
 This paper presents an analysis of a peer-assisted CDN system, where an ISP manages its own CDN and its users participate in a P2P network to assist content delivery.
-The system consists of a two-level CDN, where one level can be considered as the current CDN and the other level is managed by the ISP, and a number of user nodes forming a P2P network, where some of the user nodes are obliged to contribute in the content delivery.
+The system consists of a two level of peer where first level can be considered as direct client from CDN (seeders) and second level is peer that get data from first level (leechers).
+We show that depend on number of peers, upload rate of peer in first level, and capacity of CDN, CDN energy can be reduced when peer in first level contribute to second level.
+Moreover bigger upload rate of peers in first level, then bigger peers in second level can be served by peers in first level thus reducing CDN work load. 
 
 
 \end{abstract}
@@ -124,7 +127,7 @@ By offloading workload, their CDN can relax energy demand thus relaxing data cen
 \section{System Description}\label{system model}
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.5]{graphs/p2p-cdn.eps}
+\includegraphics[scale=0.6]{graphs/p2p-cdn.eps}
 \end{center}
 \caption{A typical content delivery architecture with peer assisted.}
 \label{fig:iptv}
@@ -159,7 +162,7 @@ Therefore we have three seeders that do not need to upload content to leecher.
 \subsection{Abstracting Data Center Power}\label{thermodynamics}
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.3]{graphs/datacenter.eps}
+\includegraphics[scale=0.4]{graphs/datacenter.eps}
 \end{center}
 \caption{A typical data center schematic.
 The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate cool air through a share plenum.}
@@ -208,7 +211,7 @@ If $T_{adj}$ is negative, it indicates that a hardware inlet exceeds maximum saf
 
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.5]{graphs/cop.eps}
+\includegraphics[scale=0.6]{graphs/cop.eps}
 \end{center}
 \caption{COP curve for the chilled water cooling units from HP Lab utility data center.
 As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases.}
@@ -329,7 +332,18 @@ IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.5]{graphs/cdnp2p-1.eps}
+\includegraphics[scale=0.6]{graphs/cdn.eps}
+\end{center}
+\caption{0.}
+\label{fig:4-0}
+\vspace{-2mm}
+\end{figure} 
+
+
+
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.6]{graphs/cdnp2p-1.eps}
 \end{center}
 \caption{1.}
 \label{fig:4-1}
@@ -338,7 +352,7 @@ IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
+\includegraphics[scale=0.6]{graphs/cdnp2p-2.eps}
 \end{center}
 \caption{2.}
 \label{fig:4-2}
@@ -347,7 +361,7 @@ IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.5]{graphs/cdnp2p-3.eps}
+\includegraphics[scale=0.6]{graphs/cdnp2p-3.eps}
 \end{center}
 \caption{3.}
 \label{fig:4-3}
@@ -385,10 +399,12 @@ Another interesting study of energy efficient in content delivery architectures 
 by Guan et al. \cite{5963557} comparing energy efficient of CDN architecture and CCN architecture.
 The authors in \cite{5963557} conclude that CCN is more energy efficient in delivering popular content while the approach with optical bypass is more energy efficient in delivering infrequent accessed content.
 
-To the best our knowledge, the only study that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
+To the best of our knowledge, the study of energy in that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
 Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the core network around 20-40\% less energy.  
-The authors are focus on energy consumption of different algorithm for minimizing server bandwidth based on popularity of content.  
-Our work is quite different, we take number of peers with static content and dynamic content (popularity) and thinking bigger to the relaxing of capacity data center by considering hardware temperature cost.
+The authors are focus on energy consumption of different algorithms for minimizing server bandwidth based on popularity of content.  
+By maximizing peer request, the authors can minimizing CDN workload. 
+The authors only considered energy consumption of hardware and does not include overhead inside data center.  
+Our work is quite different, we take number of peers with static content and dynamic content (popularity) and add overhead of data center which power of cooling cause by temperature of hardware.
 
  
 
@@ -400,7 +416,7 @@ Integrating peer to peer capability to assist the existing CDN has a great poten
 In this study, we show that event without explicitly considering energy consumption while assigning content, the peer assisted CDN saves significant energy.
 Although the energy savings depend on number of request (number of clients) and the content popularity, 20-30\% energy can be saved for a moderately popular content.
 Additionally, by downloading the contents from the peers, especially of high popular content, the server load is decreased significantly.
-The energy saving potential of peer assisted CDN architecture presents a strong reason for the ISP.  
+The energy saving potential of peer assisted CDN architecture presents as a strong reason for the ISP to reduce energy usage.  
 
 \begin{acknowledgment}
 We thank Rodney Van Meter for suggestions.

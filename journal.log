@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  17 JUN 2013 03:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  17 JUN 2013 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -315,48 +315,48 @@ LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <8.5373> not available
 (Font)              Font shape `OT1/txss/b/sl' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
 (Font)              scaled to size 8.1104pt on input line 37.
-LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 48.
-LaTeX Font Info:    Try loading font information for U+txmia on input line 48.
+LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 51.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 51.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 48.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 51.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 48.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 51.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 48.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 51.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Calculating math sizes for size <12.56738> on input line 48
+LaTeX Font Info:    Calculating math sizes for size <12.56738> on input line 51
 .
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.02292pt on input line 48.
-LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 48.
+(Font)              scaled to size 7.02292pt on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 51.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.78625pt on input line 90.
+(Font)              scaled to size 8.78625pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <9.24873> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 90.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 8.78625pt on input line 90.
+(Font)              scaled to size 8.78625pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.43452pt on input line 90.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 90.
+(Font)              scaled to size 7.43452pt on input line 92.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 92.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 92.
  [1
 
 
@@ -364,27 +364,32 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
 File: graphs/business-relationship.eps Graphic file (type eps)
 
 <graphs/business-relationship.eps>
-Overfull \hbox (14.8297pt too wide) in paragraph at lines 98--99
+Overfull \hbox (14.8297pt too wide) in paragraph at lines 101--102
  [] 
  []
 
 File: graphs/p2p-cdn.eps Graphic file (type eps)
 <graphs/p2p-cdn.eps>
 File: graphs/datacenter.eps Graphic file (type eps)
- <graphs/datacenter.eps> [2]
-File: graphs/cop.eps Graphic file (type eps)
- <graphs/cop.eps>
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 280
-.
- [3]
-File: graphs/cdnp2p-1.eps Graphic file (type eps)
+ <graphs/datacenter.eps>
+Overfull \hbox (28.4805pt too wide) in paragraph at lines 165--166
+ [] 
+ []
 
-<graphs/cdnp2p-1.eps>
+[2]
+File: graphs/cop.eps Graphic file (type eps)
+ <graphs/cop.eps> [3]
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 283
+.
+File: graphs/cdn.eps Graphic file (type eps)
+ <graphs/cdn.eps>
+File: graphs/cdnp2p-1.eps Graphic file (type eps)
+ <graphs/cdnp2p-1.eps>
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
- <graphs/cdnp2p-2.eps>
+
+<graphs/cdnp2p-2.eps>
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
- <graphs/cdnp2p-3.eps> [4]
-(./journal.bbl
+ <graphs/cdnp2p-3.eps> [4] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -396,18 +401,20 @@ l.5 \newblock Available on \url
 
 ? 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 422--422
+Underfull \hbox (badness 10000) in paragraph at lines 438--438
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[5] (./journal.aux) ) 
+[5] [6
+
+] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 2866 strings out of 493482
- 36359 string characters out of 3140988
- 90707 words of memory out of 3000000
- 6143 multiletter control sequences out of 15000+200000
+ 2869 strings out of 493482
+ 36389 string characters out of 3140988
+ 91707 words of memory out of 3000000
+ 6145 multiletter control sequences out of 15000+200000
  50818 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  30i,16n,22p,323b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (5 pages, 40784 bytes).
+Output written on journal.dvi (6 pages, 41944 bytes).
