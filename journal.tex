@@ -265,19 +265,6 @@ $R_{max}$ is a router power when operating at maximum capacity.
 $R_{base}$ is a router's baseline power consumption.
 $M_R$ is maximum capacity in bit per second for a router.
 
-We summarize the notation of the key parameters and its value in table.\ref{tab:parameters}.
-
-\begin{table}[tb]
-\caption{Notation of Key Parameters and Its Value from \cite{Nedevschi:2008:HDC:1855610.1855618}.}
-\label{tab:parameters}
-\hbox to\hsize{\hfil
-\begin{tabular}{l|l}\hline\hline
-Symbol & Value\\\hline
-$\delta_s$ & $5.2 . 10^{-8}$ (J/b)\\
-$\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\\hline
-\end{tabular}\hfil}
-\end{table}
-
 Substituting eq.\ref{eqn:delta_s}, and eq.\ref{eqn:delta_r} to eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r}, we can rewrite eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r} as follows:
 \begin{equation}\label{eqn:E_d dan E_r}
 \begin{split}
@@ -322,8 +309,8 @@ The data flows from CDN to network in this case router then arrive in seeders.
 If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
 
 Parameters values used in this numerical simulation
-\begin{table}[tb]
-\caption{Simulation Parameters.}
+\begin{table}[thb]
+\caption{Numerical Simulation Parameters.}
 \label{tab:simparameters}
 \hbox to\hsize{\hfil
 \begin{tabular}{l|l}\hline\hline
@@ -334,6 +321,8 @@ $E_{r-baseline}$ & $750$ watt \\
 $E_{s-baseline}$ & $290$ watt \\
 $B$ & $500$MB\\
 $d_s$ & $1$ \\
+$N_{s}^{u}$ & $[0.25,0.5,0.75,1]$ Mbps \\
+$N$ & $[100,..,1000]$ \\
 $T$ & $[20,25]$\\\hline
 \end{tabular}\hfil}
 \end{table}
@@ -349,7 +338,10 @@ $T$ & $[20,25]$\\\hline
 
 
 Figure \ref{fig:4-0} shows energy usage for CDN server, router, total energy consumption for CDN scenario (without peer assisted).
-We plot energy cons
+We plot energy consumption for CDN server, router, and total energy for every $T$ or $COP$ coefficient value.
+In CDN only scenario, the energy consumption is increase as number of client increase.  
+This is natural. 
+Increasing of clients imply to increasing of traffic to CDN server and router.
 
 \begin{figure}[thb]
 \begin{center}

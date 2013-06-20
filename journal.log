@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  20 JUN 2013 16:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  20 JUN 2013 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -262,17 +262,14 @@ LaTeX Info: Redefining \not on input line 1043.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-(./journal.aux
-
-LaTeX Warning: Label `tab:parameters' multiply defined.
-
-)
+(./journal.aux)
 \openout1 = `journal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 26.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 26.
 
- (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 26.
@@ -376,10 +373,9 @@ File: graphs/p2p-cdn.eps Graphic file (type eps)
 File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
- <graphs/cop.eps>
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 274
+ <graphs/cop.eps> [3]
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 316
 .
- [3]
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
@@ -403,24 +399,18 @@ l.5 \newblock Available on \url
 
 ? 
 [5])
-Underfull \hbox (badness 10000) in paragraph at lines 458--458
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[6
-
-] (./journal.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[6] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
  2870 strings out of 493482
- 36390 string characters out of 3140988
+ 36393 string characters out of 3140988
  88707 words of memory out of 3000000
  6145 multiletter control sequences out of 15000+200000
  50818 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  30i,15n,22p,323b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (6 pages, 42076 bytes).
+Output written on journal.dvi (6 pages, 42088 bytes).
