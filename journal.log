@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  20 JUN 2013 16:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  20 JUN 2013 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,7 +387,10 @@ File: graphs/cdnp2p-2.eps Graphic file (type eps)
 
 <graphs/cdnp2p-2.eps>
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
- <graphs/cdnp2p-3.eps> [4] (./journal.bbl
+ <graphs/cdnp2p-3.eps>
+File: graphs/cdnp2p-4.eps Graphic file (type eps)
+ <graphs/cdnp2p-4.eps> [4]
+(./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -399,18 +402,18 @@ l.5 \newblock Available on \url
 
 ? 
 [5])
-Underfull \hbox (badness 10000) in paragraph at lines 450--450
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
 [6] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 2870 strings out of 493482
- 36393 string characters out of 3140988
+ 2873 strings out of 493482
+ 36433 string characters out of 3140988
  88707 words of memory out of 3000000
- 6145 multiletter control sequences out of 15000+200000
+ 6147 multiletter control sequences out of 15000+200000
  50818 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,15n,22p,323b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,15n,22p,323b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (6 pages, 42088 bytes).
+Output written on journal.dvi (6 pages, 42324 bytes).
