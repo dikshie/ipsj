@@ -236,21 +236,20 @@ To do so, we designed a series of model and perform an analysis.
 Our energy model is similar to the models used in \cite{Nedevschi:2008:HDC:1855610.1855618}.
 Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
 
-The energy consumption for a single request in data center as:
+For each component, we consider two energy measurement:  baseline energy consumption and energy consumed per work unit $\delta$.
+The baseline energy is the energy consumed to keep the device on.
+Even when there is not traffic, the device still consume energy.
+The energy consumption for a single request in CDN server as:
 \begin{equation}\label{eqn:E_d}
 	E_{d} = E_s
 \end{equation}
-
 while the energy consumption for a single request in network as:
 \begin{equation}\label{eqn:E_r}
 	E_{r} = d_s.E_r
 \end{equation}
 
 where $d_s$ is number of hops or the path length.
-
-We introduce the notion of the energy consumed per bit transferred by each servers and routers then measure the per-request consumption by multiplying the per bit consumption with number of bits transferred per request.  
 We define $\delta_s$ and $\delta_r$ work-induced energy consumed per additional bit transferred by a server and router.   
-We also define $\gamma_s$ and $\gamma_r$ is the baseline energy consumed per processed bit.  
 We can express these per-bit work induced consumptions as follows:
 \begin{equation}\label{eqn:delta_s}
 	\delta_s = \frac{(S_{max} - S_{base})}{M_s} 
@@ -258,7 +257,7 @@ We can express these per-bit work induced consumptions as follows:
 $S_{base}$ is a server's baseline power consumption.  
 $S_{max}$ is a server's power when operating at maximum capacity.
 $M_s$ is the maximum capacity in bit per second for a server.
-Same formulation also applied for router.  
+Same formulation also applied for network component.  
 \begin{equation}\label{eqn:delta_r}
 	\delta_r = \frac{(R_{max} - R_{base})}{M_R} 
 \end{equation}
@@ -332,14 +331,23 @@ IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 \begin{figure}[thb]
 \begin{center}
+\includegraphics[scale=0.6]{graphs/topology.eps}
+\end{center}
+\caption{Dummy network}
+\label{fig:4-0}
+\vspace{-2mm}
+\end{figure} 
+
+
+
+\begin{figure}[thb]
+\begin{center}
 \includegraphics[scale=0.6]{graphs/cdn.eps}
 \end{center}
 \caption{0.}
 \label{fig:4-0}
 \vspace{-2mm}
 \end{figure} 
-
-
 
 \begin{figure}[thb]
 \begin{center}
@@ -377,8 +385,9 @@ IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 Content Distribution Networks with peer assist have been successfully deployed on the Internet, such as Akamai \cite{Huang:2008:UHC:1496046.1496064} and LiveSky \cite{Yin:2010:LEC:1823746.1823750}.  
 The authors of \cite{Huang:2008:UHC:1496046.1496064} conclude from two real world traces that hybrid CDN-P2P can significantly reduce the cost of content distribution and can scale to cope with the exponential growth of Internet video content.  
-Yin et al. \cite{Yin:2010:LEC:1823746.1823750} described commercial operation of a peer-assisted CDN in China.  
+Yin et al. \cite{Yin:2010:LEC:1823746.1823750} described LiveSkye as commercial operation of a peer-assisted CDN in China.  
 LiveSky solved several challenges in the system design, such as dynamic resource scaling of P2P, low startup latency, ease of P2P integration with the existing CDN infrastructure, and network friendliness and upload fairness in the P2P operation.  
+Measurement from LiveSky showed that LiveSky can save bandwidth around 40\% \cite{Yin:2010:LEC:1823746.1823750}.
 The author in \cite{Huang:2007:IVP:1282427.1282396} and \cite{huang2007peer} proposed mechanisms to minimize CDN server bandwidth to make the content distribution cheap.
 They designed different peer prefetching policies of video on demand system in surplus mode while ensuring user quality of experience.
 A similar analysis has been done in \cite{xu2006analysis} for live video streaming system where the authors proposed different limited peer contribution policies to reduce CDN bandwidth requirement and eventually off the distribution process from CDN to P2P system. 
@@ -391,7 +400,7 @@ Moreover while content based services are growing, energy consumption of a conte
 
 The idea that utilize ISP controlled home gateway to provide computing and storage services and adopts managed peer-to-peer model is presented in \cite{valancius2009greening}. 
 Valancius et al. \cite{valancius2009greening} show that distributing computing platform in NaDa (Nano Data Center) save at least 20-30\% energy compare to traditional data centers.
-The saving in NaDa comes from underutilizing home gateway, avaoidance of cooling costs, and the reduction of network energy consumption as a result of demand and service co-localization.
+The saving in NaDa comes from underutilizing home gateway, avoidance of cooling costs, and the reduction of network energy consumption as a result of demand and service co-localization.
 
 The comparison between CDN architecture and peer-to-peer architecture are discussed in \cite{baliga2007energy} and \cite{feldmann2010energy}.
 Both authors in \cite{baliga2007energy} and \cite{feldmann2010energy} agree that CDN architecture is more energy saving compare to peer-to-peer architecture. 

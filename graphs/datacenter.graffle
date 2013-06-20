@@ -245,7 +245,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{335.5, 408.5}, {69, 19}}</string>
+			<string>{{327.5, 408.5}, {69, 19}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1062,7 +1062,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-06-07 09:08:24 +0000</string>
+	<string>2013-06-19 10:45:08 +0000</string>
 	<key>Modifier</key>
 	<string>ハウジー ムハマドディクシ</string>
 	<key>NotesVisible</key>

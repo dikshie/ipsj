@@ -1,0 +1,13 @@
+BitTorrent is the most successful Peer-to-Peer (P2P) application and is responsible for a major portion of Internet traffic. 
+It has been largely studied using simulations, models and real measurements. 
+Although simulations and modelling are easier to perform, they typically simplify analysed problems and in case of BitTorrent they are likely to miss some of the effects which occur in real swarms. 
+Thus, in this thesis we rely on real measurements. 
+Using our datasets, we investigate the topology of real BitTorrent swarms.
+In the first part of the thesis we present the summary of measurement techniques used so far and we use it as a base to allow us to perform different types of analysis of peer behavior.  
+We found that the node degree of the graph formed in a Bittorrent swarm can be described by a power-law with exponential cut-off and observation of low-clustering coefficient implies Bittorrent networks are close to random networks. 
+In the next part of the thesis we look at the BitTorrent from the perspective of general P2P architecture.
+We focus on the application of P2P to cooperate with CDN architecture for delivering the content on the Internet. 
+Moving of workload of CDN to peer in customer side will not be a problem because: 
+first, difference power consumption of home gateway between full load and idle is very small.
+second, increasing power consumption of home gateway do not need additional cooling power.
+Therefore, we show that employing P2P to assist CDN can reduce energy consumption of CDN thus reducing power budget of data center in general. 

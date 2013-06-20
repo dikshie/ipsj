@@ -1,0 +1,184 @@
+AVAILABILITY				
+1.Unraveling BitTorrent’s File Unavailability: Measurements, Analysis and Solution Exploration, 2010
+Sebastian Kaune1, Rube ́n Cuevas Rum ́ın2, Gareth Tyson3, Andreas Mauthe3,
+Carmen Guerrero2, and Ralf Steinmetz1
+Technische Universita ̈t Darmstadt 1, Universidad Carlos III de Madrid 2, Lancaster University 3 
+		
+- To conclude, even when considering the seeding discontinuity of users, the single-torrent approach emerges as highly impracticable: to ensure a system-wide file avail- ability of >99%, average seeding times of more than 34 hours are required. 			
+- seeders has a significant impact on both performance and availability.
+- a lack of seeders often results in unavailability but not always, (ii) the churn level, the fast replication of rare chunks and the population size largely defines a swarm’s ability to survive without a seeder (iii) unavailability usually occurs in cyclic periods with intermittent availability, and (iv) un- availability often results in a chain effect that leads to future download failures.
+
+
+2.Unveiling the Incentives for Content Publishing in Popular BitTorrent Portals, 2012
+Rubén Cuevas, Member, IEEE, ACM, Michal Kryczka, Angel Cuevas, Member, IEEE, ACM, Sebastian Kaune, Carmen Guerrero, and Reza Rejaie, Senior Member, IEEE, ACM
+
+-  We discover that around 100 publishers are responsible for publishing 67% of the content, which corresponds to 75% of the downloads. Our investigation reveals several key insights about major publishers. First, antipiracy agencies and malicious users publish “fake” files to protect copyrighted content and spread malware, respectively. Second, excluding the fake publishers, content publishing in major BitTorrent portals appears to be largely driven by companies that try to attract consumers to their own Web sites for financial gain. Finally, we demonstrate that profit-driven publishers attract more loyal consumers than altruistic top publishers, whereas the latter have a larger fraction of loyal consumers with a higher degree of loyalty than the former.
+
+3.Availability in Swarming Systems, 2010
+Daniel Sadoc Menasche Antonio A. Aragao Rocha Bin Li
+
+- In this work we model content unavailability in swarming systems and show that bundling can be used to mitigate it. In terms of future work, in the models presented in this pa- per we do not account for ISP locality/friendliness. Incorporating such aspects may lead, from an economic perspective, to interesting extensions of the model.
+				
+			
+4.Availability in BitTorrent Systems, 2006
+Giovanni Neglia†, Giuseppe Reina†, Honggang Zhang∗ Don Towsley∗, Arun Venkataramani∗, John Danaher∗
+
+- Our findings include: (i) multiple trackers improve availability, but the improvement largely comes from the choice of a single highly available tracker, (ii) such improvement is reduced by the presence of correlated failures, (iii) multiple trackers can significantly reduce the overlay connectivity, (iv) the DHT improves information availability, but induces a higher response latency to peer queries.		
+
+
+
+EFFICIENCY
+1.Analytical Model for BitTorrent-based Live Video Streaming, 2007
+Tewari & Leonard kleinrock
+
+We refer to the fraction of total end-user upload capacity that can be utilized as the efficiency of fragment exchange in BitTorrent-like systems in this paper..
+The efficiency of a  BitTorrent-like peer-to-peer solution depends on the peer group size and the number of fragments available for sharing at any 
+given time. Our analysis suggests that the efficiency of the peer-to-peer solution is not sensitive to the size of the peer group for 
+groups larger than 15-20 users. A similar threshold exists for the number of fragments available for sharing at any given time. For  live streaming scenarios, this threshold dictates that the fragment size be substantially smaller than the default fragment size in  BitTorrent to ensure that the stream latency is small. 
+
+We show that a peer group size of 15-20 peers is sufficient to achieve any benefits a large peer group size would offer. 
+A more important factor in determining the server side capacity that would be needed to support a target  streaming rate to a given number of users is the number of 
+fragments that are available for sharing. We provide an analytical expression to compute the fraction of the total peer upload capacity that can be utilized given the number of fragments that are available for sharing. 
+
+
+LOCALITY
+1.Deep Diving into BitTorrent Locality, INFOCOM 2011
+we have shown that locality yields win-win situations in most cases. The win-win profile is bounded by “unlocalizable” torrents that have few local neighbors..
+Handling the unlocalizable torrents requires limiting the number of allowed inter-AS overlay connections.
+
+2.Pushing BitTorrent Locality to the Limit, 2011
+Our main findings are that a small number of inter-ISP connections will dramatically reduce the overhead and keep the slowdown low independently of the torrent size, the number of peers per ISP, the upload capacity of peers, or the churn. We have introduced two new strategies called Round Robin and Partition Merging that make the use of a small number of inter- ISP connections feasible for real torrents of the Internet.
+we intend to increase confidence in BitTorrent locality by showing that even in case of high locality BitTorrent still performs extremely well, and that with high locality the inter-ISP traffic reduction can be up to 40% on the torrents we crawled.
+
+3.Improving Traffic Locality in BitTorrent via Biased Neighbor Selection, 2006.
+we examine a new approach to enhance BitTorrent traffic locality, biased neighbor selection, in which a peer chooses the majority, but not all, of its neighbors from peers within the same ISP. Using simulations, we show that biased neighbor selection maintains the nearly optimal performance of BitTorrent in a variety of environments, and fundamentally reduces the cross-ISP traffic by stopping it from growing linearly with the number of peers. A key reason for its performance is the rarest first piece replication algorithm used by BitTorrent clients. Compared with existing locality- enhancing approaches such as bandwidth limiting, gateway peers, and caching, biased neighbor selection requires no dedicated servers and scales to a large number of BitTorrent networks.
+
+4.Can P2P-Users Benefit from Locality-Awareness?, 2010.
+The most important conclusions from our results are: (1) a win-no lose situation for ISPs and P2P users is difficult to achieve in practice with the current locality- promotion proposals and (2) current proposals introduce or increase unfairness in the distribution process, in some cases they even decrease the overall efficiency of the distribution process. Thus, to summarize, current locality-aware peer- selection mechanisms provide mainly a gain for the ISPs. Some P2P users may benefit, some may lose by using a locality-awareness implementation. What is the case for a specific user depends strongly on the concrete implementation of the locality-aware peer selection mechanism and the properties of the swarm. 
+
+
+5.Understanding BitTorrent: A reality check from the ISP’s perspective, 2012.
+Our paper confirms that BitTorrent traffic is mostly unlocal, e.g, 95% of this traffic traverses expensive transit links between ISPs. However, only 1% of the torrents have potential for localization since very few torrents are popular within an ISP and users are highly desynchronized. 
+Accordingly, a localization mechanism a la P4P can only partially return local peer-sets to requesting peers; on average, only 4–44% of the peers composing a peer-set could be local. 
+
+ENERGY
+1.Impact of Peers Behaviour on the Energy Efficiency of BitTorrent over Optical Networks, 2012
+The results show that leechers altruistic behavior where all leechers stay to seed after finishing downloading reduces energy consumption in the network. However as leechers may not always have the incentive to participate in sharing their files, we develop a MILP model to optimize the upload rate of operated controlled seeders to compensate for leechers leaving the network after finishing downloading.
+
+2.Energy-Efficient Peer Selection Mechanism for BitTorrent Content Distribution, 2012
+we evaluate the energy consumption of BitTorrent based peer to peer (P2P) content distribution systems in bypass IP/WDM core networks and compare it to client-server (C/S) systems. 
+This paper has evaluated the energy consumption of BitTorrent and C/S systems over bypass IP/WDM networks. We have modeled BitTorrent P2P systems using MILP. Our results indicate that while the original BitTorrent protocol, based on random peer selection, results in similar energy consumption compared to a typical C/S model consisting of five datacenters, the power minimized BitTorrent model can reduce power/energy consumption by 30% compared to the C/S and original BitTorrent models while maintaining the optimal download rate for homogeneous peers. 
+
+3.A BitTorrent proxy for Green Internet file sharing: Design and experimental evaluation
+We have evaluated our solution in a realistic testbed, measuring the file download time with the legacy and proxy-based architectures, respectively. Our experimental results have shown that the proxy-based architecture can save up to 95% of the energy consumed by each PC when using the legacy solution. 
+
+
+
+
+ABSTRACT
+
+Live video streaming has long been projected as the killer application for Internet.  
+In recent years with the deployment of increased bandwidth in the last mile, this promise finally turned into reality.
+There are competing technologies to deliver live video streaming:  CDN (content delivery network) and P2P (peer-to-peer).
+CDNs provides end-users with the appearance of traditional client server approaches but enable content providers to handle much larger request volumes.
+At the same time, ISPs can also benefit from deploying CDN servers in their networks as it reduces the total amount of upstream and transit traffic. 
+CDN provide excellent quality to end-users when the workload is within provisioning limits.
+P2P systems solve the scalability issue by leveraging the resources of the participating peers, while keeping the server requirement low.
+However, decentralized uncoordinated of P2P operation comes with undesirable side effects: unfairness in the face of heterogeneous peer resources, network unfriendliness, etc. 
+For example:Bittorrent, that based on our measurement the swarms are close to random networks, therefore the locality is very low thus traffic traverses expensive transit links.
+Other implications is energy consumption become higher. 
+
+In more closed network such hybrid CDN-P2P, the CDN server or SN (service node) are organized into several tiers.
+This hierarchical arrangement is typical of many CDN infrastructures to effectively magnify the total system capacity, reduce the load at the content source, and also leverage the benefit of caching requested contents in higher layers. 
+Edge SNs handle client requests and obtain the required contents from core SNs.
+In P2P side, peers are organized in a tree based overlay on a per substream basis.  
+This ensure that all nodes contribute some upload bandwidth. 
+Each edge SN keeps track of clients currently assigned to it to avoid undesirable side effects of P2P.
+Each client learns about other peers assigned to its designed edge SN.
+Since CDN redirection already takes into account the client and SN locations when assigning a client to an edge SN this automatically ensures that clients mostly peer with other clients in the same region thus locality is preserved.  
+In that such system, it is very important also to calculate how much energy consumed by hybrid CDN-P2P and the possibility to relax energy consumption in CDN side due to some contents are delivered by peers.
+-------------------------
+
+Live video streaming has long been projected as the killer application for Internet.  
+In recent years with the deployment of increased bandwidth in the last mile, this promise finally turned into reality.
+There are competing technologies to deliver live video streaming:  CDN (content delivery network) and P2P (peer-to-peer).
+CDNs provides end-users with the appearance of traditional client server approaches but enable content providers to handle much larger request volumes.
+At the same time, ISPs can also benefit from deploying CDN servers in their networks as it reduces the total amount of upstream and transit traffic. 
+CDN provide excellent quality to end-users when the workload is within provisioning limits.
+P2P systems solve the scalability issue by leveraging the resources of the participating peers, while keeping the server requirement low.
+However, decentralized uncoordinated of P2P operation comes with undesirable side effects: unfairness in the face of heterogeneous peer resources, network unfriendliness, etc. 
+On the other hand, the growth of video traffic is also contribute to increases of power consumption and it's need to be considered.
+
+In this research, Bittorrent as one of the most popular and successful P2P applications in the current Internet is taken as example the study of uncoordinated P2P operation.
+First problem to be addressed in this research is how to reveal the topology of real Bittorrent swarms, how dynamic the topology is, and how it affects overall behavior.
+We study of Bittorrent networks, where real-world Bittorrent swarms were measured using a rigorous and simple method in order to understand the Bittorrent network topology. 
+We propose the Bittorrent Peer Exchange (PEX) messages to infer the topology of Bittorrent swarms listed on a Bittorrent tracker claiming to be the largest Bittorrent network on the Internet, instead of building small Bittorrent networks on testbeds such as PlanetLab and OneLab as other researchers have done. 
+We also performed simulations using the same approach to show the validity of the inferred topology  resulted from the PEX messages by comparing it with the topology of the simulated network.
+Our result, verified using the Kolmogorov-Smirnov goodness of fit test and the likelihood ratio test and confirmed via simulation, show that a power-law with exponential cutoff is a more plausible model than a pure power-law distribution.  
+We also found that the average clustering coefficient is very low, implies the the Bittorrent swarms are close to random networks.  
+Bittorrent swarms are far more dynamic than has been recognized previously, potentially impacting attempts to optimize the performance of the system as well as the accuracy of simulations and analyses. 
+
+In the current content delivery architecture, many CDN companies and ISPs adopt hybrid CDN-P2P because the advantage of P2P. 
+In P2P side, peers are organized in a tree based overlay on a per substream basis for live streaming.   
+This ensure that all peers contribute some upload bandwidth. 
+Each CDN server keeps track of clients currently assigned to it to avoid undesirable side effects of P2P.
+Each client learns about other peers assigned to its designed CDN server.
+Since in hybrid CDN-P2P architecture some of workload or data delivery are done by peers, therefore CDN server foreseeing the potential power consumption reduction. 
+Second problem to addressed in this research is what's the trade-off of hybrid CDN-P2P architecture compare to CDN.
+We solve this problem by proposing simple model of power consumption of CDN server and router including the cost of cooling that needed generated from power consumption of CDN server and router. Furthermore, this power reduction can be used for capacity planning of data center. 
+
+Finally, proposed methodology can contribute largely to further characterizing P2P networks and promotion of relaxing capacity planning data center in term of energy consumption by hybrid CDN-P2P. 
+
+--------------------
+
+The Internet traffic is growing up dominated by video contents.  
+Delivering video content can be done using peer-to-peer or Content Delivery Network (CDN).
+CDNs provides end-users with the appearance of traditional client server approaches but enable content providers to handle much larger request volumes.
+At the same time, ISPs can also benefit from deploying CDN servers in their networks as it reduces the total amount of upstream and transit traffic. 
+CDN provide excellent quality to end-users when the workload is within provisioning limits.
+P2P systems solve the scalability issue by leveraging the resources of the participating peers, while keeping the server requirement low.
+However, decentralized uncoordinated of P2P operation comes with undesirable side effect such as unfairness in the face of heterogeneous peer resources, network unfriendliness, etc. 
+On the other hand, the growth of video traffic is also contribute to increases of power consumption and it's need to be considered.
+In this research, Bittorrent as one of the most popular and successful P2P applications in the current Internet is taken as example the study of uncoordinated P2P operation.
+The problem to address in Bittorrent is how to reveal the topology of real Bittorrent swarms, how dynamic the topology is, and how it affects overall behavior.
+We proposed measurement of Bittorrent swarm by capturing Bittorrent Peer Exchange (PEX) messages to infer the topology of Bittorrent swarms.
+On the other hand, A hybrid CDN-P2P is now adopted by CDN and ISPs because of the advantage of P2P.  
+Since in hybrid CDN-P2P architecture some of workload or data delivery are done by peers, therefore CDN server foreseeing the potential power consumption reduction. 
+The problem to address in hybrid CDN-P2P is what's the trade-offs of power consumption CDN-P2P compare to CDN.  
+We solve this problem by proposing simple model of power consumption of CDN server and router including the cost of cooling that needed generated from power consumption of CDN server and router. Furthermore, this power reduction framework can be used for capacity planning of data center.
+
+
+-----------------------
+
+The Internet traffic is growing up dominated by video contents.  
+Delivering video content can be done using peer-to-peer or Content Delivery Network (CDN).
+CDN provide excellent quality to end-users when the workload is within provisioning limits.
+P2P systems solve the scalability issue by leveraging the resources of the participating peers, while keeping the server requirement low.
+However, decentralized uncoordinated of P2P operation comes with undesirable side effect such as unfairness in the face of heterogeneous peer resources, network unfriendliness, etc. 
+On the other hand, the growth of video traffic is also contribute to increases of power consumption and it's need to be considered.
+
+In this research, Bittorrent as one of the most popular and successful P2P applications in the current Internet is taken as example the study of uncoordinated P2P operation.
+The problem to address in Bittorrent is how to reveal the topology of real Bittorrent swarms, how dynamic the topology is, and how it affects overall behavior.
+We proposed measurement of Bittorrent swarm by capturing Bittorrent Peer Exchange (PEX) messages to infer the topology of Bittorrent swarms.
+Our result, verified using the Kolmogorov-Smirnov goodness of fit test and the likelihood ratio test and confirmed via simulation, show that a power-law with exponential cutoff is a more plausible model than a pure power-law distribution.
+We also found that the average clustering coefficient is very low, implies the the Bittorrent swarms are close to random networks.  
+On the other hand, A hybrid CDN-P2P is now adopted by CDN and ISPs because of the advantage of P2P.  
+Since in hybrid CDN-P2P architecture some of workload or data delivery are done by peers, therefore CDN server foreseeing the potential power consumption reduction. 
+The problem to address in hybrid CDN-P2P is what's the trade-offs of power consumption CDN-P2P compare to CDN.  
+We solve this problem by proposing simple model of power consumption of CDN server and router including the cost of cooling that needed generated from power consumption of CDN server and router. Our initial results show that peer assisted help CDN to reduce power consumption.
+Furthermore, this power reduction framework can be used for capacity planning of data center.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
