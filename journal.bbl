@@ -48,6 +48,18 @@ Wang, J., Huang, C. and Li, J.: On ISP-friendly rate allocation for
   on Multimedia}, MM '08, New York, NY, USA, ACM, pp.\ 279--288 (online),
   \doi{10.1145/1459359.1459397} (2008).
 
+\bibitem{qureshi2009cutting}
+Qureshi, A., Weber, R., Balakrishnan, H., Guttag, J. and Maggs, B.: Cutting the
+  electric bill for internet-scale systems, {\em ACM SIGCOMM Computer
+  Communication Review},  Vol.~39, No.~4, pp.\ 123--134 (2009).
+
+\bibitem{Palasamudram:2012:UBR:2391229.2391240}
+Palasamudram, D.~S., Sitaraman, R.~K., Urgaonkar, B. and Urgaonkar, R.: Using
+  batteries to reduce the power costs of internet-scale distributed networks,
+  {\em Proceedings of the Third ACM Symposium on Cloud Computing}, SoCC '12,
+  New York, NY, USA, ACM, pp.\ 11:1--11:14 (online),
+  \doi{10.1145/2391229.2391240} (2012).
+
 \bibitem{valancius2009greening}
 Valancius, V., Laoutaris, N., Massouli{\'e}, L., Diot, C. and Rodriguez, P.:
   Greening the internet with nano data centers, {\em Proceedings of the 5th
