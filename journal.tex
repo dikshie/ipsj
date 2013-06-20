@@ -162,7 +162,7 @@ Therefore we have three seeders that do not need to upload content to leecher.
 \subsection{Abstracting Data Center Power}\label{thermodynamics}
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.4]{graphs/datacenter.eps}
+\includegraphics[scale=0.3]{graphs/datacenter.eps}
 \end{center}
 \caption{A typical data center schematic.
 The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate cool air through a share plenum.}
@@ -238,7 +238,7 @@ Network model for energy is assumed to be flat network as shown in fig.\ref{fig:
 
 For each component, we consider two energy measurement:  baseline energy consumption and energy consumed per work unit $\delta$.
 The baseline energy is the energy consumed to keep the device on.
-Even when there is not traffic, the device still consume energy.
+Even when there is no traffic, the device still consume energy.
 The energy consumption for a single request in CDN server as:
 \begin{equation}\label{eqn:E_d}
 	E_{d} = E_s
@@ -265,14 +265,6 @@ $R_{max}$ is a router power when operating at maximum capacity.
 $R_{base}$ is a router's baseline power consumption.
 $M_R$ is maximum capacity in bit per second for a router.
 
-For baseline energy consumption, we expressed as: 
-\begin{equation}\label{eqn:gamma}
-\begin{split}
-	\gamma_s &= \frac{S_{base}}{\mu_s.M_s} \\
-	\gamma_r &= \frac{R_{base}}{\mu_r.M_R}
-\end{split}
-\end{equation}
-$\mu_s$ and $\mu_r$ is the average utilization at a server and a router.
 We summarize the notation of the key parameters and its value in table.\ref{tab:parameters}.
 
 \begin{table}[tb]
@@ -282,27 +274,25 @@ We summarize the notation of the key parameters and its value in table.\ref{tab:
 \begin{tabular}{l|l}\hline\hline
 Symbol & Value\\\hline
 $\delta_s$ & $5.2 . 10^{-8}$ (J/b)\\
-$\gamma_s$ & $6.7 . 10^{-7}$ (J/b)\\
-$\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\
-$\gamma_r$ & $1.5 . 10^{-7}$ (J/b)\\\hline
+$\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\\hline
 \end{tabular}\hfil}
 \end{table}
 
-Substituting eq.\ref{eqn:gamma}, eq.\ref{eqn:delta_s}, and eq.\ref{eqn:delta_r} to eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r}, we can rewrite eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r} as follows:
+Substituting eq.\ref{eqn:delta_s}, and eq.\ref{eqn:delta_r} to eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r}, we can rewrite eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r} as follows:
 \begin{equation}\label{eqn:E_d dan E_r}
 \begin{split}
-	E_{d} &= (\delta_s + \gamma_s).B \\
-	E_{r} &= d_s.(\delta_r + \gamma_r).B
+	E_{d} &= \delta_s .B + E_{d-baseline}\\
+	E_{r} &= d_s.\delta_r.B + E_{r-baseline}
 \end{split}
 \end{equation}
 Finaly total energy is:
 \begin{equation}\label{eqn:E_t}
 \begin{split}
 	E_{t} &= E_s + E_r  \\
-	E_{t} &= (\delta_s + \gamma_s).B + d_s.(\delta_r + \gamma_r).B
+	E_{t} &= \delta_s.B + E_{d-baseline} + d_s.\delta_r.B + E_{r-baseline}
 \end{split}
 \end{equation}
-where $B$ is size of file. 
+where $B$ is size of file to be transferred. 
 
 Considering cooling energy, we can rewrite eq.\ref{eqn:E_t}:
 \begin{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  20 JUN 2013 13:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  20 JUN 2013 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,28 +374,24 @@ Overfull \hbox (14.8297pt too wide) in paragraph at lines 101--102
 File: graphs/p2p-cdn.eps Graphic file (type eps)
 <graphs/p2p-cdn.eps>
 File: graphs/datacenter.eps Graphic file (type eps)
- <graphs/datacenter.eps>
-Overfull \hbox (28.4805pt too wide) in paragraph at lines 165--166
- [] 
- []
-
-[2]
+ <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
- <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 283
+ <graphs/cop.eps>
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 274
 .
+ [3]
 File: graphs/topology.eps Graphic file (type eps)
- <graphs/topology.eps>
+
+<graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
-
-<graphs/cdnp2p-1.eps>
+ <graphs/cdnp2p-1.eps>
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
- <graphs/cdnp2p-2.eps>
+
+<graphs/cdnp2p-2.eps>
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
- <graphs/cdnp2p-3.eps> [4]
-(./journal.bbl
+ <graphs/cdnp2p-3.eps> [4] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -407,7 +403,7 @@ l.5 \newblock Available on \url
 
 ? 
 [5])
-Underfull \hbox (badness 10000) in paragraph at lines 448--448
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
@@ -419,12 +415,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2871 strings out of 493482
- 36420 string characters out of 3140988
- 88707 words of memory out of 3000000
- 6146 multiletter control sequences out of 15000+200000
+ 2870 strings out of 493482
+ 36409 string characters out of 3140988
+ 90707 words of memory out of 3000000
+ 6145 multiletter control sequences out of 15000+200000
  50818 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,16n,22p,323b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,15n,22p,323b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (6 pages, 42320 bytes).
+Output written on journal.dvi (6 pages, 41692 bytes).
