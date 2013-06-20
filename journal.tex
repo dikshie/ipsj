@@ -281,20 +281,20 @@ $\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\\hline
 Substituting eq.\ref{eqn:delta_s}, and eq.\ref{eqn:delta_r} to eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r}, we can rewrite eq.\ref{eqn:E_d} and eq.\ref{eqn:E_r} as follows:
 \begin{equation}\label{eqn:E_d dan E_r}
 \begin{split}
-	E_{d} &= \delta_s .B + E_{d-baseline}\\
+	E_{d} &= \delta_s .B + E_{s-baseline}\\
 	E_{r} &= d_s.\delta_r.B + E_{r-baseline}
 \end{split}
 \end{equation}
 Finaly total energy is:
 \begin{equation}\label{eqn:E_t}
 \begin{split}
-	E_{t} &= E_s + E_r  \\
-	E_{t} &= \delta_s.B + E_{d-baseline} + d_s.\delta_r.B + E_{r-baseline}
+	E_{t} &= E_d + E_r  \\
+	E_{t} &= \delta_s.B + E_{s-baseline} + d_s.\delta_r.B + E_{r-baseline}
 \end{split}
 \end{equation}
 where $B$ is size of file to be transferred. 
 
-Considering cooling energy, we can substitute \eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}:
+Considering cooling energy, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}, therefore total energy consumed: 
 \begin{equation}
 	\hat{E}_{t} = E_{t}.\left( 1+\frac{1}{COP(T)} \right)
 \end{equation}
@@ -307,28 +307,49 @@ Considering cooling energy, we can substitute \eq.\ref{eqn:cost} to eq.\ref{eqn:
 %\begin{equation}
 %	R_k = R \frac{k^{-\beta}}{\sum_{k=1}^F k^{-\beta}}
 %\end{equation}
-
 %A large $\beta$ indicates a relatively small set of very popular content.
 %Typical value of $\beta$ range between $0.5$ and $1.0$.
 %IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 
-
-
-
-
 \section{Result and Analysis}\label{analysis}
+
+For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
+For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt. 
+We use that both values from \cite{Nedevschi:2008:HDC:1855610.1855618}.
+The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
+The data flows from CDN to network in this case router then arrive in seeders. 
+If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
+
+Parameters values used in this numerical simulation
+\begin{table}[tb]
+\caption{Simulation Parameters.}
+\label{tab:simparameters}
+\hbox to\hsize{\hfil
+\begin{tabular}{l|l}\hline\hline
+Symbol & Value\\\hline
+$\delta_s$ & $5.2 . 10^{-8}$ (J/b)\\
+$\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\
+$E_{r-baseline}$ & $750$ watt \\
+$E_{s-baseline}$ & $290$ watt \\
+$B$ & $500$MB\\
+$d_s$ & $1$ \\
+$T$ & $[20,25]$\\\hline
+\end{tabular}\hfil}
+\end{table}
 
 \begin{figure}[thb]
 \begin{center}
 \includegraphics[scale=0.6]{graphs/topology.eps}
 \end{center}
 \caption{Dummy network}
-\label{fig:4-0}
+\label{fig:dummy}
 \vspace{-2mm}
 \end{figure} 
 
 
+Figure \ref{fig:4-0} shows energy usage for CDN server, router, total energy consumption for CDN scenario (without peer assisted).
+We plot energy cons
 
 \begin{figure}[thb]
 \begin{center}
