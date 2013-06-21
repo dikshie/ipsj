@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  21 JUN 2013 19:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  21 JUN 2013 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,16 +436,35 @@ File: graphs/topology.eps Graphic file (type eps)
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-File: graphs/cdnp2p-1.eps Graphic file (type eps)
- <graphs/cdnp2p-1.eps> [4]
-File: graphs/cdnp2p-2.eps Graphic file (type eps)
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 344--345
+[][] 
+ []
 
+File: graphs/cdnp2p-1.eps Graphic file (type eps)
+<graphs/cdnp2p-1.eps>
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 350--351
+[][] 
+ []
+
+File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 356--357
+[][] 
+ []
+
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
- <graphs/cdnp2p-3.eps>
+<graphs/cdnp2p-3.eps>
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 362--363
+[][] 
+ []
+
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
- <graphs/cdnp2p-4.eps> [5]
-(./journal.bbl
+<graphs/cdnp2p-4.eps>
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 368--369
+[][] 
+ []
+
+[4] [5] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -457,20 +476,18 @@ l.5 \newblock Available on \url
 
 ? 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
+Underfull \hbox (badness 10000) in paragraph at lines 539--539
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[6] [7
-
-] (./journal.aux) ) 
+[6] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 4046 strings out of 493482
- 57455 string characters out of 3140988
- 122208 words of memory out of 3000000
- 7310 multiletter control sequences out of 15000+200000
+ 4047 strings out of 493482
+ 57465 string characters out of 3140988
+ 121208 words of memory out of 3000000
+ 7311 multiletter control sequences out of 15000+200000
  50229 words of font info for 145 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,15n,42p,398b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (7 pages, 48820 bytes).
+Output written on journal.dvi (6 pages, 48340 bytes).

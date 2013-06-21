@@ -338,14 +338,51 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{figure} 
 
 
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cdn.eps}
-\end{center}
-\caption{Energy consumption in CDN architecture. Increasing number of clients make increasing energy consumption.}
-\label{fig:4-0}
+\begin{figure*}[t]
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.5]{graphs/cdn.eps}
+	\caption{CDN.}
+	\label{fig:4-0}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.5]{graphs/cdnp2p-1.eps}
+	\caption{CDN-P2P $\rho=0.25$.}
+	\label{fig:4-1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
+	\caption{CDN-P2P $\rho=0.5$.}
+	\label{fig:4-2}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.5]{graphs/cdnp2p-3.eps}
+	\caption{CDN-P2P $\rho=0.75$.}
+	\label{fig:4-3}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.5]{graphs/cdnp2p-4.eps}
+	\caption{CDN-P2P $\rho=1$.}
+	\label{fig:4-4}
+\end{minipage}
+
+
+%\caption{main}
+\label{fig:main}
+\end{figure*}
+
+%\begin{figure}[thb]
+%\begin{center}
+%\includegraphics[scale=0.6]{graphs/cdn.eps}
+%\end{center}
+%\caption{Energy consumption in CDN architecture. Increasing number of clients make increasing energy consumption.}
+%\label{fig:4-0}
 %\vspace{-2mm}
-\end{figure} 
+%\end{figure} 
 
 Figure \ref{fig:4-0} shows energy usage for CDN server, router, total energy consumption for CDN scenario (without peer assisted).
 We plot energy consumption for CDN server, router, and total energy for every $T$ or $COP$ coefficient value.
@@ -355,14 +392,14 @@ The effect of different $T$ to total energy is small.
 It is between $7.3\% ~ 7.7\%$.
 
 
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cdnp2p-1.eps}
-\end{center}
-\caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.25$.}
-\label{fig:4-1}
+%\begin{figure}*[t]
+%\begin{center}
+%\includegraphics[scale=0.6]{graphs/cdnp2p-1.eps}
+%\end{center}
+%\caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.25$.}
+%\label{fig:4-1}
 %\vspace{-2mm}
-\end{figure} 
+%\end{figure*} 
 
 Figure \ref{fig:4-1} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
 We use upload rate of seeders to leechers $\rho=0.25$.
@@ -387,35 +424,16 @@ That's because energy needed to supply air cooling with temperature $T=25$ is le
 The difference is from $7.3\% ~ 7.7\%$.
 
 
-%\begin{figure}[ht]
-%\centering
-%\subfloat[Gambar 1]{
-%\includegraphics[scale=0.3]{graphs/cdn.eps}
-%\label{fig:4-0}}
-%\quad
-%\subfloat[Gambar 2]{
-%\includegraphics[scale=0.3]{graphs/cdnp2p-1.eps}
-%\label{fig:4-1}}
-%\quad
-%\subfloat[Gambar 3]{
-%\includegraphics[scale=0.3]{graphs/cdnp2p-2.eps}
-%\label{fig:fig4-2}}
-%\quad
-%\subfloat[Gambar 4]{
-%\includegraphics[scale=0.3]{graphs/cdnp2p-3.eps}
-%\label{fig:fig4-3}}
-%\caption{Main Figure}
-%\label{fig:mainfigure}
-%\end{figure}
 
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cdnp2p-2.eps}
-\end{center}
-\caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.5$.}
-\label{fig:4-2}
+
+%\begin{figure}[thb]
+%\begin{center}
+%\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
+%\end{center}
+%\caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.5$.}
+%\label{fig:4-2}
 %\vspace{-2mm}
-\end{figure} 
+%\end{figure} 
 
 Next, Figure \ref{fig:4-2} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
 We use upload rate of seeders to leechers $\rho=0.5$.
@@ -426,27 +444,27 @@ When CDN server on $50\%$ utilization, maximum number of seeders are $n_s=500$ a
 In this situation, CDN server can save energy, because with just $50\%$ utilization, additional $250$ peers are served from seeders. 
 We can see this situation as flat line in fig.\ref{fig:4-1} from $N=500$ until $N=750$.
 In order to allow more peers, then CDN server must allow to increase its utilization from $50\%$ to $75\%$.
+Again we will see flat line in fig.\ref{fig:4-1} from $N=750$ until $N=1125$. 
+That's because with CDN server utilization $75\%$, with number of seeders $n_s=750$ can also serve leechers $n_l=325$ leechers.
+On the other hand, energy consumption of router increasing with the increasing number of peers because router needs to accommodate traffic from all peers. 
+Total energy 
 
-
-
-
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cdnp2p-3.eps}
-\end{center}
-\caption{3.}
-\label{fig:4-3}
+%\begin{figure}[thb]
+%\begin{center}
+%\includegraphics[scale=0.6]{graphs/cdnp2p-3.eps}
+%\end{center}
+%\caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.75$.}
+%\label{fig:4-3}
 %\vspace{-2mm}
-\end{figure} 
-
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cdnp2p-4.eps}
-\end{center}
-\caption{3.}
-\label{fig:4-4}
+%\end{figure} 
+%\begin{figure}[thb]
+%\begin{center}
+%\includegraphics[scale=0.6]{graphs/cdnp2p-4.eps}
+%\end{center}
+%\caption{4.}
+%\label{fig:4-4}
 %\vspace{-2mm}
-\end{figure} 
+%\end{figure} 
 
 
 
