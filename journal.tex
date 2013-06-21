@@ -4,6 +4,7 @@
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
 \usepackage{amsmath}
+\usepackage{subfig}
 
 \def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
 \def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
@@ -167,7 +168,7 @@ Therefore we have three seeders that do not need to upload content to leecher.
 \caption{A typical data center schematic.
 The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate cool air through a share plenum.}
 \label{fig:datacenter}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
 Many aspects involved in power management in data center and interactions among power management strategies across subsystems grow more complex.
 Five distinct subsystems account for most of a data center's power draw:   server and storage systems, power conditioning equipment, cooling and humidification systems, networking equipment, and lighting/physical security.
@@ -216,7 +217,7 @@ If $T_{adj}$ is negative, it indicates that a hardware inlet exceeds maximum saf
 \caption{COP curve for the chilled water cooling units from HP Lab utility data center.
 As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases.}
 \label{fig:twotier}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
 
 Cooling cost can be calculated as  \cite{moore2005making} :
@@ -300,10 +301,10 @@ Considering cooling energy, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E
 
 
 \section{Result and Discussion}\label{analysis}
-
+\subsection{Live Streaming}
 For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
-For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt. 
-We use that both values from \cite{Nedevschi:2008:HDC:1855610.1855618}.
+For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt \cite{Nedevschi:2008:HDC:1855610.1855618}. 
+For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valancius2009greening}.
 The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
 The data flows from CDN to network in this case router then arrive in seeders. 
 If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
@@ -319,7 +320,7 @@ $\delta_s$ & $5.2 . 10^{-8}$ (J/b)\\
 $\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\
 $E_{r-baseline}$ & $750$ watt \\
 $E_{s-baseline}$ & $290$ watt \\
-$B$ & $500$MB\\
+%%$B$ & $500$MB\\
 $d_s$ & $1$ \\
 $N_{s}^{u}$ & $[0.25,0.5,0.75,1]$ Mbps \\
 $N$ & $[100,..,1000]$ \\
@@ -337,31 +338,21 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{figure} 
 
 
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.6]{graphs/cdn.eps}
+\end{center}
+\caption{Energy consumption in CDN architecture. Increasing number of clients make increasing energy consumption.}
+\label{fig:4-0}
+%\vspace{-2mm}
+\end{figure} 
+
 Figure \ref{fig:4-0} shows energy usage for CDN server, router, total energy consumption for CDN scenario (without peer assisted).
 We plot energy consumption for CDN server, router, and total energy for every $T$ or $COP$ coefficient value.
 In CDN only scenario, the energy consumption is increase as number of client increase.  
 This is natural because increasing of clients imply to increasing of traffic from CDN server through router to clients.
 The effect of different $T$ to total energy is small.  
-It is around $8\%$ less energy consumed.  
-
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cdn.eps}
-\end{center}
-\caption{Energy consumption in CDN architecture. Increasing number of clients make increasing energy consumption.
-The effect of $T$ or $COP$ is quite small, around $8\%$.}
-\label{fig:4-0}
-\vspace{-2mm}
-\end{figure} 
-
-Figure \ref{fig:4-1} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
-We use upload rate of seeders to leechers $\rho=0.25$.
-We assume that CDN server always utilize under $50\%$.
-For CDN server energy, the usage of energy increase until number of seeders $n_s=500$.
-On $n_s=500$ the CDN server right on $50\%$ utilization.
-To be able to serve 
-
- 
+It is between $7.3\% ~ 7.7\%$.
 
 
 \begin{figure}[thb]
@@ -370,17 +361,74 @@ To be able to serve
 \end{center}
 \caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.25$.}
 \label{fig:4-1}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
+
+Figure \ref{fig:4-1} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
+We use upload rate of seeders to leechers $\rho=0.25$.
+We assume that CDN server always utilize under $50\%$.
+For CDN server energy, the usage of energy increase until number of seeders $n_s=500$.
+On $n_s=500$ the CDN server right on $50\%$ utilization.
+When CDN server on $50\%$ utilization, maximum number of seeders are $n_s=500$ and number of leechers can be served by seeders is $125$ peers.  
+Therefore in this situation, CDN server can save energy, because with just $50\%$ utilization, additional $125$ peers are served from seeders.  
+We can see this situation as flat line in fig.\ref{fig:4-1}.
+Next, to be able to server more peers, we allow CDN server to increase the $62.5\%$ utilization.
+With $62.5\%$ utilization, $625$ peers served by CDN server. 
+Number of leechers can be supported by seeders are $156$ peers.
+In this situation CDN server can save energy, because with just $62.5\%$ utilization and number additional $156$ peers are served from seeders.  
+We can see this situation as flat line in fig.\ref{fig:4-1} from $N=625$ until $N=781$
+In router case, we do not see router can get energy saving because number of traffic increase as increasing number of peers. 
+For example, when CDN server on $50\%$ utilization, maximum number seeders are $n_s=500$ and number of leechers can be served by seeders is $125$ peers.
+Traffic traverse through router is $500$Mbps plus additional $125$Mbps. 
+We get $125$Mbps from $500$ multiply to upload rate of seeders $0.25$Mbps
+Different air temperature supply, make different power consumption.  
+With $T=25$ or $COP=3.194$, we can see the power consumption for all components decrease.
+That's because energy needed to supply air cooling with temperature $T=25$ is less than  energy needed to supply air cooling with temperature $T=20$.
+The difference is from $7.3\% ~ 7.7\%$.
+
+
+%\begin{figure}[ht]
+%\centering
+%\subfloat[Gambar 1]{
+%\includegraphics[scale=0.3]{graphs/cdn.eps}
+%\label{fig:4-0}}
+%\quad
+%\subfloat[Gambar 2]{
+%\includegraphics[scale=0.3]{graphs/cdnp2p-1.eps}
+%\label{fig:4-1}}
+%\quad
+%\subfloat[Gambar 3]{
+%\includegraphics[scale=0.3]{graphs/cdnp2p-2.eps}
+%\label{fig:fig4-2}}
+%\quad
+%\subfloat[Gambar 4]{
+%\includegraphics[scale=0.3]{graphs/cdnp2p-3.eps}
+%\label{fig:fig4-3}}
+%\caption{Main Figure}
+%\label{fig:mainfigure}
+%\end{figure}
 
 \begin{figure}[thb]
 \begin{center}
 \includegraphics[scale=0.6]{graphs/cdnp2p-2.eps}
 \end{center}
-\caption{2.}
+\caption{Energy consumption in CDN-P2P architecture. Upload rate of seeders to leechers $\rho=0.5$.}
 \label{fig:4-2}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
+
+Next, Figure \ref{fig:4-2} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
+We use upload rate of seeders to leechers $\rho=0.5$.
+We assume that CDN server always utilize under $50\%$.
+For CDN server energy, the usage of energy increase until number of seeders $n_s=500$.
+On $n_s=500$ the CDN server right on $50\%$ utilization.
+When CDN server on $50\%$ utilization, maximum number of seeders are $n_s=500$ and number of leechers can be served by seeders are $250$ peers.
+In this situation, CDN server can save energy, because with just $50\%$ utilization, additional $250$ peers are served from seeders. 
+We can see this situation as flat line in fig.\ref{fig:4-1} from $N=500$ until $N=750$.
+In order to allow more peers, then CDN server must allow to increase its utilization from $50\%$ to $75\%$.
+
+
+
 
 \begin{figure}[thb]
 \begin{center}
@@ -388,9 +436,8 @@ To be able to serve
 \end{center}
 \caption{3.}
 \label{fig:4-3}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
-
 
 \begin{figure}[thb]
 \begin{center}
@@ -398,7 +445,7 @@ To be able to serve
 \end{center}
 \caption{3.}
 \label{fig:4-4}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
 
 

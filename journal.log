@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  21 JUN 2013 13:56
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  21 JUN 2013 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -183,7 +183,59 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/txfonts.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/02/03 v3.3-65 Customizing captions (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/02/03 v1.5-62 caption3 kernel (AR)
+\captionmargin=\dimen125
+\captionmargin@=\dimen126
+\captionwidth=\dimen127
+\caption@tempdima=\dimen128
+\caption@indent=\dimen129
+\caption@parindent=\dimen130
+\caption@hangindent=\dimen131
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\footnotesize \vskip \a
+bovecaptionskip \setbox \@tempboxa \hbox {\footnotesize {\bfseries #1}\hskip 1\
+zw \shortstack [l]{#2}}\@tempdima \ht \@tempboxa \advance \@tempdima \dp \@temp
+boxa \setbox \@tempboxb \hbox {\footnotesize {\bfseries #1}\hskip 1\zw }\ifdim 
+\@tempdima > \baselineskip \ifdim \wd \@tempboxa > \capwidth \hfil \parbox [t]{
+\capwidth }{\hangindent \wd \@tempboxb {\bfseries #1}\hskip 1\zw #2}\vskip 4\@Q
+ \else \hfil \parbox [t]{\wd \@tempboxa }{\hangindent \wd \@tempboxb {\bfseries
+ #1}\hskip 1\zw #2}\par \prevdepth =0pt\vskip -1.5\h \fi \else \ifdim \wd \@tem
+pboxa > \capwidth \hfil \parbox [t]{\capwidth }{\hangindent \wd \@tempboxb {\bf
+series #1}\hskip 1\zw #2}\ifx \@captype \TABLE \ifDS@english \par \vskip .25mm\
+else \par \prevdepth =0pt\vskip -1.5mm\fi \else \par \prevdepth =0pt\vskip -1.5
+\h \fi \else \setbox \@tempboxb \hbox {#2}\hbox to\hsize {\hfil \box \@tempboxa
+ \hfil }\ifDS@english \relax \else \vspace {-\belowcaptionskip }\fi \fi \fi \vs
+pace {\belowcaptionskip }\par .
+\c@ContinuedFloat=\count112
+)
+\c@KVtest=\count113
+\sf@farskip=\skip67
+\sf@captopadj=\dimen132
+\sf@capskip=\skip68
+\sf@nearskip=\skip69
+\c@subfigure=\count114
+\c@subfigure@save=\count115
+\c@lofdepth=\count116
+\c@subtable=\count117
+\c@subtable@save=\count118
+\c@lotdepth=\count119
+\sf@top=\skip70
+\sf@bottom=\skip71
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -265,98 +317,101 @@ File: ot1txtt.fd 2000/12/15 v3.1
 (./journal.aux)
 \openout1 = `journal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 26.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 26.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 27.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 27.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 27.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 27.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 27.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 26.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 27.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OT1+txss on input line 37.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+txss on input line 38.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/ot1txss.fd
 File: ot1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <8.5373> not available
-(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 37.
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
-(Font)              scaled to size 8.1104pt on input line 37.
-LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 51.
-LaTeX Font Info:    Try loading font information for U+txmia on input line 51.
+(Font)              scaled to size 8.1104pt on input line 38.
+LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 52.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 52.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 51.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 52.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 51.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 52.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 51.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 52.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Calculating math sizes for size <12.56738> on input line 51
+LaTeX Font Info:    Calculating math sizes for size <12.56738> on input line 52
 .
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.02292pt on input line 51.
-LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 51.
+(Font)              scaled to size 7.02292pt on input line 52.
+LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 52.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.78625pt on input line 92.
+(Font)              scaled to size 8.78625pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <9.24873> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 8.78625pt on input line 92.
+(Font)              scaled to size 8.78625pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.43452pt on input line 92.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 92.
+(Font)              scaled to size 7.43452pt on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 93.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 92.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 93.
  [1
 
 
@@ -364,7 +419,7 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
 File: graphs/business-relationship.eps Graphic file (type eps)
 
 <graphs/business-relationship.eps>
-Overfull \hbox (14.8297pt too wide) in paragraph at lines 101--102
+Overfull \hbox (14.8297pt too wide) in paragraph at lines 102--103
  [] 
  []
 
@@ -374,7 +429,7 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 316
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 317
 .
 File: graphs/topology.eps Graphic file (type eps)
 
@@ -382,14 +437,14 @@ File: graphs/topology.eps Graphic file (type eps)
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
- <graphs/cdnp2p-1.eps>
+ <graphs/cdnp2p-1.eps> [4]
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 
 <graphs/cdnp2p-2.eps>
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
  <graphs/cdnp2p-3.eps>
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
- <graphs/cdnp2p-4.eps> [4] [5]
+ <graphs/cdnp2p-4.eps> [5]
 (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
@@ -402,22 +457,20 @@ l.5 \newblock Available on \url
 
 ? 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 474--474
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[6] (./journal.aux)
+[6] [7
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 2875 strings out of 493482
- 36492 string characters out of 3140988
- 89707 words of memory out of 3000000
- 6149 multiletter control sequences out of 15000+200000
- 50818 words of font info for 146 fonts, out of 3000000 for 9000
+ 4046 strings out of 493482
+ 57455 string characters out of 3140988
+ 122208 words of memory out of 3000000
+ 7310 multiletter control sequences out of 15000+200000
+ 50229 words of font info for 145 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,15n,22p,388b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,15n,42p,398b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (6 pages, 44920 bytes).
+Output written on journal.dvi (7 pages, 48820 bytes).

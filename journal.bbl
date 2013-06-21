@@ -27,6 +27,12 @@ Nedevschi, S., Ratnasamy, S. and Padhye, J.: Hot data centers vs. cool peers,
   systems}, HotPower'08, Berkeley, CA, USA, USENIX Association, pp.\ 8--8
   (online), \urle{http://dl.acm.org/citation.cfm?id=1855610.1855618} (2008).
 
+\bibitem{valancius2009greening}
+Valancius, V., Laoutaris, N., Massouli{\'e}, L., Diot, C. and Rodriguez, P.:
+  Greening the internet with nano data centers, {\em Proceedings of the 5th
+  international conference on Emerging networking experiments and
+  technologies}, ACM, pp.\ 37--48 (2009).
+
 \bibitem{Huang:2008:UHC:1496046.1496064}
 Huang, C., Wang, A., Li, J. and Ross, K.~W.: Understanding hybrid CDN-P2P: why
   limelight needs its own Red Swoosh, {\em Proceedings of the 18th
@@ -71,12 +77,6 @@ Palasamudram, D.~S., Sitaraman, R.~K., Urgaonkar, B. and Urgaonkar, R.: Using
   {\em Proceedings of the Third ACM Symposium on Cloud Computing}, SoCC '12,
   New York, NY, USA, ACM, pp.\ 11:1--11:14 (online),
   \doi{10.1145/2391229.2391240} (2012).
-
-\bibitem{valancius2009greening}
-Valancius, V., Laoutaris, N., Massouli{\'e}, L., Diot, C. and Rodriguez, P.:
-  Greening the internet with nano data centers, {\em Proceedings of the 5th
-  international conference on Emerging networking experiments and
-  technologies}, ACM, pp.\ 37--48 (2009).
 
 \bibitem{5963557}
 Guan, K., Atkinson, G., Kilper, D. and Gulsen, E.: On the Energy Efficiency of
