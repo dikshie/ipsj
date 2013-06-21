@@ -354,6 +354,16 @@ The effect of $T$ or $COP$ is quite small, around $8\%$.}
 \vspace{-2mm}
 \end{figure} 
 
+Figure \ref{fig:4-1} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
+We use upload rate of seeders to leechers $\rho=0.25$.
+We assume that CDN server always utilize under $50\%$.
+For CDN server energy, the usage of energy increase until number of seeders $n_s=500$.
+On $n_s=500$ the CDN server right on $50\%$ utilization.
+To be able to serve 
+
+ 
+
+
 \begin{figure}[thb]
 \begin{center}
 \includegraphics[scale=0.6]{graphs/cdnp2p-1.eps}
@@ -426,11 +436,11 @@ by Guan et al. \cite{5963557} comparing energy efficient of CDN architecture and
 The authors in \cite{5963557} conclude that CCN is more energy efficient in delivering popular content while the approach with optical bypass is more energy efficient in delivering infrequent accessed content.
 
 To the best of our knowledge, the study of energy in that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
-Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the core network around 20-40\% less energy.  
+Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the optical core network around 20-40\% less energy.  
 The authors are focus on energy consumption of different algorithms for minimizing server bandwidth based on popularity of content.  
 By maximizing peer request, the authors can minimizing CDN workload. 
-The authors only considered energy consumption of hardware and does not include overhead inside data center.  
-Our work is quite different, we take number of peers with static content and dynamic content (popularity) and add overhead of data center which power of cooling cause by temperature of hardware.
+The authors only considered energy consumption of hardware especially optical devices and does not include overhead inside data center.  
+Our work is quite different, we take number of peers with static content and dynamic content (popularity) and add overhead of data center which is  power of cooling cause by temperature of hardware.
 
  
 
