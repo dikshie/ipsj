@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  21 JUN 2013 22:56
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  22 JUN 2013 01:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,38 +429,38 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 317
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 319
 .
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 344--345
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 347--348
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 350--351
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 353--354
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 356--357
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 359--360
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 362--363
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 365--366
 [][] 
  []
 
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
 <graphs/cdnp2p-4.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 368--369
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 371--372
 [][] 
  []
 
@@ -476,11 +476,13 @@ l.5 \newblock Available on \url
 
 ? 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 539--539
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[6] (./journal.aux) ) 
+[6] [7
+
+] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
  4047 strings out of 493482
  57465 string characters out of 3140988
@@ -490,4 +492,4 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (6 pages, 48340 bytes).
+Output written on journal.dvi (7 pages, 49060 bytes).
