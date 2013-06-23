@@ -3,50 +3,51 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: journal.aux
 The style file: ipsjunsrt-e.bst
 Database file #1: journal.bib
+Warning--there's a series but neither volume nor number in Dischinger:2007:CRB:1298306.1298313
 Warning--there's a series but neither volume nor number in Nedevschi:2008:HDC:1855610.1855618
 Warning--there's a series but neither volume nor number in Huang:2008:UHC:1496046.1496064
 Warning--there's a volume but no series in huang2007peer
 Warning--there's a series but neither volume nor number in Wang:2008:IRA:1459359.1459397
 Warning--there's a series but neither volume nor number in Palasamudram:2012:UBR:2391229.2391240
-You've used 16 entries,
+You've used 20 entries,
             1978 wiz_defined-function locations,
-            600 strings with 8242 characters,
-and the built_in function-call counts, 5259 in all, are:
-= -- 453
-> -- 208
-< -- 14
-+ -- 80
-- -- 64
-* -- 413
-:= -- 710
-add.period$ -- 17
-call.type$ -- 16
+            627 strings with 9056 characters,
+and the built_in function-call counts, 6424 in all, are:
+= -- 551
+> -- 251
+< -- 17
++ -- 97
+- -- 77
+* -- 502
+:= -- 866
+add.period$ -- 22
+call.type$ -- 20
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 246
-empty$ -- 546
-format.name$ -- 64
-if$ -- 1265
+cite$ -- 26
+duplicate$ -- 302
+empty$ -- 670
+format.name$ -- 77
+if$ -- 1549
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 15
-newline$ -- 52
-num.names$ -- 16
-pop$ -- 54
+int.to.str$ -- 20
+missing$ -- 18
+newline$ -- 65
+num.names$ -- 20
+pop$ -- 71
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 273
+skip$ -- 333
 stack$ -- 0
-substring$ -- 353
-swap$ -- 117
-text.length$ -- 14
+substring$ -- 425
+swap$ -- 143
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 56
-width$ -- 18
-write$ -- 152
-(There were 5 warnings)
+warning$ -- 6
+while$ -- 67
+width$ -- 22
+write$ -- 189
+(There were 6 warnings)

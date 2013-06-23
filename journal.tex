@@ -77,12 +77,16 @@ On the other hand, data center where CDN server placed faces costs for powering 
 The Uptime Institute, a global data center authority, surveyed 1100 data center owners and operators on 2012, reported that 55\% organizations must increase budget 10\% than 2011 \cite{uptime}.  
 30\% of organizations will run out of data center capacity (power, cooling, space, and network) in the end of 2012 \cite{uptime}. 
 More than 50\% organizations surveyed reported that saving energy is major priority \cite{uptime}.
+Even in the data centers using the state of art cooling technologies heat dissipation accounts for at least $20\%$ until $50\%$ of the total power consumption 
+\cite{google}.
 The increases in energy cost and the demand due to growth of traffic urges the data center operators and owners to look for ways to reduce energy usage in the years to come.
 Although reducing energy consumption can effectively reduce overall cost, this will limit the capacity growth and scalability of the service provisioning.
+For example: routers and servers spend most of their energy on the baseline activities such as running the fans, spinning hardisks, powering backplane, and powering the memory. 
+Even in an idle state, modern systems can be consuming anything from $50\%$ until $80\%$ of the power consumed under maximum load \cite{4404806,4509688}.
 Alternatively, the data center and be revamped by relocating some services to end-host computers or peers.
 Peers contribute their communication, storage, and computation resources to exchange data and provide services while the data center performs central administration and authentication as well as backend processing.
 P2P network, formed by peers offer flexibility and scalability in service delivery.
-Therefore, P2P services can assist and enhance data center.
+%Therefore, P2P services can assist and enhance data center.
 It is not our aim to advocate one system architecture over another.
 Many issue such as manageability, reliability, and ease of deployment must be taken into account when making high level architectural decisions.
 
@@ -105,7 +109,7 @@ Section 4 will conclude this paper.
 CDN mostly placed in data center near to eyeball ISP. 
 If CDN can not reach eyeball ISP due to business or economic reason, CDN can be placed near to IXP or even inside IXP, and CDN will reach eyeball ISP from peering point inside IXP.}
 \label{fig:businessrelationship}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
 
 \section{Motivation}\label{motivation}
@@ -118,9 +122,12 @@ CDN architectures are host-oriented: content is delivered to end users through h
 The growing of Internet traffic dominated by video, the energy consumption of a host oriented architecture becomes problematic due to over provisioning factor.
 The idea of utilizing the user's computation power to support ISP operation is not new. 
 The figaro project proposed residential gateway as an integrator of different networks and services, becoming an Internet wide distributed content management for a proposed future Internet architecture.  
+The important key in this architecture is both user home gateway and access bandwidth controlled and managed by ISP.
 In this case, ISP can offload part of workload on their CDN to user's home gateway.  
 By offloading workload, their CDN can relax energy demand thus relaxing data center power budget or relaxing capacity planning for power.
-
+This architecture depends largely on the number of devices which can be found online at a point in time.
+While some users keep their home gateway online at all times, there are small number of users might turn off or their home gateway can not be reached.
+Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313} and Valancius et al., \cite{valancius2009greening}, the average availability of the residential gateways in 12 major ISPs over one month is up $85\%$ with $5\%$ until $8\%$ uptime variations thought out a day.
 
 \section{System Description}\label{system model}
 \begin{figure}[thb]
@@ -129,7 +136,7 @@ By offloading workload, their CDN can relax energy demand thus relaxing data cen
 \end{center}
 \caption{Model of content delivery architecture with peer assisted.}
 \label{fig:iptv}
-\vspace{-2mm}
+%\vspace{-2mm}
 \end{figure} 
 
 Figure \ref{fig:iptv} shows model of CDN with peer assisted.  
@@ -308,8 +315,7 @@ For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valan
 The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
 The data flows from CDN to network in this case router then arrive in seeders. 
 If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
-
-Parameters values used in this numerical simulation
+Parameters values used in this numerical simulation is shown in table \ref{tab:simparameters}.
 \begin{table}[thb]
 \caption{Numerical Simulation Parameters.}
 \label{tab:simparameters}
@@ -360,13 +366,13 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 	\label{fig:4-2}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.3\linewidth}
+\begin{minipage}[b]{0.35\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdnp2p-3.eps}
 	\caption{CDN-P2P $\rho=0.75$.}
 	\label{fig:4-3}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.3\linewidth}
+\begin{minipage}[b]{0.35\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdnp2p-4.eps}
 	\caption{CDN-P2P $\rho=1$.}
 	\label{fig:4-4}
@@ -440,31 +446,43 @@ Once again, router energy consumption is increasing.
 \centering
 \begin{minipage}[b]{0.45\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff-1.eps}
-	\caption{d1.}
+	\caption{Different between CDN and CDN-P2P with $\rho=0.25$.}
 	\label{fig:diff1}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.45\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff-2.eps}
-	\caption{d2.}
+	\caption{Different between CDN and CDN-P2P with $\rho=0.5$.}
 	\label{fig:diff2}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.45\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff-3.eps}
-	\caption{d3.}
+	\caption{Different between CDN and CDN-P2P with $\rho=0.75$.}
 	\label{fig:diff3}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.45\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff-4.eps}
-	\caption{d4.}
+	\caption{Different between CDN and CDN-P2P with $\rho=0.1$.}
 	\label{fig:diff4}
 \end{minipage}
 %\caption{main}
 \label{fig:maindiff}
 \end{figure*}
 
+Figure \ref{fig:diff1} show percentage difference of energy consumption between CDN and CDN-P2P with $\rho=0.25$. 
+Since there are no difference consumption of router component and peer between CDN and CDN-P2P, then we see $0$ as shown as flat in.  
+The difference only appear for CDN server component that up to $3.8\%$ energy saving. 
+The total system itself can only save energy consumption up to $0.1\%$
+Percentage difference of energy consumption between CDN and CDN-P2P with $\rho=0.5$ is shown in fig.\ref{fig:diff2}.
+Same as previous, there are no difference consumption of router component and peer between CDN and CDN-P2P.
+The difference only appear for CDN server component that up to $7.2\%$ energy saving. 
+The total system itself can only save energy consumption up to $0.18\%$.
+Figure \ref{fig:diff1} show percentage difference of energy consumption between CDN and CDN-P2P with $\rho=0.75$.
+Same as previous, there are no difference consumption of router component and peer between CDN and CDN-P2P.
+The difference only appear for CDN server component that up to $11\%$ energy saving. 
+The total system itself can only save energy consumption up to $8.9\%$.
 
 
 
@@ -550,4 +568,5 @@ Former Vice-President of Keio University from May 2005 to May 2009.\
 He was an Executive Director of the Keio Research Institute at SFC, Keio University from 1999 to 2005.}
 %
 \end{biography}
+
 \end{document}

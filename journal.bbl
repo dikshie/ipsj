@@ -4,6 +4,22 @@
 Institute, U.: the 2012 Uptime Institute Data Center Industry Survey.
 \newblock Available on \url{http://uptimeinstitute.com/2012-survey-results}.
 
+\bibitem{google}
+Google: Google data center power usage.
+\newblock Available on
+  \url{http://www.google.com/corporate/datacenters/measuring.html}.
+
+\bibitem{4404806}
+Barroso, L. and Holzle, U.: The Case for Energy-Proportional Computing, {\em
+  Computer},  Vol.~40, No.~12, pp.\ 33--37 (online), \doi{10.1109/MC.2007.443}
+  (2007).
+
+\bibitem{4509688}
+Chabarek, J., Sommers, J., Barford, P., Estan, C., Tsiang, D. and Wright, S.:
+  Power Awareness in Network Design and Routing, {\em INFOCOM 2008. The 27th
+  Conference on Computer Communications. IEEE}, pp.\ 457--465 (online),
+  \doi{10.1109/INFOCOM.2008.93} (2008).
+
 \bibitem{feldmann2010energy}
 Feldmann, A., Gladisch, A., Kind, M., Lange, C., Smaragdakis, G. and Westphal,
   F.-J.: Energy trade-offs among content delivery architectures, {\em
@@ -16,6 +32,18 @@ Baliga, J., Hinton, K. and Tucker, R.~S.: Energy consumption of the Internet,
   Optical Fibre Technology. COIN-ACOFT 2007. Joint International Conference
   on}, IEEE, pp.\ 1--3 (2007).
 
+\bibitem{Dischinger:2007:CRB:1298306.1298313}
+Dischinger, M., Haeberlen, A., Gummadi, K.~P. and Saroiu, S.: Characterizing
+  residential broadband networks, {\em Proceedings of the 7th ACM SIGCOMM
+  conference on Internet measurement}, IMC '07, New York, NY, USA, ACM, pp.\
+  43--56 (online), \doi{10.1145/1298306.1298313} (2007).
+
+\bibitem{valancius2009greening}
+Valancius, V., Laoutaris, N., Massouli{\'e}, L., Diot, C. and Rodriguez, P.:
+  Greening the internet with nano data centers, {\em Proceedings of the 5th
+  international conference on Emerging networking experiments and
+  technologies}, ACM, pp.\ 37--48 (2009).
+
 \bibitem{moore2005making}
 Moore, J., Chase, J., Ranganathan, P. and Sharma, R.: Making scheduling" cool":
   temperature-aware workload placement in data centers, {\em Proceedings of the
@@ -26,12 +54,6 @@ Nedevschi, S., Ratnasamy, S. and Padhye, J.: Hot data centers vs. cool peers,
   {\em Proceedings of the 2008 conference on Power aware computing and
   systems}, HotPower'08, Berkeley, CA, USA, USENIX Association, pp.\ 8--8
   (online), \urle{http://dl.acm.org/citation.cfm?id=1855610.1855618} (2008).
-
-\bibitem{valancius2009greening}
-Valancius, V., Laoutaris, N., Massouli{\'e}, L., Diot, C. and Rodriguez, P.:
-  Greening the internet with nano data centers, {\em Proceedings of the 5th
-  international conference on Emerging networking experiments and
-  technologies}, ACM, pp.\ 37--48 (2009).
 
 \bibitem{Huang:2008:UHC:1496046.1496064}
 Huang, C., Wang, A., Li, J. and Ross, K.~W.: Understanding hybrid CDN-P2P: why

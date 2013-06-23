@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  23 JUN 2013 00:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  24 JUN 2013 02:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -398,20 +398,20 @@ LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 52.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.78625pt on input line 93.
+(Font)              scaled to size 8.78625pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <9.24873> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 93.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 8.78625pt on input line 93.
+(Font)              scaled to size 8.78625pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.43452pt on input line 93.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 93.
+(Font)              scaled to size 7.43452pt on input line 92.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 92.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 93.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 92.
  [1
 
 
@@ -419,7 +419,7 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
 File: graphs/business-relationship.eps Graphic file (type eps)
 
 <graphs/business-relationship.eps>
-Overfull \hbox (14.8297pt too wide) in paragraph at lines 102--103
+Overfull \hbox (14.8297pt too wide) in paragraph at lines 106--107
  [] 
  []
 
@@ -429,38 +429,38 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 319
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 323
 .
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 348--349
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 352--353
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 354--355
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 358--359
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 360--361
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 364--365
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 366--367
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 370--371
 [][] 
  []
 
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
 <graphs/cdnp2p-4.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 372--373
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 376--377
 [][] 
  []
 
@@ -473,7 +473,7 @@ File: graphs/diff-3.eps Graphic file (type eps)
  <graphs/diff-3.eps>
 File: graphs/diff-4.eps Graphic file (type eps)
 
-<graphs/diff-4.eps> [5] (./journal.bbl
+<graphs/diff-4.eps> [5] [6] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -484,19 +484,34 @@ l.5 \newblock Available on \url
                                {http://uptimeinstitute.com/2012-survey-resul...
 
 ? 
-[6])
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+! Undefined control sequence.
+l.9 \newblock
+              Available on
+? 
+! Undefined control sequence.
+l.10   \url
+           {http://www.google.com/corporate/datacenters/measuring.html}.
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+[]\OT1/txr/m/n/7.82584 Google: Google data cen-ter power us-age. Avail-able on
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[7] (./journal.aux) ) 
+[7] [8
+
+] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 4060 strings out of 493482
- 57631 string characters out of 3140988
- 121208 words of memory out of 3000000
- 7320 multiletter control sequences out of 15000+200000
+ 4064 strings out of 493482
+ 57694 string characters out of 3140988
+ 122208 words of memory out of 3000000
+ 7324 multiletter control sequences out of 15000+200000
  50229 words of font info for 145 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (7 pages, 51440 bytes).
+Output written on journal.dvi (8 pages, 56220 bytes).
