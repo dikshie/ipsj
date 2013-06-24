@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  24 JUN 2013 02:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  24 JUN 2013 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,15 +465,11 @@ Overfull \hbox (4.62192pt too wide) in paragraph at lines 376--377
  []
 
 [4]
-File: graphs/diff-1.eps Graphic file (type eps)
- <graphs/diff-1.eps>
-File: graphs/diff-2.eps Graphic file (type eps)
- <graphs/diff-2.eps>
-File: graphs/diff-3.eps Graphic file (type eps)
- <graphs/diff-3.eps>
-File: graphs/diff-4.eps Graphic file (type eps)
-
-<graphs/diff-4.eps> [5] [6] (./journal.bbl
+File: graphs/diff3dimension.eps Graphic file (type eps)
+ <graphs/diff3dimension.eps>
+File: graphs/diff3dimension2.eps Graphic file (type eps)
+ <graphs/diff3dimension2.eps> [5] [6]
+(./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -498,20 +494,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 559--559
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[7] [8
-
-] (./journal.aux) ) 
+[7] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 4064 strings out of 493482
- 57694 string characters out of 3140988
- 122208 words of memory out of 3000000
- 7324 multiletter control sequences out of 15000+200000
+ 4058 strings out of 493482
+ 57652 string characters out of 3140988
+ 121208 words of memory out of 3000000
+ 7320 multiletter control sequences out of 15000+200000
  50229 words of font info for 145 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (8 pages, 56220 bytes).
+Output written on journal.dvi (7 pages, 55556 bytes).
