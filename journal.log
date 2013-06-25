@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  25 JUN 2013 12:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  25 JUN 2013 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,38 +429,38 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 323
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 324
 .
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 352--353
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 353--354
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 358--359
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 359--360
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 364--365
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 365--366
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 370--371
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 371--372
 [][] 
  []
 
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
 <graphs/cdnp2p-4.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 376--377
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 377--378
 [][] 
  []
 
@@ -468,27 +468,27 @@ Overfull \hbox (4.62192pt too wide) in paragraph at lines 376--377
 File: graphs/diff3dimension.eps Graphic file (type eps)
  <graphs/diff3dimension.eps>
 File: graphs/diff3dimension2.eps Graphic file (type eps)
- <graphs/diff3dimension2.eps> [5]
+ <graphs/diff3dimension2.eps>
 File: graphs/cdn-vod.eps Graphic file (type eps)
 
 <graphs/cdn-vod.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 480--481
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 473--474
 [][] 
  []
 
 File: graphs/cdn-p2p-vod.eps Graphic file (type eps)
 <graphs/cdn-p2p-vod.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 487--488
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 480--481
 [][] 
  []
 
 File: graphs/cdn-p2p-diff.eps Graphic file (type eps)
 <graphs/cdn-p2p-diff.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 494--495
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 487--488
 [][] 
  []
 
-[6] (./journal.bbl
+[5] [6] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -513,13 +513,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
  []
 
 [7])
-Underfull \hbox (badness 10000) in paragraph at lines 572--572
+Underfull \hbox (badness 10000) in paragraph at lines 597--597
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[8
-
-] (./journal.aux) ) 
+[8] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
  4070 strings out of 493482
  57858 string characters out of 3140988
@@ -529,4 +527,4 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (8 pages, 58360 bytes).
+Output written on journal.dvi (8 pages, 60224 bytes).

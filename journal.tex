@@ -312,6 +312,7 @@ Considering cooling energy, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E
 For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
 For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt \cite{Nedevschi:2008:HDC:1855610.1855618}. 
 For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valancius2009greening}.
+The peer has 256MB flash storage.
 The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
 The data flows from CDN to network in this case router then arrive in seeders. 
 If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
@@ -465,14 +466,6 @@ Figure \ref{fig:diff2} shows percentage difference of energy consumption between
 The power saving that total system get is from $0.1\%$ to $0.8\%$.
 
 \subsection{Video on Demand}
-In peer-assisted video on demand (VoD) system, user contribute their upload bandwidth to redistribute of a video that they are downloading or that they have cached locally.
-We follow peer-assisted video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012} as basis of our work.  
-In video on demand systems, users can browse a catalog of available video and asynchronously issue request to watch a given content, which are ideally immediately satisfied by the system, with the optional support for VCR actions such as pause and jump/forward/backward. 
-Video on demand systems are quite different from live video streaming applications, in which users join the distribution of a given TV channel at random points in time, but peers connected to the same channel watch the content almost synchronously. 
-In peer-assisted video on demand systems, users interested to a specific video can retrieve it from servers (CDN), from peers downloading/watching it, and from users storing copy of it in their computer or dedicated set top boxes or home gateway remotely controlled by ISP.
-Video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012}, arrival process of requests for considered video follows a time varying Poisson process.
-There are two classes of active users: those who are still downloading the video (leechers) and those who have completed the download (seeders).
-For detail we refer the readers to \cite{ciullo:hal-00759377,ciullo:hal-00759012}.
 
 \begin{figure*}[t]
 \centering
@@ -499,6 +492,35 @@ For detail we refer the readers to \cite{ciullo:hal-00759377,ciullo:hal-00759012
 \label{fig:voddiff}
 \end{figure*}
 
+
+In peer-assisted video on demand (VoD) system, user contribute their upload bandwidth to redistribute of a video that they are downloading or that they have cached locally.
+We follow peer-assisted video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012} as basis of our work.  
+In video on demand systems, users can browse a catalog of available video and asynchronously issue request to watch a given content, which are ideally immediately satisfied by the system, with the optional support for VCR actions such as pause and jump/forward/backward. 
+Video on demand systems are quite different from live video streaming applications, in which users join the distribution of a given TV channel at random points in time, but peers connected to the same channel watch the content almost synchronously. 
+In peer-assisted video on demand systems, users interested to a specific video can retrieve it from servers (CDN), from peers downloading/watching it, and from users storing copy of it in their computer or dedicated set top boxes or home gateway remotely controlled by ISP.
+Video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012}, arrival process of requests for considered video follows a time varying Poisson process.
+There are two classes of active users: those who are still downloading the video (leechers) and those who have completed the download (seeders).
+For detail we refer the readers to \cite{ciullo:hal-00759377,ciullo:hal-00759012}.
+
+Figure \ref{fig:cdnvod} shows power consumption of CDN server, router, peers, and total systems. 
+Since in CDN architecture there is no peer-to-peer traffic, the CDN server become the central of the operation.  
+We observed insignificant increase of power consumption in CDN server and router.
+Very small increase of power consumption in CDN server is due to under utilization caused by number of peers. 
+In router part, we also observed very small increase of power consumption due small traffic from small number of peers. 
+The biggest power consumption part comes from peers.
+It is increasing as peers grow.   
+Figure \ref{fig:cdnp2pvod} shows power consumption of CDN server, router, peers, and total system in CDN-P2P architecture. 
+In CDN server part, the power consumption is flat due to some content deliver by peers.  
+In router part, we see very small increase of power consumption. 
+This is caused by peer to peer traffic and traffic from CDN server to leechers. 
+Still, the biggest contribution comes from peers. 
+From both figures, we also see that different $T$ makes decreasing of power consumption for CDN server and router. 
+The difference between $T$ is around $7.7\%$.
+Figure \ref{fig:cdnp2pvoddiff} shows the difference of power consumption between CDN-P2P and CDN architecture.  
+The CDN server part has difference from $0\%$ to $1.7\%$.
+Router part has difference from $0.19\%$ to $1.6\%$ and total system has difference from $0.1\%$ to $0.59\%$.
+For $T=25$, total system difference is from $0.1\%$ to $0.58\%$
+Increasing air temperature supply does not make significant saving due to small number of component involved in the system.
 
 
 \section{Related Work} 
@@ -545,11 +567,13 @@ Our work is quite different, we take number of peers with static content and dyn
 
 \section{Conclusion and Future Work}\label{conclusion}
 
-In this paper, we compare energy consumption between the peer-assisted CDN architecture and CDN architecture. 
-Integrating peer to peer capability to assist the existing CDN has a great potential to save energy consumption.
-In this study, we show that event without explicitly considering energy consumption while assigning content, the peer assisted CDN saves significant energy.
-Although the energy savings depend on number of request (number of clients) and the content popularity, 20-30\% energy can be saved for a moderately popular content.
-Additionally, by downloading the contents from the peers, especially of high popular content, the server load is decreased significantly.
+In this paper, we compare energy consumption between the peer-assisted CDN architecture and CDN architecture for live streaming and video on demand service.
+Integrating peer to peer capability to assist the existing CDN has a potential to save energy consumption.
+In this study, we show that event without explicitly considering energy consumption while assigning content, the peer assisted CDN can save energy consumption.
+Although the energy savings depend on number of request (number of clients), number of router and its configuration, around $0.5$ to $1.2$.
+If we break per component, the CDN server is the part that can be push to save energy.
+We agree with \cite{4509688}, Router component in the other side is quite difficult for energy saving, because different chassis size, different network interface type slot, and different configuration has different energy consumption.
+
 The energy saving potential of peer assisted CDN architecture presents as a strong reason for the ISP to reduce energy usage.  
 
 \begin{acknowledgment}
