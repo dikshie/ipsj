@@ -9,36 +9,36 @@ Warning--there's a series but neither volume nor number in Huang:2008:UHC:149604
 Warning--there's a volume but no series in huang2007peer
 Warning--there's a series but neither volume nor number in Wang:2008:IRA:1459359.1459397
 Warning--there's a series but neither volume nor number in Palasamudram:2012:UBR:2391229.2391240
-You've used 20 entries,
+You've used 22 entries,
             1978 wiz_defined-function locations,
-            627 strings with 9056 characters,
-and the built_in function-call counts, 6424 in all, are:
-= -- 551
-> -- 251
+            638 strings with 9439 characters,
+and the built_in function-call counts, 6764 in all, are:
+= -- 573
+> -- 283
 < -- 17
-+ -- 97
-- -- 77
-* -- 502
-:= -- 866
-add.period$ -- 22
-call.type$ -- 20
++ -- 109
+- -- 87
+* -- 534
+:= -- 934
+add.period$ -- 24
+call.type$ -- 22
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 302
-empty$ -- 670
-format.name$ -- 77
-if$ -- 1549
+cite$ -- 28
+duplicate$ -- 312
+empty$ -- 696
+format.name$ -- 87
+if$ -- 1617
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 22
 missing$ -- 18
-newline$ -- 65
-num.names$ -- 20
-pop$ -- 71
+newline$ -- 71
+num.names$ -- 22
+pop$ -- 75
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 333
+skip$ -- 343
 stack$ -- 0
 substring$ -- 425
 swap$ -- 143
@@ -47,7 +47,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 67
-width$ -- 22
-write$ -- 189
+while$ -- 69
+width$ -- 24
+write$ -- 205
 (There were 6 warnings)

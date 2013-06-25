@@ -55,6 +55,16 @@ Nedevschi, S., Ratnasamy, S. and Padhye, J.: Hot data centers vs. cool peers,
   systems}, HotPower'08, Berkeley, CA, USA, USENIX Association, pp.\ 8--8
   (online), \urle{http://dl.acm.org/citation.cfm?id=1855610.1855618} (2008).
 
+\bibitem{ciullo:hal-00759377}
+Ciullo, D., Martina, V., Garetto, M., Leonardi, E. and Torrisi, G.~L.:
+  {Peer-assisted VoD Systems: an Efficient Modeling Framework}, Rapport de
+  recherche RR-8184, INRIA (2012).
+
+\bibitem{ciullo:hal-00759012}
+Ciullo, D., Martina, V., Garetto, M., Leonardi, E. and Torrisi, G.~L.:
+  {Asymptotic properties of sequential streaming leveraging users'
+  cooperation}, Rapport de recherche RR-8183, INRIA (2012).
+
 \bibitem{Huang:2008:UHC:1496046.1496064}
 Huang, C., Wang, A., Li, J. and Ross, K.~W.: Understanding hybrid CDN-P2P: why
   limelight needs its own Red Swoosh, {\em Proceedings of the 18th

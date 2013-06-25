@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  24 JUN 2013 15:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  25 JUN 2013 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -468,8 +468,27 @@ Overfull \hbox (4.62192pt too wide) in paragraph at lines 376--377
 File: graphs/diff3dimension.eps Graphic file (type eps)
  <graphs/diff3dimension.eps>
 File: graphs/diff3dimension2.eps Graphic file (type eps)
- <graphs/diff3dimension2.eps> [5] [6]
-(./journal.bbl
+ <graphs/diff3dimension2.eps> [5]
+File: graphs/cdn-vod.eps Graphic file (type eps)
+
+<graphs/cdn-vod.eps>
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 480--481
+[][] 
+ []
+
+File: graphs/cdn-p2p-vod.eps Graphic file (type eps)
+<graphs/cdn-p2p-vod.eps>
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 487--488
+[][] 
+ []
+
+File: graphs/cdn-p2p-diff.eps Graphic file (type eps)
+<graphs/cdn-p2p-diff.eps>
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 494--495
+[][] 
+ []
+
+[6] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -493,19 +512,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 []\OT1/txr/m/n/7.82584 Google: Google data cen-ter power us-age. Avail-able on
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 547--547
+[7])
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[7] (./journal.aux) ) 
+[8
+
+] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 4058 strings out of 493482
- 57652 string characters out of 3140988
+ 4070 strings out of 493482
+ 57858 string characters out of 3140988
  121208 words of memory out of 3000000
- 7320 multiletter control sequences out of 15000+200000
+ 7329 multiletter control sequences out of 15000+200000
  50229 words of font info for 145 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (7 pages, 55556 bytes).
+Output written on journal.dvi (8 pages, 58360 bytes).

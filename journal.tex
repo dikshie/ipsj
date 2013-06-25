@@ -459,29 +459,45 @@ Once again, router energy consumption is increasing.
 \label{fig:maindiff}
 \end{figure*}
 
+Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
+The power saving that CDN server get is from $3.8\%$ to $11\%$.
+Figure \ref{fig:diff2} shows percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=[0.25,0.5,0.75,1]$.
+The power saving that total system get is from $0.1\%$ to $0.8\%$.
 
-Figure \ref{fig:diff1} show percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that CDN server get is from $3.8$ to $11\%$.
-Figure \ref{fig:diff2} show percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that CDN server get is from $3.8$ to $11\%$.
+\subsection{Video on Demand}
+In peer-assisted video on demand (VoD) system, user contribute their upload bandwidth to redistribute of a video that they are downloading or that they have cached locally.
+We follow peer-assisted video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012} as basis of our work.  
+In video on demand systems, users can browse a catalog of available video and asynchronously issue request to watch a given content, which are ideally immediately satisfied by the system, with the optional support for VCR actions such as pause and jump/forward/backward. 
+Video on demand systems are quite different from live video streaming applications, in which users join the distribution of a given TV channel at random points in time, but peers connected to the same channel watch the content almost synchronously. 
+In peer-assisted video on demand systems, users interested to a specific video can retrieve it from servers (CDN), from peers downloading/watching it, and from users storing copy of it in their computer or dedicated set top boxes or home gateway remotely controlled by ISP.
+Video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012}, arrival process of requests for considered video follows a time varying Poisson process.
+There are two classes of active users: those who are still downloading the video (leechers) and those who have completed the download (seeders).
+For detail we refer the readers to \cite{ciullo:hal-00759377,ciullo:hal-00759012}.
 
-
-
-
-Figure \ref{fig:diff1} show percentage difference of energy consumption between CDN and CDN-P2P with $\rho=0.25$. 
-Since there are no difference consumption of router component and peer between CDN and CDN-P2P, then we see $0$ as shown as flat in.  
-The difference only appear for CDN server component that up to $3.8\%$ energy saving. 
-The total system itself can only save energy consumption up to $0.1\%$
-Percentage difference of energy consumption between CDN and CDN-P2P with $\rho=0.5$ is shown in fig.\ref{fig:diff2}.
-Same as previous, there are no difference consumption of router component and peer between CDN and CDN-P2P.
-The difference only appear for CDN server component that up to $7.2\%$ energy saving. 
-The total system itself can only save energy consumption up to $0.18\%$.
-Figure \ref{fig:diff1} show percentage difference of energy consumption between CDN and CDN-P2P with $\rho=0.75$.
-Same as previous, there are no difference consumption of router component and peer between CDN and CDN-P2P.
-The difference only appear for CDN server component that up to $11\%$ energy saving. 
-The total system itself can only save energy consumption up to $8.9\%$.
-
-
+\begin{figure*}[t]
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/cdn-vod.eps}
+	\caption{CDN power consumption in VoD.}
+	\label{fig:cdnvod}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/cdn-p2p-vod.eps}
+	\caption{Power consumption of CDN server, router, and peers in CDN-P2P VoD with $\rho=0.7$.}
+	\label{fig:cdnp2pvod}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/cdn-p2p-diff.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for CDN server, router, peers, and total system with $\rho=0.7$.}
+	\label{fig:cdnp2pvoddiff}
+\end{minipage}
+%\caption{main}
+\label{fig:voddiff}
+\end{figure*}
 
 
 
