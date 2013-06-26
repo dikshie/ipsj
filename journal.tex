@@ -482,31 +482,31 @@ While CDN server part can save more energy, due to peers high energy consumption
 
 
 \subsection{Online Storage}
-%
-%\begin{figure*}[t]
-%\centering
-%\begin{minipage}[b]{0.3\linewidth}
-%	\includegraphics[scale=0.45]{graphs/cdn-vod.eps}
-%	\caption{CDN power consumption in VoD.}
-%	\label{fig:cdnvod}
-%\end{minipage}
-%\hfill
-%\centering
-%\begin{minipage}[b]{0.3\linewidth}
-%	\includegraphics[scale=0.45]{graphs/cdn-p2p-vod.eps}
-%	\caption{Power consumption of CDN server, router, and peers in CDN-P2P VoD with $\rho=0.7$.}
-%	\label{fig:cdnp2pvod}
-%\end{minipage}
-%\hfill
-%\centering
-%\begin{minipage}[b]{0.3\linewidth}
-%	\includegraphics[scale=0.45]{graphs/cdn-p2p-diff.eps}
-%	\caption{Different power consumption between CDN and CDN-P2P for CDN server, router, peers, and total system with $\rho=0.7$.}
-%	\label{fig:cdnp2pvoddiff}
-%\end{minipage}
-%\caption{main}
-%\label{fig:voddiff}
-%\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/strategy1.eps}
+	\caption{Power consumption of CDN server, router, and peers in lower bound strategy.}
+	\label{fig:stg1}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/strategy2.eps}
+	\caption{Power consumption of CDN server, router, and peers in request driven strategy.}
+	\label{fig:stg2}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/strategy3.eps}
+	\caption{Power consumption of CDN server, router, and peers, in water leveling strategy.}
+	\label{fig:stg3}
+\end{minipage}
+\caption{main}
+\label{fig:storage}
+\end{figure*}
 
 
 In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
@@ -516,6 +516,7 @@ In order to reduce startup latency, first block of file must be downloaded from 
 In peer-assisted online storage, users interested to a specific file can retrieve it from servers (CDN) and from users storing copy of it in their computer or dedicated set top boxes/home gateway remotely.  
 Peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249}, the arrival process of request for considered file follow Poisson process, it takes into account multiple files of different popularity and server bandwidth provisioning.
 For detail, we refer the readers to \cite{Sun:2009:POS:1542245.1542249,5199550,5061997}.
+All numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
 
 %Figure \ref{fig:cdnvod} shows power consumption of CDN server, router, peers, and total systems. 
 %Since in CDN architecture there is no peer-to-peer traffic, the CDN server become the central of the operation.  
