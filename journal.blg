@@ -5,49 +5,50 @@ The style file: ipsjunsrt-e.bst
 Database file #1: journal.bib
 Warning--there's a series but neither volume nor number in Dischinger:2007:CRB:1298306.1298313
 Warning--there's a series but neither volume nor number in Nedevschi:2008:HDC:1855610.1855618
+Warning--there's a series but neither volume nor number in Sun:2009:POS:1542245.1542249
 Warning--there's a series but neither volume nor number in Huang:2008:UHC:1496046.1496064
 Warning--there's a volume but no series in huang2007peer
 Warning--there's a series but neither volume nor number in Wang:2008:IRA:1459359.1459397
 Warning--there's a series but neither volume nor number in Palasamudram:2012:UBR:2391229.2391240
-You've used 22 entries,
+You've used 24 entries,
             1978 wiz_defined-function locations,
-            638 strings with 9439 characters,
-and the built_in function-call counts, 6764 in all, are:
-= -- 573
-> -- 283
-< -- 17
-+ -- 109
-- -- 87
-* -- 534
-:= -- 934
-add.period$ -- 24
-call.type$ -- 22
+            656 strings with 10180 characters,
+and the built_in function-call counts, 7861 in all, are:
+= -- 673
+> -- 312
+< -- 21
++ -- 120
+- -- 96
+* -- 622
+:= -- 1057
+add.period$ -- 26
+call.type$ -- 24
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 312
-empty$ -- 696
-format.name$ -- 87
-if$ -- 1617
+cite$ -- 31
+duplicate$ -- 371
+empty$ -- 814
+format.name$ -- 96
+if$ -- 1897
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 18
-newline$ -- 71
-num.names$ -- 22
-pop$ -- 75
+int.to.str$ -- 24
+missing$ -- 22
+newline$ -- 77
+num.names$ -- 24
+pop$ -- 84
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 343
+skip$ -- 408
 stack$ -- 0
-substring$ -- 425
-swap$ -- 143
-text.length$ -- 17
+substring$ -- 521
+swap$ -- 177
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 6
-while$ -- 69
-width$ -- 24
-write$ -- 205
-(There were 6 warnings)
+warning$ -- 7
+while$ -- 81
+width$ -- 26
+write$ -- 228
+(There were 7 warnings)

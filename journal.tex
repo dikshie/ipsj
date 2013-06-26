@@ -445,16 +445,28 @@ Once again, router energy consumption is increasing.
 
 \begin{figure*}[t]
 \centering
-\begin{minipage}[b]{0.45\linewidth}
+\begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
 	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.25,0.5,0.75,1$.}
 	\label{fig:diff1}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.45\linewidth}
+\begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff3dimension2.eps}
 	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.25,0.5,0.75,1$.}
 	\label{fig:diff2}
+\end{minipage}
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff-3.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.75$.}
+	\label{fig:diffs1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff-3-total.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.75$.}
+	\label{fig:diffs2}
 \end{minipage}
 %\caption{main}
 \label{fig:maindiff}
@@ -462,65 +474,68 @@ Once again, router energy consumption is increasing.
 
 Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
 The power saving that CDN server get is from $3.8\%$ to $11\%$.
+More clear figure is shown in fig.\ref{fig:diffs1} for $\rho=0.75$ where CDN server can save energy because the utilization of CDN server is same when the system has number of peers from $500$ to $875$ and from $875$ peers to $1531$ are handle with same CDN utilization.   
 Figure \ref{fig:diff2} shows percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that total system get is from $0.1\%$ to $0.8\%$.
+The power saving that total system get is from $0.1\%$ to $0.9\%$.
+Figure \ref{fig:diffs2} reports percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=0.75$.
+While CDN server part can save more energy, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
 
-\subsection{Video on Demand}
 
-\begin{figure*}[t]
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.45]{graphs/cdn-vod.eps}
-	\caption{CDN power consumption in VoD.}
-	\label{fig:cdnvod}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.45]{graphs/cdn-p2p-vod.eps}
-	\caption{Power consumption of CDN server, router, and peers in CDN-P2P VoD with $\rho=0.7$.}
-	\label{fig:cdnp2pvod}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.45]{graphs/cdn-p2p-diff.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for CDN server, router, peers, and total system with $\rho=0.7$.}
-	\label{fig:cdnp2pvoddiff}
-\end{minipage}
+\subsection{Online Storage}
+%
+%\begin{figure*}[t]
+%\centering
+%\begin{minipage}[b]{0.3\linewidth}
+%	\includegraphics[scale=0.45]{graphs/cdn-vod.eps}
+%	\caption{CDN power consumption in VoD.}
+%	\label{fig:cdnvod}
+%\end{minipage}
+%\hfill
+%\centering
+%\begin{minipage}[b]{0.3\linewidth}
+%	\includegraphics[scale=0.45]{graphs/cdn-p2p-vod.eps}
+%	\caption{Power consumption of CDN server, router, and peers in CDN-P2P VoD with $\rho=0.7$.}
+%	\label{fig:cdnp2pvod}
+%\end{minipage}
+%\hfill
+%\centering
+%\begin{minipage}[b]{0.3\linewidth}
+%	\includegraphics[scale=0.45]{graphs/cdn-p2p-diff.eps}
+%	\caption{Different power consumption between CDN and CDN-P2P for CDN server, router, peers, and total system with $\rho=0.7$.}
+%	\label{fig:cdnp2pvoddiff}
+%\end{minipage}
 %\caption{main}
-\label{fig:voddiff}
-\end{figure*}
+%\label{fig:voddiff}
+%\end{figure*}
 
 
-In peer-assisted video on demand (VoD) system, user contribute their upload bandwidth to redistribute of a video that they are downloading or that they have cached locally.
-We follow peer-assisted video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012} as basis of our work.  
-In video on demand systems, users can browse a catalog of available video and asynchronously issue request to watch a given content, which are ideally immediately satisfied by the system, with the optional support for VCR actions such as pause and jump/forward/backward. 
-Video on demand systems are quite different from live video streaming applications, in which users join the distribution of a given TV channel at random points in time, but peers connected to the same channel watch the content almost synchronously. 
-In peer-assisted video on demand systems, users interested to a specific video can retrieve it from servers (CDN), from peers downloading/watching it, and from users storing copy of it in their computer or dedicated set top boxes or home gateway remotely controlled by ISP.
-Video on demand model in \cite{ciullo:hal-00759377,ciullo:hal-00759012}, arrival process of requests for considered video follows a time varying Poisson process.
-There are two classes of active users: those who are still downloading the video (leechers) and those who have completed the download (seeders).
-For detail we refer the readers to \cite{ciullo:hal-00759377,ciullo:hal-00759012}.
+In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
+We follow peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249} as basis of our work. 
+In peer-assisted online storage, users can browse a catalog of available files and asynchronously issue request to download a given file, which are ideally immediately satisfied by the system.
+In order to reduce startup latency, first block of file must be downloaded from server \cite{5199550}.
+In peer-assisted online storage, users interested to a specific file can retrieve it from servers (CDN) and from users storing copy of it in their computer or dedicated set top boxes/home gateway remotely.  
+Peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249}, the arrival process of request for considered file follow Poisson process, it takes into account multiple files of different popularity and server bandwidth provisioning.
+For detail, we refer the readers to \cite{Sun:2009:POS:1542245.1542249,5199550,5061997}.
 
-Figure \ref{fig:cdnvod} shows power consumption of CDN server, router, peers, and total systems. 
-Since in CDN architecture there is no peer-to-peer traffic, the CDN server become the central of the operation.  
-We observed insignificant increase of power consumption in CDN server and router.
-Very small increase of power consumption in CDN server is due to under utilization caused by number of peers. 
-In router part, we also observed very small increase of power consumption due small traffic from small number of peers. 
-The biggest power consumption part comes from peers.
-It is increasing as peers grow.   
-Figure \ref{fig:cdnp2pvod} shows power consumption of CDN server, router, peers, and total system in CDN-P2P architecture. 
-In CDN server part, the power consumption is flat due to some content deliver by peers.  
-In router part, we see very small increase of power consumption. 
-This is caused by peer to peer traffic and traffic from CDN server to leechers. 
-Still, the biggest contribution comes from peers. 
-From both figures, we also see that different $T$ makes decreasing of power consumption for CDN server and router. 
-The difference between $T$ is around $7.7\%$.
-Figure \ref{fig:cdnp2pvoddiff} shows the difference of power consumption between CDN-P2P and CDN architecture.  
-The CDN server part has difference from $0\%$ to $1.7\%$.
-Router part has difference from $0.19\%$ to $1.6\%$ and total system has difference from $0.1\%$ to $0.59\%$.
-For $T=25$, total system difference is from $0.1\%$ to $0.58\%$
-Increasing air temperature supply does not make significant saving due to small number of component involved in the system.
+%Figure \ref{fig:cdnvod} shows power consumption of CDN server, router, peers, and total systems. 
+%Since in CDN architecture there is no peer-to-peer traffic, the CDN server become the central of the operation.  
+%We observed insignificant increase of power consumption in CDN server and router.
+%Very small increase of power consumption in CDN server is due to under utilization caused by number of peers. 
+%In router part, we also observed very small increase of power consumption due small traffic from small number of peers. 
+%The biggest power consumption part comes from peers.
+%It is increasing as peers grow.   
+%Figure \ref{fig:cdnp2pvod} shows power consumption of CDN server, router, peers, and total system in CDN-P2P architecture. 
+%In CDN server part, the power consumption is flat due to some content deliver by peers.  
+%In router part, we see very small increase of power consumption. 
+%This is caused by peer to peer traffic and traffic from CDN server to leechers. 
+%Still, the biggest contribution comes from peers. 
+%From both figures, we also see that different $T$ makes decreasing of power consumption for CDN server and router. 
+%The difference between $T$ is around $7.7\%$.
+%Figure \ref{fig:cdnp2pvoddiff} shows the difference of power consumption between CDN-P2P and CDN architecture.  
+%The CDN server part has difference from $0\%$ to $1.7\%$.
+%Router part has difference from $0.19\%$ to $1.6\%$ and total system has difference from $0.1\%$ to $0.59\%$.
+%For $T=25$, total system difference is from $0.1\%$ to $0.58\%$
+%Increasing air temperature supply does not make significant saving due to small number of component involved in the system.
 
 
 \section{Related Work} 
@@ -557,24 +572,25 @@ The authors in \cite{5963557} conclude that CCN is more energy efficient in deli
 
 To the best of our knowledge, the study of energy in that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
 Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the optical core network around 20-40\% less energy.  
-The authors are focus on energy consumption of different algorithms for minimizing server bandwidth based on popularity of content.  
-By maximizing peer request, the authors can minimizing CDN workload. 
-The authors only considered energy consumption of hardware especially optical devices and does not include overhead inside data center.  
-Our work is quite different, we take number of peers with static content and dynamic content (popularity) and add overhead of data center which is  power of cooling cause by temperature of hardware.
+%The authors are focus on energy consumption of different algorithms for minimizing server bandwidth based on popularity of content, by maximizing peer request, the %authors can minimizing CDN workload. 
+The authors only considered energy consumption of hardware especially optical devices and does not include overhead inside data center, CDN server energy comsumption, and consumed power by peers.
+Our work is quite different, we take number of peers with static content and add overhead of data center which is  power of cooling cause by temperature of hardware for different purpose which are live streaming and video on demand.
 
  
 
 
 \section{Conclusion and Future Work}\label{conclusion}
 
-In this paper, we compare energy consumption between the peer-assisted CDN architecture and CDN architecture for live streaming and video on demand service.
+In this paper, we have introduced the comparison of energy consumption between the peer-assisted CDN architecture and CDN architecture for live streaming and video on demand service.
 Integrating peer to peer capability to assist the existing CDN has a potential to save energy consumption.
 In this study, we show that event without explicitly considering energy consumption while assigning content, the peer assisted CDN can save energy consumption.
-Although the energy savings depend on number of request (number of clients), number of router and its configuration, around $0.5$ to $1.2$.
-If we break per component, the CDN server is the part that can be push to save energy.
+Although the energy savings depend on number of request (number of clients), number of router and its configuration, for total system energy saving is around $0.5$ to $1.2$.
+If we break per component, the CDN server is the part that can be push to save energy up to $11\%$ and can be more if new generation of power proportional server is used \cite{Krioukov:2011:NDI:1925861.1925878}.
 We agree with \cite{4509688}, Router component in the other side is quite difficult for energy saving, because different chassis size, different network interface type slot, and different configuration has different energy consumption.
+Several areas that we have been identified for future work are:  
 
-The energy saving potential of peer assisted CDN architecture presents as a strong reason for the ISP to reduce energy usage.  
+
+
 
 \begin{acknowledgment}
 We thank Rodney Van Meter for suggestions.

@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
-%%Title: diff3dimension.eps
+%%Title: diff3dimensionslice2.eps
 %%Creator: gnuplot 4.6 patchlevel 3
-%%CreationDate: Tue Jun 25 19:09:50 2013
+%%CreationDate: Tue Jun 25 19:20:04 2013
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 302
 %%EndComments
@@ -1844,13 +1844,13 @@ systemdict /pdfmark known not {
   userdict /pdfmark systemdict /cleartomark get put
 } if
 SDict begin [
-  /Title (diff3dimension.eps)
+  /Title (diff3dimensionslice2.eps)
   /Subject (gnuplot plot)
   /Creator (gnuplot 4.6 patchlevel 3)
   /Author (dikshie)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Tue Jun 25 19:09:50 2013)
+  /CreationDate (Tue Jun 25 19:20:04 2013)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -1866,83 +1866,38 @@ doclip
 newpath
 (NimbusSanL-Regu) findfont 180 scalefont setfont
 BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
-gsave % colour palette begin
-/maxcolors 0 def
-/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
-  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
-     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
-	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
-	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
-	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
-	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
-	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
-	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
-  } ifelse} def
-/Constrain {
-  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
-/YIQ2RGB {
-  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
-  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
-  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
-/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
-/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
-  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
-  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
-  exch 1.91 mul exch add Constrain 3 1 roll} def
-/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
-  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
-  if} ifelse} ifelse} ifelse} def
-/InterpolatedColor false def
-/cF7 {sqrt} bind def	% sqrt(x)
-/cF5 {dup dup mul mul} bind def	% x^3
-/cF15 {360 mul sin} bind def	% sin(360x)
-/pm3dround {maxcolors 0 gt {dup 1 ge
-	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
-/pm3dGamma 1.0 1.5 Gamma mul div def
-/ColorSpace (RGB) def
-Color InterpolatedColor or { % COLOUR vs. GRAY map
-  InterpolatedColor { %% Interpolation vs. RGB-Formula
-    /g {stroke pm3dround /grayv exch def interpolate
-        SelectSpace setrgbcolor} bind def
-  }{
-  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
-       SelectSpace setrgbcolor} bind def
-  } ifelse
-}{
-  /g {stroke pm3dround pm3dGamma exp setgray} bind def
-} ifelse
 1.000 UL
 LTb
 LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-1008 1317 M
-2906 2385 L
+1008 1375 M
+2906 2748 L
 stroke
 LTb
 LCb setrgbcolor
-6192 1768 M
-2906 2385 L
+6192 1956 M
+2906 2748 L
 stroke
 LTb
 LCb setrgbcolor
-1008 1317 M
-0 2135 V
+1008 1375 M
+0 1889 V
 stroke
 LTa
 LCa setrgbcolor
-1008 1317 M
-2906 2385 L
+1008 1375 M
+2906 2748 L
 stroke
 LTb
 LCb setrgbcolor
-1008 1317 M
-49 27 V
+1008 1375 M
+49 35 V
 stroke
 LTb
 LCb setrgbcolor
-925 1239 M
+925 1275 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0)]
 ] -60.0 MCshow
 1.000 UL
@@ -1951,22 +1906,22 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-2906 2385 M
--48 -28 V
+2906 2748 M
+-48 -35 V
 stroke
 LTa
 LCa setrgbcolor
-1830 1162 M
-3727 2231 L
+1830 1177 M
+3727 2550 L
 stroke
 LTb
 LCb setrgbcolor
-1830 1162 M
-49 28 V
+1830 1177 M
+49 35 V
 stroke
 LTb
 LCb setrgbcolor
-1747 1084 M
+1747 1077 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 500)]
 ] -60.0 MCshow
 1.000 UL
@@ -1975,22 +1930,22 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-3727 2231 M
--49 -28 V
+3727 2550 M
+-49 -35 V
 stroke
 LTa
 LCa setrgbcolor
-2652 1008 M
-4548 2076 L
+2652 979 M
+4548 2352 L
 stroke
 LTb
 LCb setrgbcolor
-2652 1008 M
-48 27 V
+2652 979 M
+48 35 V
 stroke
 LTb
 LCb setrgbcolor
-2569 930 M
+2569 879 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 1000)]
 ] -60.0 MCshow
 1.000 UL
@@ -1999,22 +1954,22 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-4548 2076 M
--48 -27 V
+4548 2352 M
+-48 -35 V
 stroke
 LTa
 LCa setrgbcolor
-3473 854 M
-5370 1922 L
+3473 781 M
+5370 2154 L
 stroke
 LTb
 LCb setrgbcolor
-3473 854 M
-49 27 V
+3473 781 M
+49 35 V
 stroke
 LTb
 LCb setrgbcolor
-3390 776 M
+3390 681 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 1500)]
 ] -60.0 MCshow
 1.000 UL
@@ -2023,22 +1978,22 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-5370 1922 M
--49 -27 V
+5370 2154 M
+-49 -35 V
 stroke
 LTa
 LCa setrgbcolor
-4294 700 M
-6192 1768 L
+4294 582 M
+6192 1956 L
 stroke
 LTb
 LCb setrgbcolor
-4294 700 M
-48 27 V
+4294 582 M
+48 36 V
 stroke
 LTb
 LCb setrgbcolor
-4211 622 M
+4211 482 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 2000)]
 ] -60.0 MCshow
 1.000 UL
@@ -2047,20 +2002,20 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-6192 1768 M
--49 -27 V
+6192 1956 M
+-49 -35 V
 stroke
 LTa
 LCa setrgbcolor
-4384 751 M
-1099 1367 L
+4467 707 M
+1181 1500 L
 stroke
 LTb
 LCb setrgbcolor
-4384 751 M
--54 10 V
+4467 707 M
+-55 14 V
 stroke
-4478 721 M
+4560 670 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0)]
 ] -60.0 MCshow
 1.000 UL
@@ -2069,21 +2024,21 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-1099 1367 M
-54 -10 V
+1181 1500 M
+55 -13 V
 stroke
 LTa
 LCa setrgbcolor
-4836 1005 M
-1551 1622 L
+4812 957 M
+1526 1750 L
 stroke
 LTb
 LCb setrgbcolor
-4836 1005 M
--54 10 V
+4812 957 M
+-55 13 V
 stroke
-4930 976 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.5)]
+4905 919 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.2)]
 ] -60.0 MCshow
 1.000 UL
 LTb
@@ -2091,20 +2046,86 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-1551 1622 M
-54 -11 V
+1526 1750 M
+55 -13 V
 stroke
 LTa
 LCa setrgbcolor
-5288 1259 M
-2002 1876 L
+5157 1207 M
+1871 2000 L
 stroke
 LTb
 LCb setrgbcolor
-5288 1259 M
--55 11 V
+5157 1207 M
+-55 13 V
 stroke
-5381 1230 M
+5250 1169 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.4)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
+1871 2000 M
+55 -14 V
+stroke
+LTa
+LCa setrgbcolor
+5502 1456 M
+2216 2249 L
+stroke
+LTb
+LCb setrgbcolor
+5502 1456 M
+-55 14 V
+stroke
+5595 1419 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.6)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
+2216 2249 M
+55 -13 V
+stroke
+LTa
+LCa setrgbcolor
+5847 1706 M
+2561 2499 L
+stroke
+LTb
+LCb setrgbcolor
+5847 1706 M
+-55 13 V
+stroke
+5940 1668 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.8)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
+2561 2499 M
+55 -13 V
+stroke
+LTa
+LCa setrgbcolor
+6192 1956 M
+2906 2748 L
+stroke
+LTb
+LCb setrgbcolor
+6192 1956 M
+-55 13 V
+stroke
+6285 1918 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 1)]
 ] -60.0 MCshow
 1.000 UL
@@ -2113,69 +2134,25 @@ LCb setrgbcolor
 1.000 UL
 LTb
 LCb setrgbcolor
-2002 1876 M
-55 -10 V
+2906 2748 M
+55 -13 V
 stroke
 LTa
 LCa setrgbcolor
-5740 1514 M
-2454 2130 L
-stroke
-LTb
-LCb setrgbcolor
-5740 1514 M
--55 10 V
-stroke
-5833 1484 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 1.5)]
-] -60.0 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTb
-LCb setrgbcolor
-2454 2130 M
-55 -10 V
+1008 2005 M
+2906 3378 L
 stroke
 LTa
 LCa setrgbcolor
-6192 1768 M
-2906 2385 L
+2906 3378 M
+6192 2586 L
 stroke
 LTb
 LCb setrgbcolor
-6192 1768 M
--55 10 V
-stroke
-6285 1739 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 2)]
-] -60.0 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTb
-LCb setrgbcolor
-2906 2385 M
-55 -10 V
-stroke
-LTa
-LCa setrgbcolor
-1008 2029 M
-2906 3096 L
-stroke
-LTa
-LCa setrgbcolor
-2906 3096 M
-6192 2480 L
-stroke
-LTb
-LCb setrgbcolor
-1008 2029 M
+1008 2005 M
 63 0 V
 stroke
-882 2029 M
+882 2005 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0)]
 ] -60.0 MRshow
 1.000 UL
@@ -2184,21 +2161,21 @@ LCb setrgbcolor
 1.000 UL
 LTa
 LCa setrgbcolor
-1008 2232 M
-2906 3299 L
+1008 2257 M
+2906 3630 L
 stroke
 LTa
 LCa setrgbcolor
-2906 3299 M
-6192 2683 L
+2906 3630 M
+6192 2837 L
 stroke
 LTb
 LCb setrgbcolor
-1008 2232 M
+1008 2257 M
 63 0 V
 stroke
-882 2232 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 2)]
+882 2257 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.2)]
 ] -60.0 MRshow
 1.000 UL
 LTb
@@ -2206,21 +2183,21 @@ LCb setrgbcolor
 1.000 UL
 LTa
 LCa setrgbcolor
-1008 2436 M
-2906 3503 L
+1008 2509 M
+2906 3882 L
 stroke
 LTa
 LCa setrgbcolor
-2906 3503 M
-6192 2886 L
+2906 3882 M
+6192 3089 L
 stroke
 LTb
 LCb setrgbcolor
-1008 2436 M
+1008 2509 M
 63 0 V
 stroke
-882 2436 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 4)]
+882 2509 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.4)]
 ] -60.0 MRshow
 1.000 UL
 LTb
@@ -2228,21 +2205,21 @@ LCb setrgbcolor
 1.000 UL
 LTa
 LCa setrgbcolor
-1008 2638 M
-2906 3706 L
+1008 2760 M
+2906 4134 L
 stroke
 LTa
 LCa setrgbcolor
-2906 3706 M
-6192 3090 L
+2906 4134 M
+6192 3341 L
 stroke
 LTb
 LCb setrgbcolor
-1008 2638 M
+1008 2760 M
 63 0 V
 stroke
-882 2638 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 6)]
+882 2760 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.6)]
 ] -60.0 MRshow
 1.000 UL
 LTb
@@ -2250,21 +2227,21 @@ LCb setrgbcolor
 1.000 UL
 LTa
 LCa setrgbcolor
-1008 2842 M
-2906 3910 L
+1008 3012 M
+2906 4386 L
 stroke
 LTa
 LCa setrgbcolor
-2906 3910 M
-6192 3293 L
+2906 4386 M
+6192 3593 L
 stroke
 LTb
 LCb setrgbcolor
-1008 2842 M
+1008 3012 M
 63 0 V
 stroke
-882 2842 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 8)]
+882 3012 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0.8)]
 ] -60.0 MRshow
 1.000 UL
 LTb
@@ -2272,71 +2249,27 @@ LCb setrgbcolor
 1.000 UL
 LTa
 LCa setrgbcolor
-1008 3045 M
-2906 4113 L
+1008 3264 M
+2906 4638 L
 stroke
 LTa
 LCa setrgbcolor
-2906 4113 M
-6192 3497 L
+2906 4638 M
+6192 3845 L
 stroke
 LTb
 LCb setrgbcolor
-1008 3045 M
+1008 3264 M
 63 0 V
 stroke
-882 3045 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 10)]
-] -60.0 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTa
-LCa setrgbcolor
-1008 3249 M
-2906 4317 L
-stroke
-LTa
-LCa setrgbcolor
-2906 4317 M
-6192 3700 L
-stroke
-LTb
-LCb setrgbcolor
-1008 3249 M
-63 0 V
-stroke
-882 3249 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 12)]
-] -60.0 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTa
-LCa setrgbcolor
-1008 3452 M
-2906 4520 L
-stroke
-LTa
-LCa setrgbcolor
-2906 4520 M
-6192 3903 L
-stroke
-LTb
-LCb setrgbcolor
-1008 3452 M
-63 0 V
-stroke
-882 3452 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 14)]
+882 3264 M
+[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 1)]
 ] -60.0 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
 LCb setrgbcolor
-252 2740 M
+252 2634 M
 currentpoint gsave translate 90 rotate 0 0 moveto
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 (Saving \(%\))]
 ] -60.0 MCshow
@@ -2344,427 +2277,150 @@ grestore
 LTb
 1.000 UP
 % Begin plot #1
-%pm3d_map_begin
-1.000 UL
+7.000 UL
 LT0
 LC0 setrgbcolor
-.013 g 2091 2515 N -261 17 75 42 262 -17 h
-.0131 g 2016 2473 N -262 17 76 43 261 -18 h
-.013 g 1941 2430 N -261 18 75 42 261 -17 h
-.013 g 1866 2388 N -261 17 75 43 261 -18 h
-.0131 g 1790 2346 N -261 18 75 42 262 -18 h
-.013 g 1715 2303 N -262 18 76 42 261 -17 h
-.013 g 1640 2261 N -261 17 75 43 261 -18 h
-.0131 g 1564 2219 N -261 18 75 42 262 -18 h
-.013 g 1489 2176 N -262 18 76 42 261 -17 h
-.0253 g 2353 2498 N -261 51 75 42 261 -51 h
-.0253 g 2277 2455 N -261 51 75 42 262 -50 h
-.0253 g 2202 2413 N -262 50 76 43 261 -51 h
-.0253 g 2127 2370 N -261 51 75 42 261 -50 h
-.0253 g 2052 2328 N -261 50 75 43 261 -51 h
-.0253 g 1976 2286 N -261 51 75 42 262 -51 h
-.0253 g 1901 2243 N -262 51 76 42 261 -50 h
-.0253 g 1826 2201 N -261 50 75 43 261 -51 h
-.0253 g 1750 2159 N -261 51 75 42 262 -51 h
-.0556 g 2614 2447 N -262 -27 76 42 261 27 h
-.0556 g 2539 2405 N -261 -27 75 43 261 26 h
-.0556 g 2463 2362 N -261 -26 75 42 262 27 h
-.0556 g 2388 2320 N -262 -27 76 43 261 26 h
-.0556 g 2313 2277 N -261 -26 75 42 261 27 h
-.0556 g 2238 2235 N -261 -27 75 42 261 27 h
-.0556 g 2162 2193 N -261 -27 76 43 261 26 h
-.0556 g 2087 2150 N -261 -26 75 42 261 27 h
-.0556 g 2012 2108 N -261 -27 75 43 261 26 h
-.1575 g 2875 2474 N -261 -123 75 41 262 124 h
-.1576 g 2800 2431 N -262 -124 76 42 261 125 h
-.1577 g 2725 2389 N -261 -125 75 42 261 125 h
-.1578 g 2649 2346 N -261 -125 75 43 262 125 h
-.1579 g 2574 2304 N -262 -125 76 42 261 125 h
-.158 g 2499 2262 N -261 -125 75 42 261 125 h
-.158 g 2423 2219 N -261 -125 75 43 262 125 h
-.1578 g 2348 2177 N -262 -125 76 42 261 125 h
-.1577 g 2273 2134 N -261 -125 75 43 261 125 h
-.2528 g 3137 2598 N -261 -11 75 42 261 10 h
-.2529 g 3061 2556 N -261 -10 75 42 262 10 h
-.2531 g 2986 2514 N -262 -10 76 42 261 10 h
-.2532 g 2911 2471 N -261 -10 75 43 261 10 h
-.2532 g 2835 2429 N -261 -10 75 42 262 10 h
-.2533 g 2760 2387 N -262 -10 76 43 261 9 h
-.2532 g 2685 2344 N -261 -9 75 42 261 10 h
-.253 g 2609 2302 N -261 -10 75 43 262 9 h
-.2528 g 2534 2259 N -262 -9 76 43 261 9 h
-.3349 g 3398 2608 N -260 -91 75 42 260 91 h
-.3349 g 3323 2566 N -260 -91 74 42 261 91 h
-.3349 g 3247 2524 N -261 -91 75 43 262 90 h
-.3348 g 3172 2481 N -262 -90 76 41 261 92 h
-.3348 g 3097 2439 N -261 -92 75 43 261 91 h
-.3347 g 3021 2396 N -261 -91 75 42 262 92 h
-.3346 g 2946 2354 N -262 -92 76 43 261 91 h
-.3344 g 2871 2311 N -261 -91 75 43 261 91 h
-.3342 g 2795 2268 N -261 -91 75 42 262 92 h
-.3738 g 3658 2699 N -262 94 76 42 261 -94 h
-.3738 g 3584 2657 N -261 94 75 42 260 -94 h
-.3738 g 3509 2614 N -260 94 75 42 260 -93 h
-.3738 g 3433 2573 N -260 93 75 43 261 -95 h
-.3738 g 3358 2530 N -261 95 76 42 260 -94 h
-.3738 g 3283 2488 N -260 94 74 42 261 -94 h
-.3738 g 3207 2445 N -261 94 75 43 262 -94 h
-.3736 g 3132 2402 N -262 94 76 42 261 -93 h
-.3734 g 3057 2360 N -261 93 75 43 261 -94 h
-.3402 g 3919 2605 N -261 85 75 42 262 -85 h
-.3403 g 3844 2563 N -262 85 76 42 261 -85 h
-.3403 g 3769 2521 N -261 85 75 43 261 -86 h
-.3404 g 3694 2478 N -261 86 75 42 261 -85 h
-.3404 g 3618 2436 N -261 85 76 43 261 -86 h
-.3404 g 3544 2394 N -261 86 75 42 260 -86 h
-.3404 g 3469 2351 N -260 86 75 42 260 -85 h
-.3403 g 3393 2309 N -260 85 75 43 261 -86 h
-.3402 g 3318 2266 N -261 86 75 42 261 -85 h
-.6258 g 4181 2520 N -261 -683 75 40 261 685 h
-.6269 g 4105 2478 N -261 -685 75 40 262 687 h
-.6279 g 4030 2435 N -262 -687 76 40 261 690 h
-.6279 g 3955 2393 N -261 -690 75 45 261 687 h
-.6269 g 3879 2350 N -261 -687 75 45 262 685 h
-.6259 g 3804 2308 N -262 -685 76 45 261 682 h
-.6248 g 3729 2266 N -261 -682 75 44 261 680 h
-.6238 g 3654 2223 N -261 -680 75 45 261 678 h
-.6228 g 3579 2181 N -261 -678 75 45 261 675 h
-%pm3d_map_end
-1.000 UL
-LT0
-LC0 setrgbcolor
-3840 2856 M
-75 45 V
-75 45 V
-75 44 V
-76 45 V
-75 45 V
-75 45 V
-76 40 V
-75 40 V
-75 40 V
-3579 2181 M
-75 42 V
-75 43 V
-75 42 V
-75 42 V
-76 43 V
-75 42 V
-75 43 V
-76 42 V
-75 42 V
-3318 2266 M
-75 43 V
-76 42 V
-75 43 V
-74 42 V
-76 42 V
-75 43 V
-75 42 V
-75 42 V
-76 42 V
-3057 2360 M
-75 42 V
-75 43 V
-76 43 V
-75 42 V
-75 43 V
-76 41 V
-75 43 V
-74 42 V
-75 42 V
-2795 2268 M
-76 43 V
-75 43 V
-75 42 V
-76 43 V
-75 42 V
-75 43 V
-76 42 V
-75 42 V
-75 42 V
-2534 2259 M
-75 43 V
-76 42 V
-75 43 V
-75 42 V
-76 42 V
-75 43 V
-75 42 V
-76 42 V
-75 41 V
-2273 2134 M
-75 43 V
-75 42 V
-76 43 V
-75 42 V
-75 42 V
-76 43 V
-75 42 V
-75 43 V
-76 42 V
-2012 2108 M
-75 42 V
-75 43 V
-76 42 V
-75 42 V
-75 43 V
-75 42 V
-76 43 V
-75 42 V
-75 42 V
-1750 2159 M
-76 42 V
-75 42 V
-75 43 V
-76 42 V
-75 42 V
-75 43 V
-75 42 V
-76 43 V
-75 42 V
-1489 2176 M
-75 43 V
-76 42 V
-75 42 V
-75 43 V
-76 42 V
-75 42 V
-75 43 V
-75 42 V
-76 42 V
-2350 688 R
-4256 2562 L
--261 85 V
--262 94 V
--260 -91 V
--261 -11 V
-2951 2516 L
--262 -27 V
--261 51 V
--261 17 V
-2275 648 R
-4181 2520 L
--262 85 V
--261 94 V
--260 -91 V
--261 -10 V
-2875 2474 L
--261 -27 V
--261 51 V
--262 17 V
-2276 650 R
-4105 2478 L
--261 85 V
--260 94 V
--261 -91 V
--262 -10 V
-2800 2431 L
--261 -26 V
--262 50 V
--261 18 V
-2275 652 R
-4030 2435 L
--261 86 V
--260 93 V
--262 -90 V
--261 -10 V
-2725 2389 L
--262 -27 V
--261 51 V
--261 17 V
-2275 650 R
-3955 2393 L
--261 85 V
--261 95 V
--261 -92 V
--261 -10 V
-2649 2346 L
--261 -26 V
--261 50 V
--261 18 V
-2275 647 R
-3879 2350 L
--261 86 V
--260 94 V
--261 -91 V
--262 -10 V
-2574 2304 L
--261 -27 V
--261 51 V
--262 18 V
-2275 644 R
-3804 2308 L
--260 86 V
--261 94 V
--262 -92 V
--261 -9 V
-2499 2262 L
--261 -27 V
--262 51 V
--261 17 V
-2275 643 R
-3729 2266 L
--260 85 V
--262 94 V
--261 -91 V
--261 -10 V
-2423 2219 L
--261 -26 V
--261 50 V
--261 18 V
-2275 640 R
-3654 2223 L
--261 86 V
--261 93 V
--261 -91 V
--262 -9 V
-2348 2177 L
--261 -27 V
--261 51 V
--262 18 V
-2276 637 R
-3579 2181 L
--261 85 V
--261 94 V
--262 -92 V
--261 -9 V
-2273 2134 L
--261 -26 V
--262 51 V
--261 17 V
+4990 3559 M
+4728 3061 M
+4467 2941 M
+-261 -13 R
+-262 70 R
+-261 -25 R
+-260 -45 R
+-261 -2 R
+-262 66 R
+-261 34 R
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
+2351 533 R
+4728 3061 L
+4467 2941 L
+-261 -13 V
+-262 70 V
+-261 -25 V
+-260 -45 V
+-261 -2 V
+-262 66 V
+-261 34 V
 % End plot #1
 stroke
+1.000 UL
 LTb
 LCb setrgbcolor
-6192 1768 M
-4294 700 L
+6192 1956 M
+4294 582 L
 stroke
 LTb
 LCb setrgbcolor
-1008 1317 M
-4294 700 L
+1008 1375 M
+4294 582 L
 stroke
 LCb setrgbcolor
-2177 741 M
+2177 636 M
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 (N)]
 ] -60.0 MCshow
 LTb
 LCb setrgbcolor
-6064 1080 M
+6064 1071 M
 [ [(Symbol) 180.0 0.0 true true 0 (r)]
 ] -60.0 MCshow
 LTb
 LCb setrgbcolor
-252 2740 M
+252 2634 M
 currentpoint gsave translate 90 rotate 0 0 moveto
 [ [(NimbusSanL-Regu) 180.0 0.0 true true 0 (Saving \(%\))]
 ] -60.0 MCshow
 grestore
 LTb
-stroke gsave	%% draw gray scale smooth box
-maxcolors 0 gt {/imax maxcolors def} {/imax 1024 def} ifelse
-6290 2247 translate 262 1589 scale 0 setlinewidth
-/ystep 1 imax div def /y0 0 def /ii 0 def
-{ y0 g 0 y0 N 1 0 V 0 ystep V -1 0 f
-/y0 y0 ystep add def /ii ii 1 add def
-ii imax ge {exit} if } loop
-grestore 0 setgray
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 2247 N
-262 0 V
-0 1589 V
--262 0 V
-0 -1589 V
-Z stroke
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTb
-LCb setrgbcolor
-6552 2247 M
--63 0 V
-stroke
-6660 2247 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 0)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 2247 M
-63 0 V
-199 264 R
--63 0 V
-stroke
-6660 2511 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 2)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 2511 M
-63 0 V
-199 265 R
--63 0 V
-stroke
-6660 2776 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 4)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 2776 M
-63 0 V
-199 265 R
--63 0 V
-stroke
-6660 3041 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 6)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 3041 M
-63 0 V
-199 265 R
--63 0 V
-stroke
-6660 3306 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 8)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 3306 M
-63 0 V
-199 265 R
--63 0 V
-stroke
-6660 3571 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 10)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 3571 M
-63 0 V
-199 265 R
--63 0 V
-stroke
-6660 3836 M
-[ [(NimbusSanL-Regu) 180.0 0.0 true true 0 ( 12)]
-] -60.0 MLshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6290 3836 M
-63 0 V
 1.000 UP
-stroke
-grestore % colour palette end
 stroke
 grestore
 end

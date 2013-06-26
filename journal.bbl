@@ -55,15 +55,23 @@ Nedevschi, S., Ratnasamy, S. and Padhye, J.: Hot data centers vs. cool peers,
   systems}, HotPower'08, Berkeley, CA, USA, USENIX Association, pp.\ 8--8
   (online), \urle{http://dl.acm.org/citation.cfm?id=1855610.1855618} (2008).
 
-\bibitem{ciullo:hal-00759377}
-Ciullo, D., Martina, V., Garetto, M., Leonardi, E. and Torrisi, G.~L.:
-  {Peer-assisted VoD Systems: an Efficient Modeling Framework}, Rapport de
-  recherche RR-8184, INRIA (2012).
+\bibitem{Sun:2009:POS:1542245.1542249}
+Sun, Y., Liu, F., Li, B. and Li, B.: Peer-assisted online storage and
+  distribution: modeling and server strategies, {\em Proceedings of the 18th
+  international workshop on Network and operating systems support for digital
+  audio and video}, NOSSDAV '09, New York, NY, USA, ACM, pp.\ 13--18 (online),
+  \doi{10.1145/1542245.1542249} (2009).
 
-\bibitem{ciullo:hal-00759012}
-Ciullo, D., Martina, V., Garetto, M., Leonardi, E. and Torrisi, G.~L.:
-  {Asymptotic properties of sequential streaming leveraging users'
-  cooperation}, Rapport de recherche RR-8183, INRIA (2012).
+\bibitem{5199550}
+Liu, F., Sun, Y., Li, B. and Zhang, X.: Understanding the Roles of Servers in
+  Large-Scale Peer-Assisted Online Storage Systems, {\em Communications, 2009.
+  ICC '09. IEEE International Conference on}, pp.\ 1--5 (online),
+  \doi{10.1109/ICC.2009.5199550} (2009).
+
+\bibitem{5061997}
+Sun, Y., Liu, F., Li, B., Li, B. and Zhang, X.: FS2You: Peer-Assisted
+  Semi-Persistent Online Storage at a Large Scale, {\em INFOCOM 2009, IEEE},
+  pp.\ 873--881 (online), \doi{10.1109/INFCOM.2009.5061997} (2009).
 
 \bibitem{Huang:2008:UHC:1496046.1496064}
 Huang, C., Wang, A., Li, J. and Ross, K.~W.: Understanding hybrid CDN-P2P: why
@@ -122,5 +130,11 @@ Mandal, U., Lange, C., Gladisch, A. and Mukherjee, B.: Should ISPs adopt hybrid
   Advanced Networks and Telecommuncations Systems (ANTS), 2012 IEEE
   International Conference on}, pp.\ 6--11 (online),
   \doi{10.1109/ANTS.2012.6524219} (2012).
+
+\bibitem{Krioukov:2011:NDI:1925861.1925878}
+Krioukov, A., Mohan, P., Alspaugh, S., Keys, L., Culler, D. and Katz, R.:
+  NapSAC: design and implementation of a power-proportional web cluster, {\em
+  SIGCOMM Comput. Commun. Rev.},  Vol.~41, No.~1, pp.\ 102--108 (online),
+  \doi{10.1145/1925861.1925878} (2011).
 
 \end{thebibliography}
