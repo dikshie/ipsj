@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  27 JUN 2013 11:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  27 JUN 2013 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,13 +503,13 @@ Overfull \hbox (11.70485pt too wide) in paragraph at lines 514--515
 
 File: graphs/diff-2to1.eps Graphic file (type eps)
 <graphs/diff-2to1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 545--546
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 525--526
 [][] 
  []
 
 File: graphs/diff-3to1.eps Graphic file (type eps)
 <graphs/diff-3to1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 552--553
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 532--533
 [][] 
  []
 
@@ -539,7 +539,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
