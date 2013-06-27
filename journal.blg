@@ -12,16 +12,16 @@ Warning--there's a series but neither volume nor number in Wang:2008:IRA:1459359
 Warning--there's a series but neither volume nor number in Palasamudram:2012:UBR:2391229.2391240
 You've used 24 entries,
             1978 wiz_defined-function locations,
-            656 strings with 10180 characters,
-and the built_in function-call counts, 7861 in all, are:
-= -- 673
+            656 strings with 10154 characters,
+and the built_in function-call counts, 7851 in all, are:
+= -- 671
 > -- 312
 < -- 21
 + -- 120
 - -- 96
-* -- 622
-:= -- 1057
-add.period$ -- 26
+* -- 624
+:= -- 1055
+add.period$ -- 24
 call.type$ -- 24
 change.case$ -- 0
 chr.to.int$ -- 0
@@ -29,17 +29,17 @@ cite$ -- 31
 duplicate$ -- 371
 empty$ -- 814
 format.name$ -- 96
-if$ -- 1897
+if$ -- 1895
 int.to.chr$ -- 0
 int.to.str$ -- 24
 missing$ -- 22
-newline$ -- 77
+newline$ -- 75
 num.names$ -- 24
-pop$ -- 84
+pop$ -- 78
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 408
+skip$ -- 414
 stack$ -- 0
 substring$ -- 521
 swap$ -- 177
@@ -50,5 +50,5 @@ type$ -- 0
 warning$ -- 7
 while$ -- 81
 width$ -- 26
-write$ -- 228
+write$ -- 226
 (There were 7 warnings)
