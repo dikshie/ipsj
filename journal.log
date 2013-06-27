@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  27 JUN 2013 02:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  27 JUN 2013 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,7 +235,15 @@ pace {\belowcaptionskip }\par .
 \c@lotdepth=\count119
 \sf@top=\skip70
 \sf@bottom=\skip71
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/txfonts.sty
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count120
+\float@exts=\toks20
+\float@box=\box37
+\@float@everytoks=\toks21
+\@floatcapt=\box38
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -317,101 +325,102 @@ File: ot1txtt.fd 2000/12/15 v3.1
 (./journal.aux)
 \openout1 = `journal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 27.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 27.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 28.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 28.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 27.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 27.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 28.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 27.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 27.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 28.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 27.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 27.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 28.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 27.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 28.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+txss on input line 38.
+LaTeX Font Info:    Try loading font information for OT1+txss on input line 39.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/ot1txss.fd
 File: ot1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <8.5373> not available
-(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 38.
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 39.
 LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
-(Font)              scaled to size 8.1104pt on input line 38.
-LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 52.
-LaTeX Font Info:    Try loading font information for U+txmia on input line 52.
+(Font)              scaled to size 8.1104pt on input line 39.
+LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 53.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 53.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 52.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 53.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 52.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 53.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 52.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 53.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Calculating math sizes for size <12.56738> on input line 52
+LaTeX Font Info:    Calculating math sizes for size <12.56738> on input line 53
 .
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.02292pt on input line 52.
-LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 52.
+(Font)              scaled to size 7.02292pt on input line 53.
+LaTeX Font Info:    Calculating math sizes for size <7.82585> on input line 53.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.78625pt on input line 92.
+(Font)              scaled to size 8.78625pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <9.24873> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 8.78625pt on input line 92.
+(Font)              scaled to size 8.78625pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.43452pt on input line 92.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 92.
+(Font)              scaled to size 7.43452pt on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 93.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 92.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 93.
  [1
 
 
@@ -419,7 +428,7 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <7.11441> not available
 File: graphs/business-relationship.eps Graphic file (type eps)
 
 <graphs/business-relationship.eps>
-Overfull \hbox (14.8297pt too wide) in paragraph at lines 106--107
+Overfull \hbox (14.8297pt too wide) in paragraph at lines 107--108
  [] 
  []
 
@@ -429,38 +438,38 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps> [2]
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 324
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 325
 .
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 353--354
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 354--355
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 359--360
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 360--361
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 365--366
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 366--367
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 371--372
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 372--373
 [][] 
  []
 
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
 <graphs/cdnp2p-4.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 377--378
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 378--379
 [][] 
  []
 
@@ -473,26 +482,38 @@ File: graphs/diff-3.eps Graphic file (type eps)
 
 <graphs/diff-3.eps>
 File: graphs/diff-3-total.eps Graphic file (type eps)
- <graphs/diff-3-total.eps>
+ <graphs/diff-3-total.eps> [5]
 File: graphs/strategy1.eps Graphic file (type eps)
  <graphs/strategy1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 489--490
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 500--501
 [][] 
  []
 
 File: graphs/strategy2.eps Graphic file (type eps)
 <graphs/strategy2.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 496--497
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 507--508
 [][] 
  []
 
 File: graphs/strategy3.eps Graphic file (type eps)
 <graphs/strategy3.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 503--504
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 514--515
 [][] 
  []
 
-[5] [6] (./journal.bbl
+File: graphs/diff-2to1.eps Graphic file (type eps)
+<graphs/diff-2to1.eps>
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 545--546
+[][] 
+ []
+
+File: graphs/diff-3to1.eps Graphic file (type eps)
+<graphs/diff-3to1.eps>
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 552--553
+[][] 
+ []
+
+[6] (./journal.bbl
 ! Undefined control sequence.
 l.5 \newblock
               Available on \url{http://uptimeinstitute.com/2012-survey-resul...
@@ -503,6 +524,7 @@ l.5 \newblock Available on \url
                                {http://uptimeinstitute.com/2012-survey-resul...
 
 ? 
+[7]
 ! Undefined control sequence.
 l.9 \newblock
               Available on
@@ -516,19 +538,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 []\OT1/txr/m/n/7.82584 Google: Google data cen-ter power us-age. Avail-able on
  []
 
-[7])
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
+)
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
 [8] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 4078 strings out of 493482
- 57967 string characters out of 3140988
+ 4134 strings out of 493482
+ 58748 string characters out of 3140988
  121208 words of memory out of 3000000
- 7335 multiletter control sequences out of 15000+200000
+ 7385 multiletter control sequences out of 15000+200000
  50229 words of font info for 145 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,15n,42p,398b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,15n,42p,398b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (8 pages, 60704 bytes).
+Output written on journal.dvi (8 pages, 61240 bytes).

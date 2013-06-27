@@ -5,6 +5,7 @@
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{subfig}
+\usepackage{float}
 
 \def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
 \def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
@@ -443,7 +444,7 @@ Therefore with same energy consumption level on $50\%$ utilization the system ca
 Once again, router energy consumption is increasing. 
 
 
-\begin{figure*}[t]
+\begin{figure*}[ht]
 \centering
 \begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
@@ -483,7 +484,17 @@ While CDN server part can save more energy, due to peers high energy consumption
 
 \subsection{Online Storage}
 
-\begin{figure*}[t]
+In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
+We follow peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249} as basis of our work. 
+In peer-assisted online storage, users can browse a catalog of available files and asynchronously issue request to download a given file, which are ideally immediately satisfied by the system.
+In order to reduce startup latency, first block of file must be downloaded from server \cite{5199550}.
+In peer-assisted online storage, users interested to a specific file can retrieve it from servers (CDN) and from users storing copy of it in their computer or dedicated set top boxes/home gateway remotely.  
+Peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249}, the arrival process of request for considered file follow Poisson process, it takes into account multiple files of different popularity and server bandwidth provisioning.
+For detail, we refer the readers to \cite{Sun:2009:POS:1542245.1542249,5199550,5061997}.
+All numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
+
+
+\begin{figure*}[ht]
 \centering
 \begin{minipage}[b]{0.3\linewidth}
 	\includegraphics[scale=0.45]{graphs/strategy1.eps}
@@ -504,19 +515,9 @@ While CDN server part can save more energy, due to peers high energy consumption
 	\caption{Power consumption of CDN server, router, and peers, in water leveling strategy.}
 	\label{fig:stg3}
 \end{minipage}
-\caption{main}
+%\caption{main}
 \label{fig:storage}
 \end{figure*}
-
-
-In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
-We follow peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249} as basis of our work. 
-In peer-assisted online storage, users can browse a catalog of available files and asynchronously issue request to download a given file, which are ideally immediately satisfied by the system.
-In order to reduce startup latency, first block of file must be downloaded from server \cite{5199550}.
-In peer-assisted online storage, users interested to a specific file can retrieve it from servers (CDN) and from users storing copy of it in their computer or dedicated set top boxes/home gateway remotely.  
-Peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249}, the arrival process of request for considered file follow Poisson process, it takes into account multiple files of different popularity and server bandwidth provisioning.
-For detail, we refer the readers to \cite{Sun:2009:POS:1542245.1542249,5199550,5061997}.
-All numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
 
 %Figure \ref{fig:cdnvod} shows power consumption of CDN server, router, peers, and total systems. 
 %Since in CDN architecture there is no peer-to-peer traffic, the CDN server become the central of the operation.  
@@ -537,6 +538,25 @@ All numerical simulation parameters that we used in this section same as \cite{S
 %Router part has difference from $0.19\%$ to $1.6\%$ and total system has difference from $0.1\%$ to $0.59\%$.
 %For $T=25$, total system difference is from $0.1\%$ to $0.58\%$
 %Increasing air temperature supply does not make significant saving due to small number of component involved in the system.
+
+\begin{figure*}[ht]
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/diff-2to1.eps}
+	\caption{Power consumption difference between request driven strategy and lower bound strategy.}
+	\label{fig:diff2to1}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.45]{graphs/diff-3to1.eps}
+	\caption{Power consumption difference between water leveling strategy and lower bound strategy.}
+	\label{fig:diff3to1}
+\end{minipage}
+%\caption{main}
+\label{fig:diffstrategy}
+\end{figure*}
+
 
 
 \section{Related Work} 
