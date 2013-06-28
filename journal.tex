@@ -138,7 +138,6 @@ Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313
 \end{center}
 \caption{Model of content delivery architecture with peer assisted.}
 \label{fig:iptv}
-%\vspace{-2mm}
 \end{figure} 
 
 Figure \ref{fig:iptv} shows model of CDN with peer assisted.  
@@ -574,12 +573,8 @@ The authors in \cite{5963557} conclude that CCN is more energy efficient in deli
 
 To the best of our knowledge, the study of energy in that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
 Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the optical core network around 20-40\% less energy.  
-%The authors are focus on energy consumption of different algorithms for minimizing server bandwidth based on popularity of content, by maximizing peer request, the %authors can minimizing CDN workload. 
 The authors only considered energy consumption of hardware especially optical devices and does not include overhead inside data center, CDN server energy comsumption, and consumed power by peers.
 Our work is quite different, we take number of peers with static content and add overhead of data center which is  power of cooling cause by temperature of hardware for different purpose which are live streaming and video on demand.
-
- 
-
 
 \section{Conclusion and Future Work}\label{conclusion}
 
@@ -587,8 +582,8 @@ In this paper, we have introduced the comparison of energy consumption between t
 Integrating peer to peer capability to assist the existing CDN has a potential to save energy consumption.
 In this study, we show that event without explicitly considering energy consumption while assigning content, the peer assisted CDN can save energy consumption.
 Although the energy savings depend on number of request (number of clients), number of router and its configuration, for total system energy saving is around $0.5$ to $1.2$.
-If we break per component, the CDN server is the part that can be push to save energy up to $11\%$ and can be more if new generation of power proportional server is used \cite{Krioukov:2011:NDI:1925861.1925878}.
-We agree with \cite{4509688}, Router component in the other side is quite difficult for energy saving, because different chassis size, different network interface type slot, and different configuration has different energy consumption.
+If we break per component, the CDN server is the part that can be pushed to save energy up to $11\%$ and can be more if new generation of power proportional server is used \cite{Krioukov:2011:NDI:1925861.1925878}.
+We agree with \cite{4509688}, Router component in the other side is quite difficult for energy saving, because different chassis size, different network interface type slot, and different configuration can lead to different energy consumption.
 Several areas that we have been identified for future work are:  
 
 
