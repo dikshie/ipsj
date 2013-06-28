@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  27 JUN 2013 16:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  28 JUN 2013 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,43 +437,43 @@ Overfull \hbox (14.8297pt too wide) in paragraph at lines 108--109
  []
 
 File: graphs/p2p-cdn.eps Graphic file (type eps)
-<graphs/p2p-cdn.eps>
+<graphs/p2p-cdn.eps> [2]
 File: graphs/datacenter.eps Graphic file (type eps)
- <graphs/datacenter.eps> [2]
+ <graphs/datacenter.eps>
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 326
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 325
 .
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 355--356
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 354--355
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 361--362
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 360--361
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 367--368
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 366--367
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 373--374
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 372--373
 [][] 
  []
 
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
 <graphs/cdnp2p-4.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 379--380
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 378--379
 [][] 
  []
 
@@ -486,50 +486,53 @@ File: graphs/diff-3.eps Graphic file (type eps)
 
 <graphs/diff-3.eps>
 File: graphs/diff-3-total.eps Graphic file (type eps)
- <graphs/diff-3-total.eps> [5]
+ <graphs/diff-3-total.eps>
 File: graphs/strategy1.eps Graphic file (type eps)
  <graphs/strategy1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 501--502
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 479--480
 [][] 
  []
 
 File: graphs/strategy2.eps Graphic file (type eps)
 <graphs/strategy2.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 508--509
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 486--487
 [][] 
  []
 
 File: graphs/strategy3.eps Graphic file (type eps)
 <graphs/strategy3.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 515--516
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 493--494
 [][] 
  []
 
+[5]
 File: graphs/diff-2to1.eps Graphic file (type eps)
-<graphs/diff-2to1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 526--527
+ <graphs/diff-2to1.eps>
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 520--521
 [][] 
  []
 
 File: graphs/diff-3to1.eps Graphic file (type eps)
 <graphs/diff-3to1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 533--534
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 527--528
 [][] 
  []
 
-[6] (./journal.bbl [7])
-Underfull \hbox (badness 10000) in paragraph at lines 614--614
+[6] [7] (./journal.bbl [8])
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[8] (./journal.aux) ) 
+[9
+
+] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
  4210 strings out of 493482
  59679 string characters out of 3140988
- 121208 words of memory out of 3000000
+ 122208 words of memory out of 3000000
  7456 multiletter control sequences out of 15000+200000
  50505 words of font info for 146 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (8 pages, 61248 bytes).
+Output written on journal.dvi (9 pages, 66084 bytes).
