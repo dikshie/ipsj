@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  30 JUN 2013 01:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  3 JUL 2013 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -443,38 +443,38 @@ File: graphs/datacenter.eps Graphic file (type eps)
  <graphs/datacenter.eps>
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 330
-.
 File: graphs/topology.eps Graphic file (type eps)
 
 <graphs/topology.eps>
+LaTeX Font Info:    Calculating math sizes for size <7.82584> on input line 342
+.
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 359--360
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 361--362
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 365--366
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 367--368
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (29.77345pt too wide) in paragraph at lines 371--372
+Overfull \hbox (29.77345pt too wide) in paragraph at lines 373--374
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 377--378
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 379--380
 [][] 
  []
 
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
 <graphs/cdnp2p-4.eps>
-Overfull \hbox (4.62192pt too wide) in paragraph at lines 383--384
+Overfull \hbox (4.62192pt too wide) in paragraph at lines 385--386
 [][] 
  []
 
@@ -489,19 +489,19 @@ File: graphs/diff-3-total.eps Graphic file (type eps)
 <graphs/diff-3-total.eps> [4] [5]
 File: graphs/strategy1.eps Graphic file (type eps)
  <graphs/strategy1.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 487--488
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 489--490
 [][] 
  []
 
 File: graphs/strategy2.eps Graphic file (type eps)
 <graphs/strategy2.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 494--495
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 496--497
 [][] 
  []
 
 File: graphs/strategy3.eps Graphic file (type eps)
 <graphs/strategy3.eps>
-Overfull \hbox (11.70485pt too wide) in paragraph at lines 501--502
+Overfull \hbox (11.70485pt too wide) in paragraph at lines 503--504
 [][] 
  []
 
@@ -512,7 +512,7 @@ File: graphs/diff-3to1.eps Graphic file (type eps)
 File: graphs/diff-cdn.eps Graphic file (type eps)
  <graphs/diff-cdn.eps> [6]
 [7] (./journal.bbl [8])
-Underfull \hbox (badness 10000) in paragraph at lines 653--653
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
@@ -520,10 +520,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 653--653
 Here is how much of TeX's memory you used:
  4245 strings out of 493482
  60327 string characters out of 3140988
- 125208 words of memory out of 3000000
+ 124208 words of memory out of 3000000
  7490 multiletter control sequences out of 15000+200000
  59559 words of font info for 177 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (9 pages, 68012 bytes).
+Output written on journal.dvi (9 pages, 67940 bytes).
