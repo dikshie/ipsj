@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  4 JUL 2013 23:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=latex 2013.4.17)  4 JUL 2013 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,21 +493,26 @@ File: graphs/diff-3to1.eps Graphic file (type eps)
 
 <graphs/diff-3to1.eps>
 File: graphs/diff-cdn.eps Graphic file (type eps)
- <graphs/diff-cdn.eps> [6] [7] (./journal.bbl)
-Underfull \hbox (badness 10000) in paragraph at lines 655--655
+ <graphs/diff-cdn.eps>
+File: graphs/pop.eps Graphic file (type eps)
+ <graphs/pop.eps>
+File: graphs/totalconsumption.eps Graphic file (type eps)
+
+<graphs/totalconsumption.eps> [6] [7] (./journal.bbl [8])
+Underfull \hbox (badness 10000) in paragraph at lines 673--673
 [][] \OT1/txr/m/n/9.24873 is As-sis-tant
  []
 
-[8] [9
+[9
 
 ] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 4235 strings out of 493482
- 60185 string characters out of 3140988
+ 4241 strings out of 493482
+ 60299 string characters out of 3140988
  124208 words of memory out of 3000000
- 7483 multiletter control sequences out of 15000+200000
+ 7488 multiletter control sequences out of 15000+200000
  59559 words of font info for 177 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,380s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on journal.dvi (9 pages, 65568 bytes).
+Output written on journal.dvi (9 pages, 66304 bytes).
