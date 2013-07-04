@@ -558,6 +558,13 @@ For fig.\ref{fig:diff1}, \ref{fig:diffs1},\ref{fig:diff2},and \ref{fig:diffs2}, 
 \hfill
 \centering
 \begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/componentconsumption.eps}
+	\caption{Power consumption for server and router under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies.}
+	\label{fig:componentpop}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
 	\includegraphics[scale=0.4]{graphs/totalconsumption.eps}
 	\caption{Power consumption under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies.}
 	\label{fig:totalpop}
@@ -598,10 +605,24 @@ In water leveling strategy, server bandwidth is equally divided across all the f
 Fewer peers are involved in less popular files, each of these peers can obtain more server bandwidth.  
 This explains less peers compare to request driven but more peers compare to lower bound.
 
-Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy \ref{fig:diff2to1}, while water level strategy totally consume around $2.3\%$ more energy compare to lower bound strategy \ref{fig:diff3to1}.
-Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have cooling overhead $T=25$.
-Generally, increasing server bandwidth will decrease number of peers thus increasing CDN server energy consumption and decreasing router energy consumption. 
-Total energy consumption in every strategies depend on number peers.  
+Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy fig.\ref{fig:diff2to1}, while water level strategy totally consume around $2.3\%$ more energy compare to lower bound strategy fig.\ref{fig:diff3to1}.
+Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have cooling overhead $T=25$ fig.\ref{fig:difftocdn}.
+%Generally, increasing server bandwidth will decrease number of peers thus increasing CDN server energy consumption and decreasing router energy consumption. 
+%Total energy consumption in every strategies depend on number peers.  
+
+File popularity has strong correlation with downloading performance. 
+We examine popularity by varying the peer arrival rate of less popular files.
+Specifically we linearly increase file popularity from $0.1$ to $1$ and we choose server bandwidth $S=50$MBps which is quite constraint and similar to FS2You case.
+As shown in fig.\ref{fig:popsimulation} when file popularity increases, downloading performance decrease first and increases again as files become more popular.
+When file popularity is low there are fewer peers downloading the file and hence each of them can obtain relatively more sever bandwidth.
+When file popularity is high peers can enjoy high file sharing effectiveness and hence high average downloading rates.
+Semi popular files get the worst downloading performance in the system as difficulty in both file sharing among peers and requesting bandwidth from server.
+In request driven strategy, we do not find such as U-shaped curve due to server bandwidth strategy that is equally divided across all peers and not affected by file popularity.
+
+Figure \ref{fig:totalpop} shows total energy of system as function from file popularity.  
+More popular file implicate to more peers in the system thus increases total energy.  
+While CDN server energy consumption is constant, router energy consumption is increases fig.\ref{fig:componentpop}. 
+
 
 
 \section{Related Work} 
