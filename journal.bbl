@@ -65,6 +65,14 @@ V.~Valancius, N.~Laoutaris, L.~Massouli{\'e}, C.~Diot, and P.~Rodriguez,
   5th international conference on Emerging networking experiments and
   technologies}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 37--48.
 
+\bibitem{Yin:2010:LEC:1823746.1823750}
+\BIBentryALTinterwordspacing
+H.~Yin, X.~Liu, T.~Zhan, V.~Sekar, F.~Qiu, C.~Lin, H.~Zhang, and B.~Li,
+  ``Livesky: Enhancing cdn with p2p,'' \emph{ACM Trans. Multimedia Comput.
+  Commun. Appl.}, vol.~6, no.~3, pp. 16:1--16:19, Aug. 2010. [Online].
+  Available: \url{http://doi.acm.org/10.1145/1823746.1823750}
+\BIBentrySTDinterwordspacing
+
 \bibitem{moore2005making}
 J.~Moore, J.~Chase, P.~Ranganathan, and R.~Sharma, ``Making scheduling" cool":
   temperature-aware workload placement in data centers,'' in \emph{Proceedings
@@ -108,14 +116,6 @@ C.~Huang, A.~Wang, J.~Li, and K.~W. Ross, ``Understanding hybrid cdn-p2p: why
   Audio and Video}, ser. NOSSDAV '08.\hskip 1em plus 0.5em minus 0.4em\relax
   New York, NY, USA: ACM, 2008, pp. 75--80. [Online]. Available:
   \url{http://doi.acm.org/10.1145/1496046.1496064}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Yin:2010:LEC:1823746.1823750}
-\BIBentryALTinterwordspacing
-H.~Yin, X.~Liu, T.~Zhan, V.~Sekar, F.~Qiu, C.~Lin, H.~Zhang, and B.~Li,
-  ``Livesky: Enhancing cdn with p2p,'' \emph{ACM Trans. Multimedia Comput.
-  Commun. Appl.}, vol.~6, no.~3, pp. 16:1--16:19, Aug. 2010. [Online].
-  Available: \url{http://doi.acm.org/10.1145/1823746.1823750}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Huang:2007:IVP:1282427.1282396}
