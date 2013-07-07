@@ -1,11 +1,10 @@
 \documentclass[conference]{IEEEtran}
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
-%\usepackage{amsmath}
 \usepackage{subfig}
 %\usepackage{float}
 \usepackage{url}
-
+%\usepackage{amsmath}
 
 %\usepackage{ifpdf}
 %\usepackage{cite}
@@ -288,6 +287,8 @@ Currently we assume a uniform $T_{sup}$ from each cooling units due to the compl
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
 To do so, we designed a series of model and perform an analysis.
 Our energy model is similar to the models used in \cite{Nedevschi:2008:HDC:1855610.1855618}.
+The difference with \cite{Nedevschi:2008:HDC:1855610.1855618}, our baseline energy is not function of bitrate flow. 
+Our baseline energy is based on minimum energy required to turn-on the device without any traffic low trough the device. 
 Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
 
 %% sama atau serupa? kalau serupa bedanya apa dng model yng ada di [10]????
@@ -339,7 +340,7 @@ Finaly total energy is:
 \end{equation}
 where $B$ is size of file to be transferred. 
 
-Considering cooling energy, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}, therefore total energy consumed: 
+Considering cooling energy, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}, therefore total energy consumption: 
 \begin{equation}
 	\hat{E}_{t} = E_{t}.\left( 1+\frac{1}{COP(T)} \right)
 \end{equation}
