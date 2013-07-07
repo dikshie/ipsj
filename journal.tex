@@ -1,41 +1,83 @@
-%\documentclass[JIP,draft]{ipsj}
-\documentclass[JIP]{ipsj}
-
+\documentclass[conference]{IEEEtran}
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
-\usepackage{amsmath}
+%\usepackage{amsmath}
 \usepackage{subfig}
-\usepackage{float}
+%\usepackage{float}
 \usepackage{url}
 
-\def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
-\def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
-\def\|{\verb|}
 
-%\setcounter{volume}{20}% vol20=2012
-%\setcounter{number}{4}% 1, 2, 3, 4
-\setcounter{page}{1}
-
-%\received{2011}{7}{1}
-%\rereceived{2011}{10}{1}   % optional
-%\rerereceived{2011}{10}{31} % optional
-%\accepted{2011}{11}{5}
-
-\usepackage[varg]{txfonts}%%!!
-\makeatletter%
-\input{ot1txtt.fd}
-\makeatother%
+%\usepackage{ifpdf}
+%\usepackage{cite}
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+\usepackage[cmex10]{amsmath}
+%\usepackage{algorithmic}
+%\usepackage{array}
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+%\usepackage{eqparbox}
+%\usepackage[tight,footnotesize]{subfigure}
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%\usepackage{fixltx2e}
+%\usepackage{stfloats}
+%\usepackage{url}
+% correct bad hyphenation here
+%\hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
+\title{Relaxing CDN energy}
 
-\title{Relaxing CDN Energy: Considering Peer-Assisted}
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
 
-\affiliate{SFC}{Keio University Shonan Fujisawa Campus, 5322 Endo, Fujisawa-shi, Kanagawa 252-0882 Japan}
 
-\author{Mohamad Dikshie Fauzie}{SFC}[dikshie@sfc.wide.ad.jp]
-\author{Achmad Husni Thamrin}{SFC}[husni@ai3.net]
-\author{Jun Murai}{SFC}[jun@wide.ad.jp]
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
 
+
+\author{\IEEEauthorblockN{Mohamad Dikshie Fauzie\IEEEauthorrefmark{1} \quad
+Achmad Husni Thamrin\IEEEauthorrefmark{1} \quad
+Rodney Van Meter\IEEEauthorrefmark{2} \quad
+Jun Murai\IEEEauthorrefmark{2}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Graduate School of Media and Governance} \quad
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Faculty of Environment and Information Studies\\ 
+Keio University, 252-0882 Kanagawa, Japan \\
+dikshie@sfc.wide.ad.jp \quad\quad husni@ai3.net \quad\quad rdv@sfc.wide.ad.jp \quad\quad jun@wide.ad.jp}
+}
+% make the title area
+\maketitle
+\IEEEpeerreviewmaketitle
 
 \begin{abstract}
 
@@ -52,9 +94,9 @@ Compare to pure CDN architecture peer-assisted, peer assisted online storage tot
 \end{abstract}
 
 
-\begin{keyword}
-CDN, Data Center, Energy, Peer Assisted, P2P
-\end{keyword}
+%\begin{keyword}
+%CDN, Data Center, Energy, Peer Assisted, P2P
+%\end{keyword}
 
 \maketitle
 
@@ -673,35 +715,33 @@ We agree with \cite{4509688}, Router component in the other side is quite diffic
 Several areas that we have been identified for future work are: more correlation analysis of time period to peer energy usage pattern in live streaming, continued characterization of different peer energy usage based on flash memory storage, and comparing energy model with different file popularity models.
 
 
+\section*{Acknowledgements}
+We thank A,B,C, and D
 
-\begin{acknowledgment}
-We thank A,B,C, and D for suggestions.
-\end{acknowledgment}
-
-\bibliographystyle{ipsjunsrt-e}% bib style
+\bibliographystyle{IEEEtran}% bib style
 \bibliography{journal}% your bib database
 
 
 
-\begin{biography}
-
-\profile{Mohamad Dikshie Fauzie}{was born in 1976.\
-He received a bachelors degree and a master's degree from Institute of Technology Bandung, Indonesia.\
-He is currently a Ph.D candidate at Keio University's Shonan Fujisawa Campus.}
+%\begin{biography}
 %
-\profile{Achmad Husni Thamrin}{is Assistant Professor at Keio University.\ 
-He is a graduate of Keio University, Graduate School of Media and Governance (Ph.D 2005, MMG, 2002).\
-His research interests include multicast, Internet over broadcast media, and peer-to-peer networks.} 
+%\profile{Mohamad Dikshie Fauzie}{was born in 1976.\
+%He received a bachelors degree and a master's degree from Institute of Technology Bandung, Indonesia.\
+%He is currently a Ph.D candidate at Keio University's Shonan Fujisawa Campus.}
 %
-\profile{Jun Murai}{was born in March 1955 in Tokyo.\
-Graduated Keio University in 1979, Department of Mathematics, Faculty of Science and Technology.\
-He received his M.S. for Computer Science from Keio University in 1981,
-and received his Ph.D. in Computer Science, Keio University in 1987.\ 
-He specializes in computer science, computer network, and computer 
-communication. He is currently Dean of the Faculty of Environment and Information Studies, Keio University since October 2009.\
-Former Vice-President of Keio University from May 2005 to May 2009.\ 
-He was an Executive Director of the Keio Research Institute at SFC, Keio University from 1999 to 2005.}
+%\profile{Achmad Husni Thamrin}{is Assistant Professor at Keio University.\ 
+%He is a graduate of Keio University, Graduate School of Media and Governance (Ph.D 2005, MMG, 2002).\
+%His research interests include multicast, Internet over broadcast media, and peer-to-peer networks.} 
 %
-\end{biography}
+%\profile{Jun Murai}{was born in March 1955 in Tokyo.\
+%Graduated Keio University in 1979, Department of Mathematics, Faculty of Science and Technology.\
+%He received his M.S. for Computer Science from Keio University in 1981,
+%and received his Ph.D. in Computer Science, Keio University in 1987.\ 
+%He specializes in computer science, computer network, and computer 
+%communication. He is currently Dean of the Faculty of Environment and Information Studies, Keio University since October 2009.\
+%Former Vice-President of Keio University from May 2005 to May 2009.\ 
+%He was an Executive Director of the Keio Research Institute at SFC, Keio University from 1999 to 2005.}
+%
+%\end{biography}
 
 \end{document}
