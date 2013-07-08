@@ -581,7 +581,7 @@ For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}
 \hfill
 \begin{minipage}[b]{0.3\linewidth}
 	\includegraphics[scale=0.4]{graphs/diff-cdn.eps}
-	\caption{Total power consumption difference between CDN architecture, surplus mode, lower bound strategy, request driven strategy, and water leveling strategy.}
+	\caption{Total power consumption difference between CDN architecture, surplus mode $S=150$MBps, lower bound strategy, request driven strategy, and water leveling strategy.}
 	\label{fig:difftocdn}
 \end{minipage}
 %\caption{main}
@@ -646,7 +646,7 @@ Fewer peers are involved in less popular files, each of these peers can obtain m
 This explains less peers compare to request driven but more peers compare to lower bound.
 
 Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy fig.\ref{fig:diff2to1}, while water level strategy totally consume around $2.3\%$ more energy compare to lower bound strategy fig.\ref{fig:diff3to1}.
-Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have cooling overhead $T=25$ fig.\ref{fig:difftocdn}.
+Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have cooling overhead $T=25$ fig.\ref{fig:difftocdn} for above case. 
 %Generally, increasing server bandwidth will decrease number of peers thus increasing CDN server energy consumption and decreasing router energy consumption. 
 %Total energy consumption in every strategies depend on number peers.  
 
@@ -660,7 +660,7 @@ Semi popular files get the worst downloading performance in the system as diffic
 In request driven strategy, we do not find such as U-shaped curve due to server bandwidth strategy that is equally divided across all peers and not affected by file popularity.
 
 Figure \ref{fig:totalpop} shows total energy of system as function from file popularity.  
-More popular file imply having more peers in the system thus increases total energy.  
+More popular files imply having more peers in the system thus increases total energy.  
 While CDN server energy consumption is constant, router energy consumption is increases fig.\ref{fig:componentpop}. 
 
 
@@ -708,7 +708,9 @@ In this paper, we have introduced the comparison of energy consumption between t
 Integrating peer to peer capability to assist the existing CDN has a potential to save energy consumption.
 In this study, we show that event without explicitly considering energy consumption while assigning content, the peer assisted CDN can save energy consumption.
 Although the energy savings depend on number of request (number of clients), number of router and its configuration, for total system energy saving is around $0.5$ to $1.2$.
-If we break per component, the CDN server is the part that can be pushed to save energy up to $11\%$ and can be more if new generation of power proportional server is used \cite{Krioukov:2011:NDI:1925861.1925878}.
+If we break per component in live streaming case, the CDN server is the part that can be pushed to save energy up to $11\%$ and can be more if new generation of power proportional server is used \cite{Krioukov:2011:NDI:1925861.1925878}.
+Unfortunately, in peer-assisted online storage, we do not see such energy saving.  
+In peer-assisted storage, all of strategies that we discussed before focus how to efficiently allocated bandwidth for every peers thus we do not see energy saving in CDN server.
 We agree with \cite{4509688}, Router component in the other side is quite difficult to optimize for energy saving, because different chassis size, different network interface type slot, and different configuration can lead to different energy consumption.
 Several areas that we have been identified for future work are: more correlation analysis of time period to peer energy usage pattern in live streaming, continued characterization of different peer energy usage based on flash memory storage, and comparing energy model with different file popularity models.
 

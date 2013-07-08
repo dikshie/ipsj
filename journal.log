@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.6)  8 JUL 2013 16:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.6)  8 JUL 2013 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,7 +353,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2469) has occurred while \output is active []
 
  [7]
-(./journal.bbl [8])
+[8] (./journal.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -375,4 +375,4 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (9 pages, 60284 bytes).
+Output written on journal.dvi (9 pages, 60700 bytes).
