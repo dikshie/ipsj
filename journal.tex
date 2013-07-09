@@ -1,4 +1,6 @@
 \documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
 \usepackage{subfig}
@@ -287,8 +289,9 @@ Currently we assume a uniform $T_{sup}$ from each cooling units due to the compl
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
 To do so, we designed a series of model and perform an analysis.
 Our energy model is similar to the models used in \cite{Nedevschi:2008:HDC:1855610.1855618}.
-The difference with \cite{Nedevschi:2008:HDC:1855610.1855618}, our baseline energy is not function of bitrate flow. 
+The difference with \cite{Nedevschi:2008:HDC:1855610.1855618}, firstly, our baseline energy is not function of bitrate flow. 
 Our baseline energy is based on minimum energy required to turn-on the device without any traffic low trough the device. 
+Secondly, our overhead number based on COP value.
 Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
 
 For each component, we consider two energy measurement:  baseline energy consumption and energy consumed per work unit $\delta$.
@@ -699,7 +702,7 @@ The authors in \cite{5963557} conclude that CCN is more energy efficient in deli
 
 To the best of our knowledge, the study of energy in that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
 Mandal et al. \cite{6524219} mentioned that hybrid CDN-P2P systems can reduce a significant amount energy in the optical core network around 20-40\% less energy.  
-The authors only considered energy consumption of hardware especially optical devices and does not include overhead inside data center, CDN server energy comsumption, and consumed power by peers.
+The authors only considered energy consumption of hardware especially optical devices and does not include overhead inside data center, CDN server energy consumption, and consumed power by peers.
 Our work is quite different, we take number of peers and add overhead of data center which is power of cooling cause by temperature of hardware for different purpose: live streaming and online storage.
 
 \section{Conclusion and Future Work}\label{conclusion}
@@ -710,8 +713,13 @@ In this study, we show that event without explicitly considering energy consumpt
 Although the energy savings depend on number of request (number of clients), number of router and its configuration, for total system energy saving is around $0.5$ to $1.2$.
 If we break per component in live streaming case, the CDN server is the part that can be pushed to save energy up to $11\%$ and can be more if new generation of power proportional server is used \cite{Krioukov:2011:NDI:1925861.1925878}.
 Unfortunately, in peer-assisted online storage, we do not see such energy saving.  
-In peer-assisted storage, all of strategies that we discussed before focus how to efficiently allocated bandwidth for every peers thus we do not see energy saving in CDN server.
+In peer-assisted storage, all of strategies that we discussed before focus how to efficiently allocated bandwidth from CDN server for every peers.
+CDN server is fully used to serve peers, thus we do not see energy saving in CDN server.
 We agree with \cite{4509688}, Router component in the other side is quite difficult to optimize for energy saving, because different chassis size, different network interface type slot, and different configuration can lead to different energy consumption.
+Different COP values, in our case $T=20$ and $T=25$, only give $7\%$ difference power consumption.
+Obviously, with $T=25$ overhead is minimal compare to $T=20$.
+once again, It is not our aim to advocate cooling temperature value over another since there is reliability issue related to air temperature supply for hardware.  
+We only show that increasing temperature can minimize overhead.
 Several areas that we have been identified for future work are: more correlation analysis of time period to peer energy usage pattern in live streaming, continued characterization of different peer energy usage based on flash memory storage, and comparing energy model with different file popularity models.
 
 
