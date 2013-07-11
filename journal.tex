@@ -163,11 +163,6 @@ If CDN can not reach eyeball ISP due to business or economic reason, CDN can be 
 \end{figure} 
 
 \section{Motivation}\label{motivation}
-In the economic supply chain of video traffic, most ISPs get a little revenue from video traffic thus ISP wants to monetize that traffic.
-the future of CDN business is likely to live deeper into ISP networks, more integrated into and interleaved with ISP infrastructures thus users can get good quality of video.
-The idea of ISP managed CDN has been proposed in recent years.
-The complexity of the CDN business encourage ISP to manage their own CDN rather than allow others to run CDNs on their networks.
-
 CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers fig.\ref{fig:businessrelationship}. 
 The growing of Internet traffic dominated by video, the energy consumption of a host oriented architecture becomes problematic due to over provisioning factor.
 The idea of utilizing the user's computation power to support ISP operation is not new. 
@@ -177,7 +172,7 @@ In this case, ISP can offload part of workload on their CDN to user's home gatew
 By offloading workload, their CDN can relax energy demand thus relaxing data center power budget or relaxing capacity planning for power.
 This architecture depends largely on the number of devices which can be found online at a point in time.
 While some users keep their home gateway online at all times, there are small number of users might turn off or their home gateway can not be reached.
-Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313} and Valancius et al., \cite{valancius2009greening}, the average availability of the residential gateways in 12 major ISPs over one month is up $85\%$ with $5\%$ until $8\%$ uptime variations thought out a day.
+Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313} and Valancius et al., \cite{valancius2009greening}, the average availability of the residential gateways in 12 major ISPs over one month is up $85\%$ with $5\%$ until $8\%$ uptime variations thought out a day thus residential gateway has potential to use as peers.
 
 \section{System Description}\label{system model}
 \begin{figure}[thb]

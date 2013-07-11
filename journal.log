@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.6)  9 JUL 2013 15:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  11 JUL 2013 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -442,12 +442,12 @@ Before submitting the final camera ready copy, remember to:
 
 [9] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 3801 strings out of 493316
- 59481 string characters out of 6137931
- 132138 words of memory out of 5000000
- 7212 multiletter control sequences out of 15000+600000
+ 3801 strings out of 493312
+ 59481 string characters out of 6137876
+ 132175 words of memory out of 5000000
+ 7216 multiletter control sequences out of 15000+600000
  103769 words of font info for 116 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,398b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (9 pages, 61560 bytes).
+Output written on journal.dvi (9 pages, 61528 bytes).
