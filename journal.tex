@@ -152,7 +152,7 @@ In section 3, we will present result and analysis.
 Section 4 will conclude this paper. 
 
 \section{Motivation}\label{motivation}
-CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers fig.\ref{fig:businessrelationship}. 
+CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers.
 The growing of Internet traffic dominated by video, the energy consumption of a host oriented architecture becomes problematic due to over provisioning factor.
 The idea of utilizing the user's computation power to support ISP operation is not new. 
 The figaro project proposed residential gateway as an integrator of different networks and services, becoming an Internet wide distributed content management for a proposed future Internet architecture.  
@@ -164,6 +164,7 @@ While some users keep their home gateway online at all times, there are small nu
 Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313} and Valancius et al., \cite{valancius2009greening}, the average availability of the residential gateways in 12 major ISPs over one month is up $85\%$ with $5\%$ until $8\%$ uptime variations thought out a day thus residential gateway has potential to use as peers.
 
 \section{System Description}\label{system model}
+\subsection{Live Streaming}
 \begin{figure}[thb]
 \begin{center}
 \includegraphics[scale=0.6]{graphs/p2p-cdn.eps}
@@ -197,6 +198,7 @@ Maximum number leechers supported by seeders is $n_l=160$.
 Number of seeders that upload content to leechers is $n_{s}^{u}=640$.  
 Therefore we have three seeders that do not need to upload content to leecher. 
 
+\subsection{Peer Assisted Online Storage}
 
 \subsection{Abstracting Data Center Power}\label{thermodynamics}
 \begin{figure}[thb]
