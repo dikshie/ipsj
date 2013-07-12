@@ -119,7 +119,7 @@ Broadband network access helps P2P applications to perform better.
 xDSL networks are deployed worldwide, and in some countries, such as Japan, even higher bandwidth fiber to the home (FTTH) already exceeds DSL in market penetration.  In the coming years, FTTH will be massively deployed by network operators throughout the world.  
 As access bandwidth increases, P2P systems may become more efficient since a peer can contribute much more.
 
-In Peer assisted CDN \footnote{in this paper, we may interchange peer assisted CDN and CDN-P2P.}, users can download content from CDN nodes for from other users or peers the content.
+In Peer assisted CDN \footnote{in this paper, we may interchange Peer Assisted CDN and CDN-P2P.}, users can download content from CDN nodes for from other users or peers the content.
 A user may cache the content after download to serve requests from other users
 Due to complexity of behavior of peers, the process should be done in home gateway user where ISP can have control on it. 
 
@@ -147,9 +147,9 @@ To be fair, we also need to see how combination of some architectures can help t
 
 The rest of this paper is organized as follows. 
 Section 2 present motivation of this paper.
-Section 3 provides an overview of system model, data center model and energy model.  
-In section 3, we will present result and analysis.  
-Section 4 will conclude this paper. 
+Section 3 provides an overview of system model and energy model.  
+In section 4, we will present result and analysis.  
+Section 5 will conclude this paper. 
 
 \section{Motivation}\label{motivation}
 CDN architectures are host-oriented: content is delivered to end users through host servers that are centrally managed in a few data centers.
@@ -174,7 +174,7 @@ Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313
 \label{fig:iptv}
 \end{figure} 
 
-Figure \ref{fig:iptv} shows example model of CDN with peer assisted for live streaming \cite{Yin:2010:LEC:1823746.1823750}.  
+Figure \ref{fig:iptv} shows example model of CDN with peer assisted for live streaming adapted from \cite{Yin:2010:LEC:1823746.1823750}.
 $P_s$ in fig.\ref{fig:iptv} is peers in level 1 or seeders.  
 Seeders get content directly from CDN.  
 $P_l$ in fig.\ref{fig:iptv} is peers in level 2 or leechers.
@@ -209,7 +209,7 @@ Therefore we have three seeders that do not need to upload content to leecher.
 \label{fig:fs2you}
 \end{figure} 
 
-Figure \ref{fig:fs2you} illustrates the architecture of peer-assisted online storage.
+Figure \ref{fig:fs2you} illustrates the architecture of peer-assisted online storage for file hosting system (one-click hosting services with peer-assistance).
 Each file provided by users is treated as a channel, since it is distributed live on an ongoing basis to other users. 
 Each end user is treated as a peer, inheriting the terminology of pure P2P systems.
 In fig.\ref{fig:fs2you} arrows 1,2,and 3 represent the interaction between a participating peer and dedicated tracking and replication servers for uploading new content.
@@ -220,8 +220,27 @@ Arrows 8 and 9 represent peer requests and server response when the requests can
 Tracking server serves the purpose of maintaining channel information and bootstrapping peers.
 Specifically, it maintains a unique channel ID and a secure hash value for each file provided by a peer and keeps track of the group of users that are participating in the distribution of each channel. 
 Replication servers serve as dedicated content servers to maintain availability of channels when they are not actively served by peers alone. 
+All peers involved in a channel, i.e., either downloading the file in the channel of holding a replica of the file, are organized into a topology, so that block availability information can be exchanged and blocks can be shared among neighboring peers in the topology.
+When a downloading peer join the swarm, it contacts the tracking server and obtains a list of initial partners (determined by a system) that are randomly selected from peers associated with the same channel.  
+This partnership list is periodically updated and new partners can be added. 
+Partners can be active or inactive, which is determined by whether there are actual connections and data block transfer between the peer and its partners.
 
+Peers need to keep a reasonably number of active and inactive partners in order to maintain a sustainable level of downloading efficiency and to be resilient to network dynamics. 
+Each peer can have up to $N$ partners in its pool of inactive partners, which is related to the number of peers simultaneously being online in a channel.
+In case the size of the inactive partner pool increases to over threshold $N$, a peer will discard aged partners or partners who it has failed to establish a connection with. 
+On the other side, with respect to active partners, the maximum number per channel that peer can have is bounded by a system parameter $K_{max}$.
+Connections to active partners can be broken from time to time due to various reasons, such as slow downloading rates and idling for a long time.
+Each peer periodically monitors the number of its current partner. 
+If the number of active partners falls below a threshold $K_{min}$ , it exchanges active partner lists with its current active partners through gossip and attempts to establish new connections with a random subset of inactive partners.
+If successful, the status of these inactive partners will be promoted to active. 
 
+To maintain accurate list of peers in each channel, peers report their status to the tracking server periodically which contains vital peer information such as unique peer identifier, its IP address, and information about channels that it has joined. 
+Since each peer can be potentially involved in a large number of channels, to keep overhead low, the reported status only includes information of a bounded number of top $C$ channels, including channel identifier and download ratios, defined as the amount of file that has been downloaded so far. 
+The top $C$ channels represent files that have been downloaded by this peer, ranked by a value computed by the combination of the file size, download ratio, and the time when the peer joined the channel. 
+Upon receiving status reports from peers, the tracking server periodically updates the corresponding list of peers associated with each channel.
+Such a periodic refresh of peer lists in each channel (associated to each file) assists peers to gain access to active partners that are most helpful, with a reasonable level of overhead. 
+Consequently, the downloading performance can be improved and the load on servers can be alleviated. 
+ 
 
 %\subsection{Abstracting Data Center Power}\label{thermodynamics}
 %\begin{figure}[thb]
