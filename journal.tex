@@ -240,17 +240,16 @@ The top $C$ channels represent files that have been downloaded by this peer, ran
 Upon receiving status reports from peers, the tracking server periodically updates the corresponding list of peers associated with each channel.
 Such a periodic refresh of peer lists in each channel (associated to each file) assists peers to gain access to active partners that are most helpful, with a reasonable level of overhead. 
 Consequently, the downloading performance can be improved and the load on servers can be alleviated. 
+
+In content distribution strategies, each file is divided into fixed size blocks.
+A block map (BM) is introduced to specify the availability of blocks at each peer. 
+The periodic exchange of BMs among peers enable them to locate the needed blocks. 
+Each peer can retrieve a number of distinct blocks from multiple active partners simultaneously up to the number of its current active partners.
+If multiple partners hold a desired block, a peer will randomly choose one of its active partners to request that block.
+Since server hold important role in this system, we present mathematical model and server bandwidth allocation strategies as base for energy calculation later in Sec.\ref{subsec:onlinestorage}.
+
  
 
-%\subsection{Abstracting Data Center Power}\label{thermodynamics}
-%\begin{figure}[thb]
-%\begin{center}
-%\includegraphics[scale=0.3]{graphs/datacenter.eps}
-%\end{center}
-%\caption{A typical data center schematic.
-%The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate %cool air through a share plenum.}
-%\label{fig:datacenter}
-%\end{figure} 
 
 \subsection{Energy Model}\label{energy model}
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
@@ -327,7 +326,7 @@ The heated substance leaves the room and goes to a chiller and cooling unit fans
 %Above process is shown in fig.\ref{fig:datacenter}
 
 The efficiency of this cycle depends on several factors, including the conductive substance and the air flow velocity, but it is quantified by coefficient of performance (COP).
-The COP is the ratio of heat removed ($Q$) to the amount of work necessary ($W$) to remove that heat:
+The COP is the ratio of heat removed ($Q$) to the amount of work necessary ($W$) to remove that heat  \cite{moore2005making}:
 
 \begin{equation}\label{eqn:cop}
 	COP=\frac{Q}{W}
@@ -348,7 +347,7 @@ Where $T$ is temperature supply by cooling unit.
 \includegraphics[scale=0.6]{graphs/cop.eps}
 \end{center}
 \caption{COP curve for the chilled water cooling units from HP Lab utility data center.
-As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases.}
+As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases \cite{moore2005making}.}
 \label{fig:twotier}
 \end{figure} 
 
@@ -536,30 +535,6 @@ Therefore with same energy consumption level on $50\%$ utilization the system ca
 Once again, router energy consumption is increasing. 
 
 
-%\begin{figure*}[ht!]
-%\centering
-%\begin{minipage}[b]{0.3\linewidth}
-%	\includegraphics[scale=0.45]{graphs/strategy1.eps}
-%	\caption{Power consumption of CDN server, router, and peers in lower bound strategy.}
-%	\label{fig:stg1}
-%\end{minipage}
-%\hfill
-%\centering
-%\begin{minipage}[b]{0.3\linewidth}
-%	\includegraphics[scale=0.45]{graphs/strategy2.eps}
-%	\caption{Power consumption of CDN server, router, and peers in request driven strategy.}
-%	\label{fig:stg2}
-%\end{minipage}
-%\hfill
-%\centering
-%\begin{minipage}[b]{0.3\linewidth}
-%	\includegraphics[scale=0.45]{graphs/strategy3.eps}
-%	\caption{Power consumption of CDN server, router, and peers, in water leveling strategy.}
-%	\label{fig:stg3}
-%\end{minipage}
-%\caption{main}
-%\label{fig:storage}
-%\end{figure*}
 
 
 Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
@@ -624,7 +599,7 @@ For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}
 \end{figure*}
 
 
-\subsection{Online Storage}
+\subsection{Online Storage}\label{subsec:onlinestorage}
 
 In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
 We follow peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249} as basis of our work. 
