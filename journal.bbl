@@ -73,12 +73,6 @@ H.~Yin, X.~Liu, T.~Zhan, V.~Sekar, F.~Qiu, C.~Lin, H.~Zhang, and B.~Li,
   Available: \url{http://doi.acm.org/10.1145/1823746.1823750}
 \BIBentrySTDinterwordspacing
 
-\bibitem{moore2005making}
-J.~Moore, J.~Chase, P.~Ranganathan, and R.~Sharma, ``Making scheduling" cool":
-  temperature-aware workload placement in data centers,'' in \emph{Proceedings
-  of the annual conference on USENIX Annual Technical Conference}, 2005, pp.
-  5--5.
-
 \bibitem{Nedevschi:2008:HDC:1855610.1855618}
 \BIBentryALTinterwordspacing
 S.~Nedevschi, S.~Ratnasamy, and J.~Padhye, ``Hot data centers vs. cool peers,''
@@ -87,6 +81,12 @@ S.~Nedevschi, S.~Ratnasamy, and J.~Padhye, ``Hot data centers vs. cool peers,''
   CA, USA: USENIX Association, 2008, pp. 8--8. [Online]. Available:
   \url{http://dl.acm.org/citation.cfm?id=1855610.1855618}
 \BIBentrySTDinterwordspacing
+
+\bibitem{moore2005making}
+J.~Moore, J.~Chase, P.~Ranganathan, and R.~Sharma, ``Making scheduling" cool":
+  temperature-aware workload placement in data centers,'' in \emph{Proceedings
+  of the annual conference on USENIX Annual Technical Conference}, 2005, pp.
+  5--5.
 
 \bibitem{Sun:2009:POS:1542245.1542249}
 \BIBentryALTinterwordspacing

@@ -216,84 +216,22 @@ In fig.\ref{fig:fs2you} arrows 1,2,and 3 represent the interaction between a par
 Arrows 4,5, and 6 represent the interaction between peers and the tracking server to maintain the peer topology. 
 Arrow 7 represents the sharing of file blocks and exchange of availability among peers. 
 Arrows 8 and 9 represent peer requests and server response when the requests cannot be satisfied by other peers alone. 
+
 Tracking server serves the purpose of maintaining channel information and bootstrapping peers.
 Specifically, it maintains a unique channel ID and a secure hash value for each file provided by a peer and keeps track of the group of users that are participating in the distribution of each channel. 
 Replication servers serve as dedicated content servers to maintain availability of channels when they are not actively served by peers alone. 
 
 
 
-
-
-\subsection{Abstracting Data Center Power}\label{thermodynamics}
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.3]{graphs/datacenter.eps}
-\end{center}
-\caption{A typical data center schematic.
-The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate cool air through a share plenum.}
-\label{fig:datacenter}
-%\vspace{-2mm}
-\end{figure} 
-Many aspects involved in power management in data center and interactions among power management strategies across subsystems grow more complex.
-Five distinct subsystems account for most of a data center's power draw:   server and storage systems, power conditioning equipment, cooling and humidification systems, networking equipment, and lighting/physical security.
-In this section, we only focus on relationship between cooling power and hardware temperature.
-
-Data center seek to provision the cooling adequately to extract the heat produce by servers, switches, routers, and other devices.
-Practically, cooling provisioning are done at facilities level.
-Data center operator operate cooling facilities based on power ratings of servers, switches, routers, and other devices often with some additional headroom for risk tolerance. 
-The compounded over provisioning of computing and cooling infrastructures can drive up initial and recurring costs. 
-
-The cooling cycle of a typical data center operates in the following way:
-Cooling units operate by extracting heat from the data center and pumping cold air into the room, usually through a pressurized floor plenum.
-The pressure forces the cold air upward through vented tiles, entering the room in front the hardware
-Fans draw the cold air inward and through the server; hot air exits through the rear of the server.
-The hot air rises sometimes with the aid of fans and a ceiling plenum , and is sucked back to the cooling units.
-The cooling units force the hot air past pipes containing cold air or water. 
-The heat from the returning air transfer through the pipes to the cold substance. 
-The heated substance leaves the room and goes to a chiller and cooling unit fans force the cold air back into the floor plenum. 
-Above process is shown in fig.\ref{fig:datacenter}
-
-The efficiency of this cycle depends on several factors, including the conductive substance and the air flow velocity, but it is quantified by coefficient of performance (COP).
-The COP is the ratio of heat removed ($Q$) to the amount of work necessary ($W$) to remove that heat:
-
-\begin{equation}\label{eqn:cop}
-	COP=\frac{Q}{W}
-\end{equation}
-
-Therefore, the work necessary to remove heat is inversely proportional to the COP.  
-A higher COP indicates a more efficient process, requiring less work to remove a constant amount of heat.
-
-However, the COP for a cooling cycling is not constant, increasing with the temperature of the air the cooling unit pushes into the plenum.  
-COP value empirically can be computed using \cite{moore2005making}:
-
-\begin{equation}\label{eqn:copt}
-	COP(T) = 0.0068.T^2 + 0.0008.T + 0.458
-\end{equation}
-
-where $T = T_{sup} + T_{adj}$ and $T_{adj} = T_{safe}^{in}-T_{max}^{in}$. \\
-$T_{sup}$ is temperature supply by cooling unit and $T_{adj}$ is temperature difference between maximum safe hardware inlet temperature ($T_{safe}^{in}$) and the maximum observed hardware inlet temperature ($T_{max}^{in}$).
-If $T_{adj}$ is negative, it indicates that a hardware inlet exceeds maximum safe temperature thus we need to lower $T_{sup}$ to bring the hardwares back below the system temperature level.
-
-\begin{figure}[thb]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/cop.eps}
-\end{center}
-\caption{COP curve for the chilled water cooling units from HP Lab utility data center.
-As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases.}
-\label{fig:twotier}
-%\vspace{-2mm}
-\end{figure} 
-
-Cooling cost can be calculated as  \cite{moore2005making} :
-
-\begin{equation}\label{eqn:cost}
-C = \frac{Q}{COP(T)}
-\end{equation}
-
-Where $Q$ is amount of power the servers and hardwares consume.
-COP(T) is our COP at $T=T_{sup}+T_{adj}$.
-Currently we assume a uniform $T_{sup}$ from each cooling units due to the complications introduced by non-uniform cold air supply.
-
+%\subsection{Abstracting Data Center Power}\label{thermodynamics}
+%\begin{figure}[thb]
+%\begin{center}
+%\includegraphics[scale=0.3]{graphs/datacenter.eps}
+%\end{center}
+%\caption{A typical data center schematic.
+%The cooling infrastructure comprises industry standard racks on a raised floor, through which multiple compressor-driven computer room air conditioning unit circulate %cool air through a share plenum.}
+%\label{fig:datacenter}
+%\end{figure} 
 
 \subsection{Energy Model}\label{energy model}
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
@@ -346,27 +284,68 @@ Finaly total energy is:
 \begin{equation}\label{eqn:E_t}
 \begin{split}
 	E_{t} &= E_d + E_r + E_p \\
-	E_{t} &= \delta_s.B + E_{s-baseline} + d_s.\delta_r.B + E_{r-baseline} + \delta_p.B + E_{p-baseline}
+	E_{t} &= \delta_s.B + E_{s-baseline} + d_s.\delta_r.B \\
+	      &+ E_{r-baseline} + \delta_p.B + E_{p-baseline}
 \end{split}
 \end{equation}
 where $B$ is size of file to be transferred. 
 
-Considering cooling energy, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}, therefore total energy consumption: 
+We have shown energy model for server, router, and peer.  
+Now, we introduce the overhead for server and router. 
+Overhead that we will consider here is cooling power.  
+Since servers and routers are placed in data center, data center seek to provision the cooling adequately to extract the heat produce by servers, switches, routers, and other devices.
+Practically, cooling provisioning are done at facilities level.
+Data center operator operate cooling facilities based on power ratings of servers, switches, routers, and other devices often with some additional headroom for risk tolerance. 
+
+The cooling cycle of a typical data center operates in the following way:
+Cooling units operate by extracting heat from the data center and pumping cold air into the room, usually through a pressurized floor plenum.
+The pressure forces the cold air upward through vented tiles, entering the room in front the hardware
+Fans draw the cold air inward and through the server; hot air exits through the rear of the server.
+The hot air rises sometimes with the aid of fans and a ceiling plenum , and is sucked back to the cooling units.
+The cooling units force the hot air past pipes containing cold air or water. 
+The heat from the returning air transfer through the pipes to the cold substance. 
+The heated substance leaves the room and goes to a chiller and cooling unit fans force the cold air back into the floor plenum. 
+%Above process is shown in fig.\ref{fig:datacenter}
+
+The efficiency of this cycle depends on several factors, including the conductive substance and the air flow velocity, but it is quantified by coefficient of performance (COP).
+The COP is the ratio of heat removed ($Q$) to the amount of work necessary ($W$) to remove that heat:
+
+\begin{equation}\label{eqn:cop}
+	COP=\frac{Q}{W}
+\end{equation}
+
+Therefore, the work necessary to remove heat is inversely proportional to the COP.  
+A higher COP indicates a more efficient process, requiring less work to remove a constant amount of heat.
+
+However, the COP for a cooling cycling is not constant, increasing with the temperature of the air the cooling unit pushes into the plenum.  
+COP value empirically can be computed using \cite{moore2005making}:
+\begin{equation}\label{eqn:copt}
+	COP(T) = 0.0068.T^2 + 0.0008.T + 0.458
+\end{equation}
+Where $T$ is temperature supply by cooling unit.  
+
+\begin{figure}[thb]
+\begin{center}
+\includegraphics[scale=0.6]{graphs/cop.eps}
+\end{center}
+\caption{COP curve for the chilled water cooling units from HP Lab utility data center.
+As the target temperature of the air the cooling unit pumps into the floor plenum increases, the COP increases.}
+\label{fig:twotier}
+\end{figure} 
+
+Cooling cost can be calculated as  \cite{moore2005making} :
+
+\begin{equation}\label{eqn:cost}
+C = \frac{Q}{COP(T)}
+\end{equation}
+
+Where $Q$ is amount of power the servers and hardwares consume.
+Currently we assume a uniform $T$ from each cooling units due to the complications introduced by non-uniform cold air supply.
+
+Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}, therefore total energy consumption: 
 \begin{equation}
 	\hat{E}_{t} = E_{t}.\left( 1+\frac{1}{COP(T)} \right)
 \end{equation}
-
-%We also considering content popularity distribution.   
-%We assume that content provider has a content catalog of size $F$, ranked from 1 to $F$ based on popularity.   
-%$1$ represents the most popular content.
-%Letting the total number of requests in a given time duration $t$ will be $R$, the number of requests for content of popularity $k$, $R_k$ follows Zipf distribution as:
-
-%\begin{equation}
-%	R_k = R \frac{k^{-\beta}}{\sum_{k=1}^F k^{-\beta}}
-%\end{equation}
-%A large $\beta$ indicates a relatively small set of very popular content.
-%Typical value of $\beta$ range between $0.5$ and $1.0$.
-%IPTV channel has $\beta=0.8$ \cite{Cha:2008:NTP:1855641.1855646}.
 
 
 \section{Result and Discussion}\label{analysis}
