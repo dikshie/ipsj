@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  11 JUL 2013 22:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  12 JUL 2013 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,11 +351,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: graphs/p2p-cdn.eps Graphic file (type eps)
 
 <graphs/p2p-cdn.eps>
+File: graphs/fs2you-arch.eps Graphic file (type eps)
+ <graphs/fs2you-arch.eps>
+Overfull \hbox (0.53964pt too wide) in paragraph at lines 206--207
+ [] 
+ []
+
+[2]
 File: graphs/datacenter.eps Graphic file (type eps)
- <graphs/datacenter.eps> [2]
+ <graphs/datacenter.eps>
 File: graphs/cop.eps Graphic file (type eps)
  <graphs/cop.eps> [3]
-Overfull \hbox (47.75328pt too wide) in paragraph at lines 327--327
+Overfull \hbox (47.75328pt too wide) in paragraph at lines 351--351
 [] 
  []
 
@@ -363,26 +370,26 @@ File: graphs/topology.eps Graphic file (type eps)
 <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 391--392
+Overfull \hbox (25.87341pt too wide) in paragraph at lines 415--416
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 397--398
+Overfull \hbox (25.87341pt too wide) in paragraph at lines 421--422
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 403--404
+Overfull \hbox (25.87341pt too wide) in paragraph at lines 427--428
 [][] 
  []
 
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
- <graphs/cdnp2p-4.eps>
+ <graphs/cdnp2p-4.eps> [4]
 File: graphs/diff3dimension.eps Graphic file (type eps)
  <graphs/diff3dimension.eps>
 File: graphs/diff3dimension2.eps Graphic file (type eps)
@@ -392,29 +399,17 @@ File: graphs/diff-3.eps Graphic file (type eps)
  <graphs/diff-3.eps>
 File: graphs/diff-3-total.eps Graphic file (type eps)
  <graphs/diff-3-total.eps>
-[4]
+Underfull \vbox (badness 2564) has occurred while \output is active []
 
-LaTeX Warning: Text page 5 contains only floats.
-
-
-Overfull \vbox (10.28992pt too high) has occurred while \output is active []
-
-
-
-LaTeX Warning: Text page 5 contains only floats.
-
-
-Overfull \vbox (10.28992pt too high) has occurred while \output is active []
-
-
-[5]
+ [5]
 File: graphs/diff-2to1.eps Graphic file (type eps)
- <graphs/diff-2to1.eps>
+
+<graphs/diff-2to1.eps>
 File: graphs/diff-3to1.eps Graphic file (type eps)
  <graphs/diff-3to1.eps>
 File: graphs/diff-cdn.eps Graphic file (type eps)
  <graphs/diff-cdn.eps>
-Underfull \hbox (badness 1360) in paragraph at lines 573--573
+Underfull \hbox (badness 1360) in paragraph at lines 597--597
 \T1/ptm/m/n/10 fer-ence be-tween CDN ar-chi-tec-ture,
  []
 
@@ -422,7 +417,7 @@ File: graphs/pop.eps Graphic file (type eps)
 <graphs/pop.eps>
 File: graphs/componentconsumption.eps Graphic file (type eps)
  <graphs/componentconsumption.eps>
-Underfull \hbox (badness 3977) in paragraph at lines 591--591
+Underfull \hbox (badness 3977) in paragraph at lines 615--615
 \T1/ptm/m/n/10 peer ar-rival rate of less pop-u-lar
  []
 
@@ -431,7 +426,7 @@ File: graphs/totalconsumption.eps Graphic file (type eps)
 Underfull \vbox (badness 2469) has occurred while \output is active []
 
  [7]
-(./journal.bbl [8])
+[8] (./journal.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -443,16 +438,14 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[9
-
-] (./journal.aux) ) 
+[9] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 3798 strings out of 493312
- 59398 string characters out of 6137876
- 134166 words of memory out of 5000000
- 7214 multiletter control sequences out of 15000+600000
+ 3801 strings out of 493312
+ 59447 string characters out of 6137876
+ 133175 words of memory out of 5000000
+ 7216 multiletter control sequences out of 15000+600000
  103769 words of font info for 116 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,15n,42p,394b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (9 pages, 60392 bytes).
+Output written on journal.dvi (9 pages, 62272 bytes).
