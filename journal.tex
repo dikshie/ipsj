@@ -276,7 +276,6 @@ Our energy model is similar to the models used in \cite{Nedevschi:2008:HDC:18556
 The difference with \cite{Nedevschi:2008:HDC:1855610.1855618}, firstly, our baseline energy is not function of bitrate flow. 
 Our baseline energy is based on minimum energy required to turn-on the device without any traffic low trough the device. 
 Secondly, our overhead number based on COP value.
-Network model for energy is assumed to be flat network as shown in fig.\ref{fig:iptv}.
 
 For each component, we consider two energy measurement:  baseline energy consumption and energy consumed per work unit $\delta$.
 The baseline energy is the energy consumed to keep the device on.
@@ -413,7 +412,7 @@ Parameters values is shown in table \ref{tab:simparameters}.
 
 
 
-\subsection{Live Streaming}
+\subsection{Live Streaming Case}
 For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
 For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt \cite{Nedevschi:2008:HDC:1855610.1855618}. 
 For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valancius2009greening}.
@@ -628,7 +627,7 @@ For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}
 \end{figure*}
 
 
-\subsection{Online Storage}\label{subsec:onlinestorage}
+\subsection{Online Storage Case}\label{subsec:onlinestorage}
 
 In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
 We follow peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249} as basis of our work. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  13 JUL 2013 15:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  13 JUL 2013 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,19 +372,19 @@ File: graphs/topology.eps Graphic file (type eps)
  <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 441--442
+Overfull \hbox (25.87341pt too wide) in paragraph at lines 440--441
 [][] 
  []
 
 File: graphs/cdnp2p-1.eps Graphic file (type eps)
 <graphs/cdnp2p-1.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 447--448
+Overfull \hbox (25.87341pt too wide) in paragraph at lines 446--447
 [][] 
  []
 
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
 <graphs/cdnp2p-2.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 453--454
+Overfull \hbox (25.87341pt too wide) in paragraph at lines 452--453
 [][] 
  []
 
@@ -423,7 +423,7 @@ File: graphs/diff-3to1.eps Graphic file (type eps)
  <graphs/diff-3to1.eps>
 File: graphs/diff-cdn.eps Graphic file (type eps)
  <graphs/diff-cdn.eps>
-Underfull \hbox (badness 1360) in paragraph at lines 599--599
+Underfull \hbox (badness 1360) in paragraph at lines 598--598
 \T1/ptm/m/n/10 fer-ence be-tween CDN ar-chi-tec-ture,
  []
 
@@ -431,7 +431,7 @@ File: graphs/pop.eps Graphic file (type eps)
 <graphs/pop.eps>
 File: graphs/componentconsumption.eps Graphic file (type eps)
  <graphs/componentconsumption.eps>
-Underfull \hbox (badness 3977) in paragraph at lines 617--617
+Underfull \hbox (badness 3977) in paragraph at lines 616--616
 \T1/ptm/m/n/10 peer ar-rival rate of less pop-u-lar
  []
 
@@ -462,4 +462,4 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  44i,15n,42p,394b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (10 pages, 69704 bytes).
+Output written on journal.dvi (10 pages, 69612 bytes).
