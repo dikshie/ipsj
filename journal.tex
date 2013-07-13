@@ -269,8 +269,6 @@ The server serves the requests from peers according to a certain probability whi
 We assume that the number of requests for a file to the server is proportional to the peer arrival rate of the file, the server will serve the same number of requests for different files and therefore the server bandwidth is equally allocated across all the files.
 
 
-
-
 \subsection{Energy Model}\label{energy model}
 In this paper, our goal is to provide a general view and a fair comparison of the energy consume by a CDN and hybrid CDN-P2P architecture. 
 To do so, we designed a series of model and perform an analysis.
@@ -387,24 +385,6 @@ Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\
 
 
 \section{Result and Discussion}\label{analysis}
-\subsection{Live Streaming}
-For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
-For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt \cite{Nedevschi:2008:HDC:1855610.1855618}. 
-For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valancius2009greening}.
-The peer has 256MB flash storage.
-The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
-The data flows from CDN to network in this case router then arrive in seeders. 
-If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
-Parameters values used in this numerical simulation is shown in table \ref{tab:simparameters}.
-
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[scale=0.6]{graphs/topology.eps}
-\end{center}
-\caption{Dummy network}
-\label{fig:dummy}
-\vspace{-2mm}
-\end{figure} 
 
 \begin{table}[thb]
 \caption{Numerical Simulation Parameters.}
@@ -425,6 +405,35 @@ $N$ & $[100,..,1000]$ \\
 $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{tabular}\hfil}
 \end{table}
+
+
+\subsection{Numerical Parameters}
+The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618} and \cite{valancius2009greening}. 
+Parameters values is shown in table \ref{tab:simparameters}.
+
+
+
+\subsection{Live Streaming}
+For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
+For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt \cite{Nedevschi:2008:HDC:1855610.1855618}. 
+For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valancius2009greening}.
+The peer has 256MB flash storage.
+The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
+The data flows from CDN to network in this case router then arrive in seeders. 
+If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
+We showed the logical network architecture of peer-assisted CDN for live streaming in fig.\ref{fig:iptv}.
+Figure.\ref{fig:dummy} shows simplified the physical representation of the network.  
+While in logical network the peer can communicate with another peer, in real physical world the communication between peer always through router inside data center.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.3]{graphs/topology.eps}
+\end{center}
+\caption{Physical representation of the network.}
+\label{fig:dummy}
+\vspace{-2mm}
+\end{figure} 
+
 
 \begin{figure*}[ht]
 \centering
