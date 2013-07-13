@@ -246,9 +246,29 @@ A block map (BM) is introduced to specify the availability of blocks at each pee
 The periodic exchange of BMs among peers enable them to locate the needed blocks. 
 Each peer can retrieve a number of distinct blocks from multiple active partners simultaneously up to the number of its current active partners.
 If multiple partners hold a desired block, a peer will randomly choose one of its active partners to request that block.
-Since server hold important role in this system, we present mathematical model and server bandwidth allocation strategies as base for energy calculation later in Sec.\ref{subsec:onlinestorage}.
+Since server hold important role in this system, we present simple mathematical model and server bandwidth allocation strategies \cite{4024139,Sun:2009:POS:1542245.1542249} as base for energy calculation later in Sec.\ref{subsec:onlinestorage}.
+There are three server bandwidth allocation strategies:  (1) lower bound of the average downloading time; (2) request driven strategy; (3) water leveling strategy.
+First we introduce some mathematical notation:\\  
+type-1 represents less popular files and type-2 represents popular files. \\
+$S_{t1}$ represents server bandwidth allocated to a file type-1 and $S_{t2}$ represents server bandwidth allocated to a file type-2. \\
+$S$ is total server bandwidth. \\
+$S_{max1}$ is the maximum amount of server bandwidth that can be assigned to a file of type-1 and $S_{max2}$ is the maximum amount of server bandwidth that can be assigned to a file of type-2.\\
+$M_{t1}$ is number of type-1 files and  $M_{t2}$ is number of type-2 files.\\
+$\lambda_{t1}$ is the arrival rate of new peers in type-1 file and $\lambda_{t2}$ is the arrival rate of new peers in type-2 file.\\
+$\lambda = M_{t1}.\lambda_{t1} + M_{t2}.\lambda_{t2}$\\
+$M=M_{t1} + M_{t2}$.\\
 
- 
+In lower bound of the average downloading time, we shall first assign the server bandwidth to type-1 files until $S_{t1}$ reaches its maximum value then the residual server bandwidth can be assigned to type-2 files.
+This strategy to achieve the lower bound of the system wide average downloading time is also applicable to the general case of multiple types of files: the server should always satisfy the requests from the peers who are downloading the least popular files.\\
+In request driven strategy, the server serves every request from peers. 
+The server bandwidth is equally divided among all the peers.
+We assume that the number of requests for a file to the server is proportional to the peer arrival rate of the file. 
+We also assume that when the amount of server bandwidth assigned to one of the two types of files has reached its maximum value, the residual server bandwidth will be assigned to the other type of files.\\
+In water leveling strategy, this strategy equalizes the server bandwidth across all the files by taking file popularity into consideration. 
+The server serves the requests from peers according to a certain probability which is inversely proportional to the peer arrival rate of the file.
+We assume that the number of requests for a file to the server is proportional to the peer arrival rate of the file, the server will serve the same number of requests for different files and therefore the server bandwidth is equally allocated across all the files.
+
+
 
 
 \subsection{Energy Model}\label{energy model}
