@@ -398,7 +398,7 @@ Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\
 
 \section{Result and Discussion}\label{analysis}
 
-\begin{table}[thb]
+\begin{table}[ht]
 \caption{Numerical Simulation Parameters from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening},\cite{4509688}, and \cite{Sun:2009:POS:1542245.1542249}.}
 \label{tab:simparameters}
 \hbox to\hsize{\hfil
@@ -426,44 +426,9 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{tabular}\hfil}
 \end{table}
 
-
-\subsection{Numerical Parameters}
-The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening}, \cite{4509688} and \cite{Sun:2009:POS:1542245.1542249}. 
-Parameters values is shown in table \ref{tab:simparameters}.\\
-\textbf{Server Parameter} - $S_{base}$ and $\delta_s$: To measure the per bit energy for servers, we use a study from \cite{Nedevschi:2008:HDC:1855610.1855618}. 
-The author found that an idle power draw of $290$ watt for the server, that are the baseline power consumptions $E_{s-baseline}$.
-To measure work induced power consumption the author repeatedly downloaded files from two machines using a number of clients and httperf benchmarking tool.
-The author measured the average power draw, network throughput and CPU utilization at maximum capacity. 
-These measurement allows the author to calculate $\delta_s$ using eq.\ref{eqn:delta_s}.\\
-\textbf{Peer Parameter} - $P_{base}$ and $\delta_p$: we use a study from \cite{valancius2009greening}.
-The author measured power consumption through a specialized energy measurement device by varied throughput the downloaded video streams. \\
-From this measurement we can get $E_{p-baseline}$ and $\delta_p$.
-\textbf{Router Parameter} - $R_{base}$ and $\delta_r$: we use a study from \cite{4509688} to derive router parameter.
-A recent measurement from \cite{4509688} reports idle power draw of Cisco GSR router $E_{r-baseline}=750$ watt. 
-When routing at $2.5$ Gbps,the study reports an increase of at most $20$ watt for a per-bit energy increase $8.10^{-9}$ J/bit.\\
-$N_{s}^{u}$ is upload rate that we will use in live streaming case.\\
-$N$ is number of peers that we will use in live streaming case. \\
-$d$ is number of hops for live streaming case and online storage case.\\
-$\lambda_{t1}$ is peer arrival rate to less popular files in online storage case.\\
-$\lambda_{t2}$ is peer arrival rate to popular files in online storage case.\\
-$\eta_{t1}$ and $\eta_{t2}$ is file sharing effectiveness. It is the fraction of the upload capacity of peers that is being utilized in online storage case.\\
-$\mu$ is upload rate of peers in online storage case. We assume it is uniform. \\
-$c$ is downloading rate of peers in online storage case. We assume it is uniform.
-$M_{t1}$ is number of files in type-1 files or less popular files and $M_{t2}$ is number of files in type-2 files or popular files in online storage case.\\
-$f_{t1} = f_{t2}$ is file size in online storage case.\\
-$T$ is air temperature supply from cooling in data center.  $T=20$ corresponds to $COP=3.194$ and $T=25$ corresponds to $COP=4.728$.\\
-
-
-\subsection{Live Streaming Case}
-In live streaming case, video stream flows from CDN to network in this case router then arrive in seeders. 
-If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
-We showed the logical network architecture of peer-assisted CDN for live streaming in fig.\ref{fig:iptv}.
-Figure.\ref{fig:dummy} shows simplified the physical representation of the network.  
-While in logical network the peer can communicate with another peer, in real physical world the communication between peer always through router inside data center.
-
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \begin{center}
-\includegraphics[scale=0.3]{graphs/topology.eps}
+\includegraphics[scale=0.35]{graphs/topology.eps}
 \end{center}
 \caption{Physical representation of the network.}
 \label{fig:dummy}
@@ -506,67 +471,69 @@ While in logical network the peer can communicate with another peer, in real phy
 \end{figure*}
 
 
+\subsection{Numerical Parameters}
+The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening}, \cite{4509688} and \cite{Sun:2009:POS:1542245.1542249}. 
+Parameters values is shown in table \ref{tab:simparameters}.\\
+\textbf{Server Parameter} - $S_{base}$ and $\delta_s$: To measure the per bit energy for servers, we use a study from \cite{Nedevschi:2008:HDC:1855610.1855618}. 
+The author found that an idle power draw of $290$ watt for the server, that are the baseline power consumptions $E_{s-baseline}$.
+To measure work induced power consumption the author repeatedly downloaded files from two machines using a number of clients and httperf benchmarking tool.
+The author measured the average power draw, network throughput and CPU utilization at maximum capacity. 
+These measurement allows the author to calculate $\delta_s$ using eq.\ref{eqn:delta_s}.\\
+\textbf{Peer Parameter} - $P_{base}$ and $\delta_p$: we use a study from \cite{valancius2009greening}.
+The author measured power consumption through a specialized energy measurement device by varied throughput the downloaded video streams. \\
+From this measurement we can get $E_{p-baseline}$ and $\delta_p$.
+\textbf{Router Parameter} - $R_{base}$ and $\delta_r$: we use a study from \cite{4509688} to derive router parameter.
+A recent measurement from \cite{4509688} reports idle power draw of Cisco GSR router $E_{r-baseline}=750$ watt. 
+When routing at $2.5$ Gbps,the study reports an increase of at most $20$ watt for a per-bit energy increase $8.10^{-9}$ J/bit.\\
+$N_{s}^{u}$ is upload rate that we will use in live streaming case.\\
+$N$ is number of peers that we will use in live streaming case. \\
+$d$ is number of hops for live streaming case and online storage case.\\
+$\lambda_{t1}$ is peer arrival rate to less popular files in online storage case.\\
+$\lambda_{t2}$ is peer arrival rate to popular files in online storage case.\\
+$\eta_{t1}$ and $\eta_{t2}$ is file sharing effectiveness. It is the fraction of the upload capacity of peers that is being utilized in online storage case.\\
+$\mu$ is upload rate of peers in online storage case. We assume it is uniform. \\
+$c$ is downloading rate of peers in online storage case. We assume it is uniform.
+$M_{t1}$ is number of files in type-1 files or less popular files and $M_{t2}$ is number of files in type-2 files or popular files in online storage case.\\
+$f_{t1} = f_{t2}$ is file size in online storage case.\\
+$T$ is air temperature supply from cooling in data center.  $T=20$ corresponds to $COP=3.194$ and $T=25$ corresponds to $COP=4.728$.\\
+
+
+
+\subsection{Live Streaming Case}
+In live streaming case, video stream flows from CDN to network in this case router then arrive in seeders. 
+If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
+We showed the logical network architecture of peer-assisted CDN for live streaming in fig.\ref{fig:iptv}.
+Figure.\ref{fig:dummy} shows simplified the physical representation of the network.  
+While in logical network the peer can communicate with another peer, in real physical world the communication between peer always through router inside data center.
+
 Figure \ref{fig:4-0} shows energy usage for CDN server, router, total energy consumption for CDN scenario (without peer assisted).
 We plot energy consumption for CDN server, router, clients, and total energy for every $T$ or $COP$ coefficient value.
 In CDN only scenario, the energy consumption is increase as number of client increase.  
 This is natural because increasing of clients imply to increasing of traffic from CDN server through router to clients.
 The effect of different $T$ to total energy is small.  
 
+Figure \ref{fig:4-2} until \ref{fig:4-4} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
+We show peer upload rate $N_{s}^{u}=[0.5, 0.75, 1]$ in fig.\ref{fig:4-2}-\ref{fig:4-4}. 
+We observe that peer power consumption is increasing as number of peers increase.  
+Router power consumption is also increasing as additional number of peers generate more traffic. 
+CDN server power consumption on the other hand relatively flat because some of seeders can supply video stream to some leechers.
+
+Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
+The power saving that CDN server get is from $3.8\%$ to $11\%$.
+More clear figure is shown in fig.\ref{fig:diffs1} that we sliced for $\rho=0.75$ from fig.\ref{fig:diff1}. 
+CDN server can save energy because the utilization of CDN server is same when the system has number of peers increasing from $500$ to $875$.
+Same situation is also happen when number of peers increasing from $875$ to $1531$.  
+The saving is up to $11\%$ 
+
+Figure \ref{fig:diff2} shows percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=[0.25,0.5,0.75,1]$.
+The power saving that total system get is from $0.2\%$ to $0.9\%$.
+Figure \ref{fig:diffs2} reports percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=0.75$.
+While CDN server part can save more energy, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
+For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-2} until fig.\ref{fig:4-4}.
 
 
 
-
-Figure \ref{fig:4-1} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
-We use upload rate of seeders to leechers $\rho=0.25$.
-We assume that CDN server always utilize under $50\%$.
-For CDN server energy $E_d$, the usage of energy increase until number of seeders $n_s=500$.
-On $n_s=500$ the CDN server right on $50\%$ utilization.
-When CDN server on $50\%$ utilization, maximum number of seeders are $n_s=500$ and number of leechers can be served by seeders is $125$ peers.  
-Therefore in this situation, CDN server can save energy, because with just $50\%$ utilization, additional $125$ peers can be served from seeders.  
-Next, to be able to server more peers, we allow CDN server to increase the utilization to $62.5\%$.
-With $62.5\%$ utilization, $625$ peers are served by CDN server. 
-Number of leechers can be supported by seeders are $156$ peers.
-In this situation CDN server can save energy, because with $62.5\%$ utilization, number additional $156$ peers can be served from seeders.  
-In router case, we do not see router can get energy saving because number of traffic increase as increasing number of peers. 
-For example, when CDN server on $50\%$ utilization, maximum number seeders are $n_s=500$ and number of leechers can be served by seeders is $125$ peers.
-Traffic traverse through router is $500$Mbps plus additional $125$Mbps. 
-We get $125$Mbps from $500$ multiply to upload rate of seeders $0.25$Mbps
-Different air temperature supply, make different power consumption.  
-With $T=25$ or $COP=4.728$, we can see the power consumption for all components lower than $T=20$ or $COP=3.194$.
-That's because energy needed to supply air cooling with temperature $T=25$ is less than  energy needed to supply air cooling with temperature $T=20$.
-
-
-Next, Figure \ref{fig:4-2} reports energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
-We use upload rate of seeders to leechers $\rho=0.5$.
-We assume that CDN server utilization under $50\%$.
-For CDN server energy, the usage of energy increase until number of seeders $n_s=500$.
-On $n_s=500$ the CDN server right on $50\%$ utilization.
-When CDN server on $50\%$ utilization, maximum number of seeders are $n_s=500$ and number of leechers can be served by seeders are $250$ peers.
-In this point, CDN server can save energy, because with just $50\%$ utilization, additional $250$ peers are served from seeders. 
-In order to allow more peers, then CDN server must allow to increase its utilization from $50\%$ to $75\%$.
-With CDN server utilization $75\%$, with number of seeders $n_s=750$ can also serve additional $n_l=325$ leechers.
-On the other hand, energy consumption of router increasing with the increasing number of peers because router needs to accommodate traffic from all peers. 
-
-Figure \ref{fig:4-3} presents energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.  
-We use upload rate of seeders to leechers $\rho=0.75$.
-We assume that CDN server utilization under $50\%$.
-The result almost same with previous. 
-CDN server energy increase until number of seeders $n_s=500$.
-When CDN server hit $50\%$ utilization, maximum number of seeders are $n_s=500$ and number of leechers can be served by seeders are $325$ peers. 
-Therefore with same energy level on $50\%$ utilization the system can server additional $325$ peers. 
-Again, router energy consumption is increasing. 
-
-Figure \ref{fig:4-4} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.  
-We use upload rate of seeders to leechers $\rho=1$.
-We assume that CDN server utilization under $50\%$.
-The result almost same with previous. 
-CDN server energy increase until number of seeders $n_s=500$.
-When CDN server hit $50\%$ utilization, maximum number of seeders are $n_s=500$ and number of leechers can be served by seeders are $500$ peers. 
-Therefore with same energy consumption level on $50\%$ utilization the system can serve additional $500$ peers. 
-Once again, router energy consumption is increasing. 
-
-
-\begin{figure*}[ht!]
+\begin{figure*}[ht]
 \centering
 \begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
@@ -599,18 +566,6 @@ Once again, router energy consumption is increasing.
 \end{figure*}
 
 
-Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that CDN server get is from $3.8\%$ to $11\%$.
-More clear figure is shown in fig.\ref{fig:diffs1} that we sliced for $\rho=0.75$ from fig.\ref{fig:diff1}. 
-CDN server can save energy because the utilization of CDN server is same when the system has number of peers increasing from $500$ to $875$.
-Same situation is also happen when number of peers increasing from $875$ to $1531$.  
-The saving is up to $11\%$ 
-
-Figure \ref{fig:diff2} shows percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that total system get is from $0.2\%$ to $0.9\%$.
-Figure \ref{fig:diffs2} reports percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=0.75$.
-While CDN server part can save more energy, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
-For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-1} until fig.\ref{fig:4-4}.
 
 \begin{figure*}[ht]
 \centering
