@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  13 JUL 2013 16:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  14 JUL 2013 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,69 +361,85 @@ Overfull \hbox (0.53964pt too wide) in paragraph at lines 206--207
 Underfull \vbox (badness 1412) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--260
+Underfull \hbox (badness 10000) in paragraph at lines 244--259
 
  []
 
-[3]
+[3] [4]
 File: graphs/cop.eps Graphic file (type eps)
- <graphs/cop.eps> [4]
+ <graphs/cop.eps>
+Underfull \hbox (badness 1681) in paragraph at lines 431--455
+\T1/ptm/m/n/10 work in-duced power con-sump-tion the au-thor re-peat-edly
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 431--455
+\T1/ptm/m/n/10 the av-er-age power draw, net-work through-put and CPU
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 431--455
+\T1/ptm/m/n/10 [[]] to de-rive router pa-ram-e-ter. A re-cent mea-sure-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--455
+
+ []
+
+
+Underfull \vbox (badness 1052) has occurred while \output is active []
+
+ [5]
 File: graphs/topology.eps Graphic file (type eps)
- <graphs/topology.eps>
+
+<graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 440--441
-[][] 
- []
-
-File: graphs/cdnp2p-1.eps Graphic file (type eps)
-<graphs/cdnp2p-1.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 446--447
-[][] 
- []
-
 File: graphs/cdnp2p-2.eps Graphic file (type eps)
-<graphs/cdnp2p-2.eps>
-Overfull \hbox (25.87341pt too wide) in paragraph at lines 452--453
-[][] 
- []
-
+ <graphs/cdnp2p-2.eps>
 File: graphs/cdnp2p-3.eps Graphic file (type eps)
+
 <graphs/cdnp2p-3.eps>
 File: graphs/cdnp2p-4.eps Graphic file (type eps)
  <graphs/cdnp2p-4.eps>
-File: graphs/diff3dimension.eps Graphic file (type eps)
- <graphs/diff3dimension.eps>
-File: graphs/diff3dimension2.eps Graphic file (type eps)
 
-<graphs/diff3dimension2.eps>
+LaTeX Warning: Reference `fig:4-1' on page 6 undefined on input line 519.
+
+File: graphs/diff3dimension.eps Graphic file (type eps)
+<graphs/diff3dimension.eps>
+File: graphs/diff3dimension2.eps Graphic file (type eps)
+ <graphs/diff3dimension2.eps>
 File: graphs/diff-3.eps Graphic file (type eps)
  <graphs/diff-3.eps>
 File: graphs/diff-3-total.eps Graphic file (type eps)
- <graphs/diff-3-total.eps>
-[5]
 
-LaTeX Warning: Text page 6 contains only floats.
+<graphs/diff-3-total.eps> [6]
 
-
-Overfull \vbox (10.28992pt too high) has occurred while \output is active []
-
-
-
-LaTeX Warning: Text page 6 contains only floats.
+LaTeX Warning: Text page 7 contains only floats.
 
 
 Overfull \vbox (10.28992pt too high) has occurred while \output is active []
 
 
-[6]
+
+LaTeX Warning: Text page 7 contains only floats.
+
+
+Overfull \vbox (10.28992pt too high) has occurred while \output is active []
+
+
+[7]
+
+LaTeX Warning: Reference `fig:4-1' on page 8 undefined on input line 613.
+
 File: graphs/diff-2to1.eps Graphic file (type eps)
- <graphs/diff-2to1.eps>
+<graphs/diff-2to1.eps>
 File: graphs/diff-3to1.eps Graphic file (type eps)
  <graphs/diff-3to1.eps>
 File: graphs/diff-cdn.eps Graphic file (type eps)
  <graphs/diff-cdn.eps>
-Underfull \hbox (badness 1360) in paragraph at lines 598--598
+Underfull \hbox (badness 1360) in paragraph at lines 632--632
 \T1/ptm/m/n/10 fer-ence be-tween CDN ar-chi-tec-ture,
  []
 
@@ -431,16 +447,19 @@ File: graphs/pop.eps Graphic file (type eps)
 <graphs/pop.eps>
 File: graphs/componentconsumption.eps Graphic file (type eps)
  <graphs/componentconsumption.eps>
-Underfull \hbox (badness 3977) in paragraph at lines 616--616
+Underfull \hbox (badness 3977) in paragraph at lines 650--650
 \T1/ptm/m/n/10 peer ar-rival rate of less pop-u-lar
  []
 
 File: graphs/totalconsumption.eps Graphic file (type eps)
-<graphs/totalconsumption.eps> [7]
+<graphs/totalconsumption.eps> [8]
+Underfull \vbox (badness 2469) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
-(./journal.bbl [9])
+ [9]
+(./journal.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -452,14 +471,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (./journal.aux) ) 
+[11
+
+] (./journal.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
  3799 strings out of 493312
- 59411 string characters out of 6137876
- 134169 words of memory out of 5000000
- 7215 multiletter control sequences out of 15000+600000
+ 59421 string characters out of 6137876
+ 135179 words of memory out of 5000000
+ 7216 multiletter control sequences out of 15000+600000
  103769 words of font info for 116 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,15n,42p,394b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,42p,394b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (10 pages, 69612 bytes).
+Output written on journal.dvi (11 pages, 73740 bytes).

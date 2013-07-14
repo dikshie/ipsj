@@ -246,9 +246,7 @@ A block map (BM) is introduced to specify the availability of blocks at each pee
 The periodic exchange of BMs among peers enable them to locate the needed blocks. 
 Each peer can retrieve a number of distinct blocks from multiple active partners simultaneously up to the number of its current active partners.
 If multiple partners hold a desired block, a peer will randomly choose one of its active partners to request that block.
-Since server hold important role in this system, we present simple mathematical model and server bandwidth allocation strategies \cite{4024139,Sun:2009:POS:1542245.1542249} as base for energy calculation later in Sec.\ref{subsec:onlinestorage}.
-There are three server bandwidth allocation strategies:  (1) lower bound of the average downloading time; (2) request driven strategy; (3) water leveling strategy.
-First we introduce some mathematical notation:\\  
+Since server hold important role in this system, we present simple mathematical model and server bandwidth allocation strategies \cite{4024139,Sun:2009:POS:1542245.1542249} as base for energy calculation later in Sec.\ref{subsec:onlinestorage} as follows:\\
 type-1 represents less popular files and type-2 represents popular files. \\
 $S_{t1}$ represents server bandwidth allocated to a file type-1 and $S_{t2}$ represents server bandwidth allocated to a file type-2. \\
 $S$ is total server bandwidth. \\
@@ -257,7 +255,9 @@ $M_{t1}$ is number of type-1 files and  $M_{t2}$ is number of type-2 files.\\
 $\lambda_{t1}$ is the arrival rate of new peers in type-1 file and $\lambda_{t2}$ is the arrival rate of new peers in type-2 file.\\
 $\lambda = M_{t1}.\lambda_{t1} + M_{t2}.\lambda_{t2}$\\
 $M=M_{t1} + M_{t2}$.\\
+$\eta$ is the file sharing effectiveness. It is the fraction of the upload capacity of peers that is being utilized.\\
 
+There are three server bandwidth allocation strategies:  (1) lower bound of the average downloading time; (2) request driven strategy; (3) water leveling strategy.
 In lower bound of the average downloading time, we shall first assign the server bandwidth to type-1 files until $S_{t1}$ reaches its maximum value then the residual server bandwidth can be assigned to type-2 files.
 This strategy to achieve the lower bound of the system wide average downloading time is also applicable to the general case of multiple types of files: the server should always satisfy the requests from the peers who are downloading the least popular files.\\
 In request driven strategy, the server serves every request from peers. 
@@ -266,7 +266,20 @@ We assume that the number of requests for a file to the server is proportional t
 We also assume that when the amount of server bandwidth assigned to one of the two types of files has reached its maximum value, the residual server bandwidth will be assigned to the other type of files.\\
 In water leveling strategy, this strategy equalizes the server bandwidth across all the files by taking file popularity into consideration. 
 The server serves the requests from peers according to a certain probability which is inversely proportional to the peer arrival rate of the file.
-We assume that the number of requests for a file to the server is proportional to the peer arrival rate of the file, the server will serve the same number of requests for different files and therefore the server bandwidth is equally allocated across all the files.
+We assume that the number of requests for a file to the server is proportional to the peer arrival rate of the file, the server will serve the same number of requests for different files and therefore the server bandwidth is equally allocated across all the files.\\
+Average downloading time can be calculated as \cite{Sun:2009:POS:1542245.1542249}:
+\begin{equation}\label{eqn:averagetimedownload}
+\begin{split}
+T &= \frac{1}{M_{t1}.\lambda_{t1} + M_{t2}.\lambda_{t2}}(\frac{M_{t1}.f_{t1}.\lambda_{t1}.\eta_{t2} + M_{t2}.f_{t2}.\lambda_{t2}.\eta_{t1}}{\mu.\eta_{t1}.\eta_{t2}}  \\ 
+   & - \frac{S_{t1} (M_{t1}.\eta_{t2}-M_{t2}.\eta_{t1}) + S.M_{t2}.\eta_{t1}}{\mu.\eta_{t1}.\eta_{t2}}) 
+\end{split}	
+\end{equation} 
+next, we can calculate number of peers as \cite{Sun:2009:POS:1542245.1542249}:
+\begin{equation}\label{eqn:numofpeers}
+\begin{split}
+T &= \frac{\sum X_i}{\sum \lambda_i}
+\end{split}	
+\end{equation} 
 
 
 \subsection{Energy Model}\label{energy model}
@@ -386,7 +399,7 @@ Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\
 \section{Result and Discussion}\label{analysis}
 
 \begin{table}[thb]
-\caption{Numerical Simulation Parameters.}
+\caption{Numerical Simulation Parameters from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening},\cite{4509688}, and \cite{Sun:2009:POS:1542245.1542249}.}
 \label{tab:simparameters}
 \hbox to\hsize{\hfil
 \begin{tabular}{l|l}\hline\hline
@@ -397,28 +410,52 @@ $\delta_p$ & $16 . 10^-9$ (J/b)\\
 $E_{r-baseline}$ & $750$ watt \\
 $E_{s-baseline}$ & $290$ watt \\
 $E_{p-baseline}$ & $13.5$ watt \\
-%%$B$ & $500$MB\\
 $d_s$ & $1$ \\
 $N_{s}^{u}$ & $[0.25,0.5,0.75,1]$ Mbps \\
 $N$ & $[100,..,1000]$ \\
+$\lambda_{t1}$ & $0.1$\\
+$\lambda_{t2}$ & $1$\\
+$\eta_{t1}$ & $0.5$ \\
+$\eta_{t2}$ & $1$ \\
+$M_{t1}$ & $10$ \\
+$M_{t2}$ & $1$ \\
+$f_{t1} = f_{t2}$ & $100$ MB\\
+$\mu$ & $0.5$ Mbps\\
+$c$ & $1$Mbps\\
 $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{tabular}\hfil}
 \end{table}
 
 
 \subsection{Numerical Parameters}
-The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618} and \cite{valancius2009greening}. 
-Parameters values is shown in table \ref{tab:simparameters}.
-
+The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening}, \cite{4509688} and \cite{Sun:2009:POS:1542245.1542249}. 
+Parameters values is shown in table \ref{tab:simparameters}.\\
+\textbf{Server Parameter} - $S_{base}$ and $\delta_s$: To measure the per bit energy for servers, we use a study from \cite{Nedevschi:2008:HDC:1855610.1855618}. 
+The author found that an idle power draw of $290$ watt for the server, that are the baseline power consumptions $E_{s-baseline}$.
+To measure work induced power consumption the author repeatedly downloaded files from two machines using a number of clients and httperf benchmarking tool.
+The author measured the average power draw, network throughput and CPU utilization at maximum capacity. 
+These measurement allows the author to calculate $\delta_s$ using eq.\ref{eqn:delta_s}.\\
+\textbf{Peer Parameter} - $P_{base}$ and $\delta_p$: we use a study from \cite{valancius2009greening}.
+The author measured power consumption through a specialized energy measurement device by varied throughput the downloaded video streams. \\
+From this measurement we can get $E_{p-baseline}$ and $\delta_p$.
+\textbf{Router Parameter} - $R_{base}$ and $\delta_r$: we use a study from \cite{4509688} to derive router parameter.
+A recent measurement from \cite{4509688} reports idle power draw of Cisco GSR router $R_{r-baseline}=750$ watt. 
+When routing at $2.5$ Gbps,the study reports an increase of at most $20$ watt for a per-bit energy increase $8.10^{-9}$ J/bit.\\
+$N_{s}^{u}$ is upload rate that we will use in live streaming case.\\
+$N$ is number of peers that we will use in live streaming case. \\
+$d$ is number of hops for live streaming case and online storage case.\\
+$\lambda_{t1}$ is peer arrival rate to less popular files in online storage case.\\
+$\lambda_{t2}$ is peer arrival rate to popular files in online storage case.\\
+$\eta_{t1}$ and $\eta_{t2}$ is file sharing effectiveness. It is the fraction of the upload capacity of peers that is being utilized in online storage case.\\
+$\mu$ is upload rate of peers in online storage case. We assume it is uniform. \\
+$c$ is downloading rate of peers in online storage case. We assume it is uniform.
+$M_{t1}$ is number of files in type-1 files or less popular files and $M_{t2}$ is number of files in type-2 files or popular files in online storage case.\\
+$f_{t1} = f_{t2}$ is file size in online storage case.\\
+$T$ is air temperature supply from cooling in data center.  $T=20$ corresponds to $COP=3.194$ and $T=25$ corresponds to $COP=4.728$.\\
 
 
 \subsection{Live Streaming Case}
-For numerical simulation, we use work induced energy consumed per second from \cite{Nedevschi:2008:HDC:1855610.1855618}.
-For CDN server baseline, we use server idle power $E_{s-baseline}=290$ watt and router baseline power $E_{r-baseline}=750$ watt \cite{Nedevschi:2008:HDC:1855610.1855618}. 
-For peer baseline, we use peer base power $E_{p-baseline}=13.5$ watt \cite{valancius2009greening}.
-The peer has 256MB flash storage.
-The dummy network model used in this numerical simulation is shown in fig.\ref{fig:dummy}.
-The data flows from CDN to network in this case router then arrive in seeders. 
+In live streaming case, video stream flows from CDN to network in this case router then arrive in seeders. 
 If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
 We showed the logical network architecture of peer-assisted CDN for live streaming in fig.\ref{fig:iptv}.
 Figure.\ref{fig:dummy} shows simplified the physical representation of the network.  
@@ -436,36 +473,35 @@ While in logical network the peer can communicate with another peer, in real phy
 
 \begin{figure*}[ht]
 \centering
-\begin{minipage}[b]{0.3\linewidth}
+\begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdn.eps}
 	\caption{CDN.}
 	\label{fig:4-0}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.5]{graphs/cdnp2p-1.eps}
-	\caption{CDN-P2P $\rho=0.25$.}
-	\label{fig:4-1}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.3\linewidth}
+%\begin{minipage}[b]{0.4\linewidth}
+%	\includegraphics[scale=0.5]{graphs/cdnp2p-1.eps}
+%	\caption{CDN-P2P $\rho=0.25$.}
+%	\label{fig:4-1}
+%\end{minipage}
+%\hfill
+\begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
 	\caption{CDN-P2P $\rho=0.5$.}
 	\label{fig:4-2}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.35\linewidth}
+\begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdnp2p-3.eps}
 	\caption{CDN-P2P $\rho=0.75$.}
 	\label{fig:4-3}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.35\linewidth}
+\begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdnp2p-4.eps}
 	\caption{CDN-P2P $\rho=1$.}
 	\label{fig:4-4}
 \end{minipage}
-%\caption{main}
 \label{fig:main}
 \end{figure*}
 
@@ -477,39 +513,6 @@ This is natural because increasing of clients imply to increasing of traffic fro
 The effect of different $T$ to total energy is small.  
 
 
-\begin{figure*}[ht!]
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.25,0.5,0.75,1$.}
-	\label{fig:diff1}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff3dimension2.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.25,0.5,0.75,1$.}
-	\label{fig:diff2}
-\end{minipage}
-\label{fig:maindiff}
-\end{figure*}
-
-
-
-\begin{figure*}[ht!]
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff-3.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.75$.}
-	\label{fig:diffs1}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff-3-total.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.75$.}
-	\label{fig:diffs2}
-\end{minipage}
-\label{fig:maindiff2}
-\end{figure*}
 
 
 
@@ -563,6 +566,37 @@ Therefore with same energy consumption level on $50\%$ utilization the system ca
 Once again, router energy consumption is increasing. 
 
 
+\begin{figure*}[ht!]
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.25,0.5,0.75,1$.}
+	\label{fig:diff1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff3dimension2.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.25,0.5,0.75,1$.}
+	\label{fig:diff2}
+\end{minipage}
+\label{fig:maindiff}
+\end{figure*}
+
+\begin{figure*}[ht!]
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff-3.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.75$.}
+	\label{fig:diffs1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff-3-total.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.75$.}
+	\label{fig:diffs2}
+\end{minipage}
+\label{fig:maindiff2}
+\end{figure*}
 
 
 Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
