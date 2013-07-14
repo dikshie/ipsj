@@ -471,7 +471,7 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{figure*}
 
 
-\subsection{Numerical Parameters}
+\subsection{Numerical Parameters}\label{sec:parameters}
 The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening}, \cite{4509688} and \cite{Sun:2009:POS:1542245.1542249}. 
 Parameters values is shown in table \ref{tab:simparameters}.\\
 \textbf{Server Parameter} - $S_{base}$ and $\delta_s$: To measure the per bit energy for servers, we use a study from \cite{Nedevschi:2008:HDC:1855610.1855618}. 
@@ -618,27 +618,10 @@ For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}
 
 \subsection{Online Storage Case}\label{subsec:onlinestorage}
 
-In peer-assisted online storage, user contribute their upload bandwidth to redistribute of a file that they are downloading or that they have cached locally.
-We follow peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249} as basis of our work. 
-In peer-assisted online storage, users can browse a catalog of available files and asynchronously issue request to download a given file, which are ideally immediately satisfied by the system.
-In order to reduce startup latency, first block of file must be downloaded from server \cite{5199550}.
-In peer-assisted online storage, users interested to a specific file can retrieve it from servers (CDN) and from users storing copy of it in their computer or dedicated set top boxes/home gateway remotely.  
-Peer-assisted online storage model in \cite{Sun:2009:POS:1542245.1542249}, the arrival process of request for considered file follow Poisson process, it takes into account multiple files of different popularity and server bandwidth provisioning.
-The model also assume that no peers would abort the download and no peers would stay in the system after finishing downloading the file.
-There are three server bandwidth allocation strategies in \cite{Sun:2009:POS:1542245.1542249} which are: (1) lower bound, (2) request driven strategy, and (3) water leveling strategy.
-For detail, we refer the readers to \cite{Sun:2009:POS:1542245.1542249,5199550,5061997}.
-All numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
+In peer-assisted online storage case, numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
+Its parameters explanation and values are shown in sect.\ref{sec:parameters}.
 
-%Figure \ref{fig:stg1} reports power consumption for lower bound strategy for CDN server, router, and peers, for server bandwidth $S=30$MBps and $S=150$MBps.
-%For $S=30$MBps correspond to number of peers $N=1874$ and $S=150$MBps correspond to $N=660$ peers.
 
-%Figure \ref{fig:stg2} reports power consumption for request driven strategy for CDN server, router, and peers, for server bandwidth $S=30$MBps and $S=150$MBps.
-%For $S=30$MBps correspond to number of peers $N=2125$ and $S=150$MBps correspond to $N=660$ peers.
-%Interestingly, with same $S=30$ compare to lower bound strategy, request driven strategy has more peers. 
-
-%Figure \ref{fig:stg3} reports power consumption for water leveling strategy for CDN server, router, and peers, for server bandwidth $S=30$MBps and $S=150$MBps.
-%For $S=30$MBps correspond to number of peers $N=1920$ and $S=150$MBps correspond to $N=660$ peers.
-%Compare to lower bound strategy, more number of peers exist in water leveling strategy but less than number of peers in request driven strategy. 
 
 When $S=150$ all of strategies are in server bandwidth surplus mode thus number of peers in the systems are same, while in $S=30$ all of strategies are server bandwidth deficit mode thus number of peers in $S=30$ bigger than number of peers on $S=150$ and number of peers in $S=30$ is also different for every strategies. 
 In request driven strategy, server bandwidth is equally divided across all the peers. 

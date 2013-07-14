@@ -103,16 +103,6 @@ J.~Moore, J.~Chase, P.~Ranganathan, and R.~Sharma, ``Making scheduling" cool":
   of the annual conference on USENIX Annual Technical Conference}, 2005, pp.
   5--5.
 
-\bibitem{5199550}
-F.~Liu, Y.~Sun, B.~Li, and X.~Zhang, ``Understanding the roles of servers in
-  large-scale peer-assisted online storage systems,'' in \emph{Communications,
-  2009. ICC '09. IEEE International Conference on}, 2009, pp. 1--5.
-
-\bibitem{5061997}
-Y.~Sun, F.~Liu, B.~Li, B.~Li, and X.~Zhang, ``Fs2you: Peer-assisted
-  semi-persistent online storage at a large scale,'' in \emph{INFOCOM 2009,
-  IEEE}, 2009, pp. 873--881.
-
 \bibitem{Huang:2008:UHC:1496046.1496064}
 \BIBentryALTinterwordspacing
 C.~Huang, A.~Wang, J.~Li, and K.~W. Ross, ``Understanding hybrid cdn-p2p: why
