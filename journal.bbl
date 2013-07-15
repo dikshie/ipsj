@@ -73,6 +73,11 @@ H.~Yin, X.~Liu, T.~Zhan, V.~Sekar, F.~Qiu, C.~Lin, H.~Zhang, and B.~Li,
   Available: \url{http://doi.acm.org/10.1145/1823746.1823750}
 \BIBentrySTDinterwordspacing
 
+\bibitem{5061997}
+Y.~Sun, F.~Liu, B.~Li, B.~Li, and X.~Zhang, ``Fs2you: Peer-assisted
+  semi-persistent online storage at a large scale,'' in \emph{INFOCOM 2009,
+  IEEE}, 2009, pp. 873--881.
+
 \bibitem{4024139}
 S.~Das, S.~Tewari, and L.~Kleinrock, ``The case for servers in a peer-to-peer
   world,'' in \emph{Communications, 2006. ICC '06. IEEE International

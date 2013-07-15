@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  15 JUL 2013 12:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  15 JUL 2013 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -389,37 +389,14 @@ File: graphs/diff-3.eps Graphic file (type eps)
 File: graphs/diff-3-total.eps Graphic file (type eps)
 
 <graphs/diff-3-total.eps>
-Underfull \hbox (badness 1681) in paragraph at lines 507--531
-\T1/ptm/m/n/10 work in-duced power con-sump-tion the au-thor re-peat-edly
- []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 507--531
-\T1/ptm/m/n/10 the av-er-age power draw, net-work through-put and CPU
- []
-
-
-Underfull \hbox (badness 3009) in paragraph at lines 507--531
-\T1/ptm/m/n/10 [[]] to de-rive router pa-ram-e-ter. A re-cent mea-sure-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 507--531
-
- []
-
-
-Underfull \vbox (badness 1533) has occurred while \output is active []
-
- [5]
-[6]
 File: graphs/diff-2to1.eps Graphic file (type eps)
  <graphs/diff-2to1.eps>
 File: graphs/diff-3to1.eps Graphic file (type eps)
  <graphs/diff-3to1.eps>
 File: graphs/diff-cdn.eps Graphic file (type eps)
- <graphs/diff-cdn.eps>
-Underfull \hbox (badness 1360) in paragraph at lines 571--571
+
+<graphs/diff-cdn.eps>
+Underfull \hbox (badness 1360) in paragraph at lines 522--522
 \T1/ptm/m/n/10 fer-ence be-tween CDN ar-chi-tec-ture,
  []
 
@@ -427,16 +404,36 @@ File: graphs/pop.eps Graphic file (type eps)
 <graphs/pop.eps>
 File: graphs/componentconsumption.eps Graphic file (type eps)
  <graphs/componentconsumption.eps>
-Underfull \hbox (badness 3977) in paragraph at lines 589--589
+Underfull \hbox (badness 3977) in paragraph at lines 540--540
 \T1/ptm/m/n/10 peer ar-rival rate of less pop-u-lar
  []
 
 File: graphs/totalconsumption.eps Graphic file (type eps)
-<graphs/totalconsumption.eps> [7]
-Underfull \vbox (badness 2469) has occurred while \output is active []
+<graphs/totalconsumption.eps>
+Underfull \hbox (badness 1681) in paragraph at lines 555--580
+\T1/ptm/m/n/10 work in-duced power con-sump-tion the au-thor re-peat-edly
+ []
 
- [8]
-(./journal.bbl [9])
+
+Underfull \hbox (badness 1824) in paragraph at lines 555--580
+\T1/ptm/m/n/10 the av-er-age power draw, net-work through-put and CPU
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 555--580
+\T1/ptm/m/n/10 [[]] to de-rive router pa-ram-e-ter. A re-cent mea-sure-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--580
+
+ []
+
+
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [5]
+[6] [7] [8] (./journal.bbl [9])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -452,12 +449,12 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./journal.aux) ) 
 Here is how much of TeX's memory you used:
- 3797 strings out of 493312
- 59410 string characters out of 6137876
- 134186 words of memory out of 5000000
- 7214 multiletter control sequences out of 15000+600000
+ 3798 strings out of 493312
+ 59419 string characters out of 6137876
+ 137190 words of memory out of 5000000
+ 7215 multiletter control sequences out of 15000+600000
  103769 words of font info for 116 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,16n,42p,394b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (10 pages, 66532 bytes).
+Output written on journal.dvi (10 pages, 66816 bytes).
