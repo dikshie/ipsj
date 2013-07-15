@@ -246,7 +246,7 @@ A block map (BM) is introduced to specify the availability of blocks at each pee
 The periodic exchange of BMs among peers enable them to locate the needed blocks. 
 Each peer can retrieve a number of distinct blocks from multiple active partners simultaneously up to the number of its current active partners.
 If multiple partners hold a desired block, a peer will randomly choose one of its active partners to request that block.
-Since server hold important role in this system, we present simple mathematical model and server bandwidth allocation strategies \cite{4024139,Sun:2009:POS:1542245.1542249} as base for energy calculation later in Sec.\ref{subsec:onlinestorage} as follows:\\
+Since server hold important role in this system, we present simple mathematical model of server bandwidth allocation strategies \cite{4024139,Sun:2009:POS:1542245.1542249} as base for energy calculation later in Sec.\ref{subsec:onlinestorage} as follows:\\
 type-1 represents less popular files and type-2 represents popular files. \\
 $S_{t1}$ represents server bandwidth allocated to a file type-1 and $S_{t2}$ represents server bandwidth allocated to a file type-2. \\
 $S$ is total server bandwidth. \\
@@ -277,7 +277,7 @@ T &= \frac{1}{M_{t1}.\lambda_{t1} + M_{t2}.\lambda_{t2}}(\frac{M_{t1}.f_{t1}.\la
 next, we can calculate number of peers as \cite{Sun:2009:POS:1542245.1542249}:
 \begin{equation}\label{eqn:numofpeers}
 \begin{split}
-T &= \frac{\sum X_i}{\sum \lambda_i}
+T &= \frac{\sum x_i}{\sum \lambda_i}
 \end{split}	
 \end{equation} 
 
@@ -372,7 +372,7 @@ COP value empirically can be computed using \cite{moore2005making}:
 \end{equation}
 Where $T$ is temperature supply by cooling unit.  
 
-\begin{figure}[thb]
+\begin{figure}[thp!]
 \begin{center}
 \includegraphics[scale=0.6]{graphs/cop.eps}
 \end{center}
@@ -398,7 +398,7 @@ Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\
 
 \section{Result and Discussion}\label{analysis}
 
-\begin{table}[ht]
+\begin{table}[htp!]
 \caption{Numerical Simulation Parameters from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening},\cite{4509688}, and \cite{Sun:2009:POS:1542245.1542249}.}
 \label{tab:simparameters}
 \hbox to\hsize{\hfil
@@ -406,7 +406,7 @@ Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\
 Symbol & Value\\\hline
 $\delta_s$ & $5.2 . 10^{-8}$ (J/b)\\
 $\delta_r$ & $8.0 . 10^{-9}$ (J/b)\\
-$\delta_p$ & $16 . 10^-9$ (J/b)\\
+$\delta_p$ & $16 . 10^{-9}$ (J/b)\\
 $E_{r-baseline}$ & $750$ watt \\
 $E_{s-baseline}$ & $290$ watt \\
 $E_{p-baseline}$ & $13.5$ watt \\
@@ -426,7 +426,7 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{tabular}\hfil}
 \end{table}
 
-\begin{figure}[ht!]
+\begin{figure}[htp!]
 \begin{center}
 \includegraphics[scale=0.35]{graphs/topology.eps}
 \end{center}
@@ -436,7 +436,7 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \end{figure} 
 
 
-\begin{figure*}[ht]
+\begin{figure*}[htp!]
 \centering
 \begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdn.eps}
@@ -468,6 +468,38 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 	\label{fig:4-4}
 \end{minipage}
 \label{fig:main}
+\end{figure*}
+
+\begin{figure*}[htp!]
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.25,0.5,0.75,1$.}
+	\label{fig:diff1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff3dimension2.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.25,0.5,0.75,1$.}
+	\label{fig:diff2}
+\end{minipage}
+\label{fig:maindiff}
+\end{figure*}
+
+\begin{figure*}[htp!]
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff-3.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.75$.}
+	\label{fig:diffs1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.5]{graphs/diff-3-total.eps}
+	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.75$.}
+	\label{fig:diffs2}
+\end{minipage}
+\label{fig:maindiff2}
 \end{figure*}
 
 
@@ -518,56 +550,8 @@ We observe that peer power consumption is increasing as number of peers increase
 Router power consumption is also increasing as additional number of peers generate more traffic. 
 CDN server power consumption on the other hand relatively flat because some of seeders can supply video stream to some leechers.
 
-Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that CDN server get is from $3.8\%$ to $11\%$.
-More clear figure is shown in fig.\ref{fig:diffs1} that we sliced for $\rho=0.75$ from fig.\ref{fig:diff1}. 
-CDN server can save energy because the utilization of CDN server is same when the system has number of peers increasing from $500$ to $875$.
-Same situation is also happen when number of peers increasing from $875$ to $1531$.  
-The saving is up to $11\%$ 
 
-Figure \ref{fig:diff2} shows percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=[0.25,0.5,0.75,1]$.
-The power saving that total system get is from $0.2\%$ to $0.9\%$.
-Figure \ref{fig:diffs2} reports percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=0.75$.
-While CDN server part can save more energy, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
-For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-2} until fig.\ref{fig:4-4}.
-
-
-
-\begin{figure*}[ht]
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff3dimension.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.25,0.5,0.75,1$.}
-	\label{fig:diff1}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff3dimension2.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.25,0.5,0.75,1$.}
-	\label{fig:diff2}
-\end{minipage}
-\label{fig:maindiff}
-\end{figure*}
-
-\begin{figure*}[ht!]
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff-3.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for CDN server component with $\rho=0.75$.}
-	\label{fig:diffs1}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/diff-3-total.eps}
-	\caption{Different power consumption between CDN and CDN-P2P for total system with $\rho=0.75$.}
-	\label{fig:diffs2}
-\end{minipage}
-\label{fig:maindiff2}
-\end{figure*}
-
-
-
-\begin{figure*}[ht]
+\begin{figure*}[htp!]
 \centering
 \begin{minipage}[b]{0.3\linewidth}
 	\includegraphics[scale=0.4]{graphs/diff-2to1.eps}
@@ -591,7 +575,7 @@ For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}
 \label{fig:diffstrategy}
 \end{figure*}
 
-\begin{figure*}[ht]
+\begin{figure*}[htp!]
 \centering
 \begin{minipage}[b]{0.3\linewidth}
 	\includegraphics[scale=0.4]{graphs/pop.eps}
@@ -615,13 +599,24 @@ For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}
 \label{fig:popularity}
 \end{figure*}
 
+Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
+The power saving that CDN server get is from $3.8\%$ to $11\%$.
+More clear figure is shown in fig.\ref{fig:diffs1} that we sliced for $\rho=0.75$ from fig.\ref{fig:diff1}. 
+CDN server can save energy because the utilization of CDN server is same when the system has number of peers increasing from $500$ to $875$.
+Same situation is also happen when number of peers increasing from $875$ to $1531$.  
+The saving is up to $11\%$ 
+
+Figure \ref{fig:diff2} shows percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=[0.25,0.5,0.75,1]$.
+The power saving that total system get is from $0.2\%$ to $0.9\%$.
+Figure \ref{fig:diffs2} reports percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=0.75$.
+While CDN server part can save more energy, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
+For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-2} until fig.\ref{fig:4-4}.
+
 
 \subsection{Online Storage Case}\label{subsec:onlinestorage}
 
 In peer-assisted online storage case, numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
 Its parameters explanation and values are shown in sect.\ref{sec:parameters}.
-
-
 
 When $S=150$ all of strategies are in server bandwidth surplus mode thus number of peers in the systems are same, while in $S=30$ all of strategies are server bandwidth deficit mode thus number of peers in $S=30$ bigger than number of peers on $S=150$ and number of peers in $S=30$ is also different for every strategies. 
 In request driven strategy, server bandwidth is equally divided across all the peers. 
