@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  17 JUL 2013 00:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  17 JUL 2013 00:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -369,11 +369,18 @@ File: graphs/topology.eps Graphic file (type eps)
  <graphs/topology.eps>
 File: graphs/cdn.eps Graphic file (type eps)
  <graphs/cdn.eps>
-File: graphs/cdnp2p-3.eps Graphic file (type eps)
+Overfull \hbox (10.41534pt too wide) in paragraph at lines 460--461
+[][] 
+ []
 
+File: graphs/cdnp2p-3.eps Graphic file (type eps)
 <graphs/cdnp2p-3.eps>
+Overfull \hbox (10.41534pt too wide) in paragraph at lines 478--479
+[][] 
+ []
+
 File: graphs/diff3dimension.eps Graphic file (type eps)
- <graphs/diff3dimension.eps>
+<graphs/diff3dimension.eps>
 File: graphs/diff3dimension2.eps Graphic file (type eps)
  <graphs/diff3dimension2.eps>
 Underfull \hbox (badness 1661) in paragraph at lines 501--501
