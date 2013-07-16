@@ -523,25 +523,25 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \begin{figure*}[htp!]
 \centering
 \begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/diff-2to1.eps}
-	\caption{Power consumption difference between request driven strategy and lower bound strategy.}
-	\label{fig:diff2to1}
+	\includegraphics[scale=0.4]{graphs/lw-energy.eps}
+	\caption{Power consumption for lower bound strategy.}
+	\label{fig:lw-energy}
 \end{minipage}
 \hfill
 \centering
 \begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/diff-3to1.eps}
-	\caption{Power consumption difference between water leveling strategy and lower bound strategy.}
-	\label{fig:diff3to1}
+	\includegraphics[scale=0.4]{graphs/req-energy.eps}
+	\caption{Power consumption for request driven strategy.}
+	\label{fig:req-energy}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/diff-cdn.eps}
-	\caption{Total power consumption difference between CDN architecture, surplus mode $S=150$MBps, lower bound strategy, request driven strategy, and water leveling strategy.}
-	\label{fig:difftocdn}
+	\includegraphics[scale=0.4]{graphs/wl-energy.eps}
+	\caption{Power consumption for water-leveling strategy.}
+	\label{fig:wl-energy}
 \end{minipage}
 %\caption{main}
-\label{fig:diffstrategy}
+\label{fig:powereachstrategy}
 \end{figure*}
 
 
@@ -647,8 +647,10 @@ In water leveling strategy, server bandwidth is equally divided across all the f
 Fewer peers are involved in less popular files, each of these peers can obtain more server bandwidth.  
 This explains less peers compare to request driven but more peers compare to lower bound.
 
-Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy fig.\ref{fig:diff2to1}, while water level strategy totally consume around $2.3\%$ more energy compare to lower bound strategy fig.\ref{fig:diff3to1}.
-Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have cooling overhead $T=25$ fig.\ref{fig:difftocdn} for above case. 
+Figures \ref{fig:lw-energy}, \ref{fig:req-energy}, and \ref{fig:wl-energy} show power consumption for every bandwidth strategy.
+
+%Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy fig.\ref{fig:diff2to1}, while water level strategy totally consume %around $2.3\%$ more energy compare to lower bound strategy fig.\ref{fig:diff3to1}.
+%Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have %cooling overhead $T=25$ fig.\ref{fig:difftocdn} for above case. 
 %Generally, increasing server bandwidth will decrease number of peers thus increasing CDN server energy consumption and decreasing router energy consumption. 
 %Total energy consumption in every strategies depend on number peers.  
 
