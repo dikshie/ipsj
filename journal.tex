@@ -168,19 +168,35 @@ Based on study from Dischinger et al., \cite{Dischinger:2007:CRB:1298306.1298313
 
 \begin{figure}[thb]
 \begin{center}
-\includegraphics[scale=0.6]{graphs/p2p-cdn.eps}
+\includegraphics[scale=0.5]{graphs/livesky.eps}
 \end{center}
-\caption{Example model of content delivery architecture with peer assisted.}
+\caption{Example model of live stream content delivery architecture with peer assisted.}
 \label{fig:iptv}
 \end{figure} 
 
 Figure \ref{fig:iptv} shows example model of CDN with peer assisted for live streaming adapted from \cite{Yin:2010:LEC:1823746.1823750}.
-$P_s$ in fig.\ref{fig:iptv} is peers in level 1 or seeders.  
-Seeders get content directly from CDN.  
-$P_l$ in fig.\ref{fig:iptv} is peers in level 2 or leechers.
-Leechers get content from seeders.
+CDN server deliver video contents from content providers to end users. 
+The CDNs are organized into severaltiers according to the scale demand, meanwhile satisfying the QoS and reliability requirement. 
+Edge CDNs are directly responsible for serving end users and the remaining part are core CDN.
+The goal of the server side overlay is efficient data distribution with some measures to guard against some node failures and network delay.
+Since CDNs are more stable, the server side distribution overlay is largely tree-based. 
+However, to provide greater reliability in the presence of node or network failures, CDN is allowed to retrieve the content either from CDN higher up in the hierarchy or from peer CDN in the same level.
+Edge CDNs are responsible for serving end users, they are typically heavily loaded. 
+In this system, a peer that is served by edge CDN named as seeders while a peer that is served by seeders named as leechers. 
 
-Maximum number of seeders is bounded by maximum CDN's capacity, while maximum number of leechers in level 2 is bounded by number of seeders can support the bitrate.
+Before accessing the video stream, a peer first obtain the URL from content source.  
+The global load server balance takes into account the peer location, edge CDN location, and edge CDN load to find a suitable edge CDN for this peer.
+The peer is then redirected to this edge CDN.
+The edge CDNs are preconfigured with some decision logic that decides if a new peer should be served directly by edge CDN or it should be redirected to P2P overlay.
+
+In P2P transmission overlay, the stream is seperated into several substreams according the stream id.
+For example, if the video is divided into six substreams, substream-0 consists of frames $0,6,12,18,...$ , substream-1 consists of frames $1,7,13,19,..$ and so on. 
+Peers are organized in a tree-based overlay on a per-substream basis.
+Each peer has a parent node for each substream and obtain the stream frames belonging to this substream from the parent node. 
+Additionally, in order to be robust to network or node failures, peers also construct a mesh-style overlay to retrieve missing frames for continuous playback.
+The working environment for peer-assisted CDN live streaming system is defined by several parameters such as: (1) media playback bitrate, (2) the total number of end users, (3) the bandwidth capacity of the edge CDNs, and (5) Characteristics of end users such as their upload bandwidth capacity and churn rates. 
+Given the working environment, the control parameter is the number of end users that are served directly by the edge CDNs.
+Maximum number of seeders is bounded by maximum CDN's capacity, while maximum number of leechers are bounded by number of seeders can support the bitrate.
 Denote number of seeders is $n_s$, number of leechers is $n_l$, $\rho$ is maximum bitrate that supplied by seeders to leechers, and $r=1$ is video bitrate, therefore we have number of leechers that can be supported by seeders is:
 
 \begin{equation}\label{eqn:leecher}
@@ -210,35 +226,35 @@ Therefore we have three seeders that do not need to upload content to leecher.
 \end{figure} 
 
 Figure \ref{fig:fs2you} illustrates the architecture of peer-assisted online storage for file hosting system (one-click hosting services with peer-assistance) \cite{5061997}.
-Each file provided by users is treated as a channel, since it is distributed live on an ongoing basis to other users. 
+Each file provided by users is treated as a swarm, since it is distributed live on an ongoing basis to other users. 
 Each end user is treated as a peer, inheriting the terminology of pure P2P systems.
 In fig.\ref{fig:fs2you} arrows 1,2,and 3 represent the interaction between a participating peer and dedicated tracking and replication servers for uploading new content.
 Arrows 4,5, and 6 represent the interaction between peers and the tracking server to maintain the peer topology. 
 Arrow 7 represents the sharing of file blocks and exchange of availability among peers. 
 Arrows 8 and 9 represent peer requests and server response when the requests cannot be satisfied by other peers alone. 
 
-Tracking server serves the purpose of maintaining channel information and bootstrapping peers.
-Specifically, it maintains a unique channel ID and a secure hash value for each file provided by a peer and keeps track of the group of users that are participating in the distribution of each channel. 
-Replication servers serve as dedicated content servers to maintain availability of channels when they are not actively served by peers alone. 
-All peers involved in a channel, i.e., either downloading the file in the channel of holding a replica of the file, are organized into a topology, so that block availability information can be exchanged and blocks can be shared among neighboring peers in the topology.
+Tracking server serves the purpose of maintaining swarm information and bootstrapping peers.
+Specifically, it maintains a unique swarm ID and a secure hash value for each file provided by a peer and keeps track of the group of users that are participating in the distribution of each swarm. 
+Replication servers serve as dedicated content servers to maintain availability of swarms when they are not actively served by peers alone. 
+All peers involved in the system, i.e., either downloading the file in the system of holding a replica of the file, are organized into a topology, so that block availability information can be exchanged and blocks can be shared among neighboring peers in the topology.
 When a downloading peer join the swarm, it contacts the tracking server and obtains a list of initial partners (determined by a system) that are randomly selected from peers associated with the same channel.  
 This partnership list is periodically updated and new partners can be added. 
 Partners can be active or inactive, which is determined by whether there are actual connections and data block transfer between the peer and its partners.
 
 Peers need to keep a reasonably number of active and inactive partners in order to maintain a sustainable level of downloading efficiency and to be resilient to network dynamics. 
-Each peer can have up to $N$ partners in its pool of inactive partners, which is related to the number of peers simultaneously being online in a channel.
+Each peer can have up to $N$ partners in its pool of inactive partners, which is related to the number of peers simultaneously being online in a swarm.
 In case the size of the inactive partner pool increases to over threshold $N$, a peer will discard aged partners or partners who it has failed to establish a connection with. 
-On the other side, with respect to active partners, the maximum number per channel that peer can have is bounded by a system parameter $K_{max}$.
+On the other side, with respect to active partners, the maximum number per swarm that peer can have is bounded by a system parameter $K_{max}$.
 Connections to active partners can be broken from time to time due to various reasons, such as slow downloading rates and idling for a long time.
 Each peer periodically monitors the number of its current partner. 
 If the number of active partners falls below a threshold $K_{min}$ , it exchanges active partner lists with its current active partners through gossip and attempts to establish new connections with a random subset of inactive partners.
 If successful, the status of these inactive partners will be promoted to active. 
 
-To maintain accurate list of peers in each channel, peers report their status to the tracking server periodically which contains vital peer information such as unique peer identifier, its IP address, and information about channels that it has joined. 
-Since each peer can be potentially involved in a large number of channels, to keep overhead low, the reported status only includes information of a bounded number of top $C$ channels, including channel identifier and download ratios, defined as the amount of file that has been downloaded so far. 
-The top $C$ channels represent files that have been downloaded by this peer, ranked by a value computed by the combination of the file size, download ratio, and the time when the peer joined the channel. 
-Upon receiving status reports from peers, the tracking server periodically updates the corresponding list of peers associated with each channel.
-Such a periodic refresh of peer lists in each channel (associated to each file) assists peers to gain access to active partners that are most helpful, with a reasonable level of overhead. 
+To maintain accurate list of peers in each swarm, peers report their status to the tracking server periodically which contains vital peer information such as unique peer identifier, its IP address, and information about swarms that it has joined. 
+Since each peer can be potentially involved in a large number of swarms, to keep overhead low, the reported status only includes information of a bounded number of top $C$ swarms, including swarm identifier and download ratios, defined as the amount of file that has been downloaded so far. 
+The top $C$ swarms represent files that have been downloaded by this peer, ranked by a value computed by the combination of the file size, download ratio, and the time when the peer joined the swarm. 
+Upon receiving status reports from peers, the tracking server periodically updates the corresponding list of peers associated with each swarm.
+Such a periodic refresh of peer lists in each swarm (associated to each file) assists peers to gain access to active partners that are most helpful, with a reasonable level of overhead. 
 Consequently, the downloading performance can be improved and the load on servers can be alleviated. 
 
 In content distribution strategies, each file is divided into fixed size blocks.
@@ -392,9 +408,11 @@ Currently we assume a uniform $T$ from each cooling units due to the complicatio
 
 Considering cooling energy overhead, we can substitute eq.\ref{eqn:cost} to eq.\ref{eqn:E_t}, therefore total energy consumption: 
 \begin{equation}
-	\hat{E}_{t} = E_{t}.\left( 1+\frac{1}{COP(T)} \right)
+	\hat{E}_{t} = E_{d}.\left( 1+\frac{1}{COP(T)} \right) + E_{r}.\left( 1+\frac{1}{COP(T)} \right) + E_p
 \end{equation}
 
+We do not include cooling overhead in peer energy consumption because most of peers in home do not need cooling.  
+The air conditioning in home mainly for human not for devices.
 
 \section{Result and Discussion}\label{analysis}
 
@@ -450,23 +468,23 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 %	\label{fig:4-1}
 %\end{minipage}
 %\hfill
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
-	\caption{CDN-P2P $\rho=0.5$.}
-	\label{fig:4-2}
-\end{minipage}
-\hfill
+%\begin{minipage}[b]{0.4\linewidth}
+%	\includegraphics[scale=0.5]{graphs/cdnp2p-2.eps}
+%	\caption{CDN-P2P $\rho=0.5$.}
+%	\label{fig:4-2}
+%\end{minipage}
+%\hfill
 \begin{minipage}[b]{0.4\linewidth}
 	\includegraphics[scale=0.5]{graphs/cdnp2p-3.eps}
 	\caption{CDN-P2P $\rho=0.75$.}
 	\label{fig:4-3}
 \end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.5]{graphs/cdnp2p-4.eps}
-	\caption{CDN-P2P $\rho=1$.}
-	\label{fig:4-4}
-\end{minipage}
+%\hfill
+%\begin{minipage}[b]{0.4\linewidth}
+%	\includegraphics[scale=0.5]{graphs/cdnp2p-4.eps}
+%	\caption{CDN-P2P $\rho=1$.}
+%	\label{fig:4-4}
+%\end{minipage}
 \label{fig:main}
 \end{figure*}
 
@@ -526,30 +544,6 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \label{fig:diffstrategy}
 \end{figure*}
 
-\begin{figure*}[htp!]
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/pop.eps}
-	\caption{Comparison of average downloading time under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies.}
-	\label{fig:popsimulation}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/componentconsumption.eps}
-	\caption{Power consumption for server and router under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
-	\label{fig:componentpop}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/totalconsumption.eps}
-	\caption{Total power consumption under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
-	\label{fig:totalpop}
-\end{minipage}
-\label{fig:popularity}
-\end{figure*}
-
 
 \subsection{Numerical Parameters}\label{sec:parameters}
 The parameters used in this numerical simulation were adapted from \cite{Nedevschi:2008:HDC:1855610.1855618}, \cite{valancius2009greening}, \cite{4509688} and \cite{Sun:2009:POS:1542245.1542249}. 
@@ -580,6 +574,32 @@ $T$ is air temperature supply from cooling in data center.  $T=20$ corresponds t
 
 
 
+\begin{figure*}[htp!]
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/pop.eps}
+	\caption{Comparison of average downloading time under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies.}
+	\label{fig:popsimulation}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/componentconsumption.eps}
+	\caption{Power consumption for server and router under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
+	\label{fig:componentpop}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/totalconsumption.eps}
+	\caption{Total power consumption under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
+	\label{fig:totalpop}
+\end{minipage}
+\label{fig:popularity}
+\end{figure*}
+
+
+
 \subsection{Live Streaming Case}
 In live streaming case, video stream flows from CDN to network in this case router then arrive in seeders. 
 If seeders need to upload data to leechers then, it will flows through router then arrive in leechers. 
@@ -593,12 +613,11 @@ In CDN only scenario, the energy consumption is increase as number of client inc
 This is natural because increasing of clients imply to increasing of traffic from CDN server through router to clients.
 The effect of different $T$ to total energy is small.  
 
-Figure \ref{fig:4-2} until \ref{fig:4-4} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
-We show peer upload rate $N_{s}^{u}=[0.5, 0.75, 1]$ in fig.\ref{fig:4-2}-\ref{fig:4-4}. 
+Figure \ref{fig:4-3} shows energy consumption for CDN, router, and total energy consumption for CDN-P2P scenario.
+We show peer upload rate $N_{s}^{u}=0.75$ in fig.\ref{fig:4-3}.
 We observe that peer power consumption is increasing as number of peers increase.  
 Router power consumption is also increasing as additional number of peers generate more traffic. 
 CDN server power consumption on the other hand relatively flat because some of seeders can supply video stream to some leechers.
-
 
 
 Figure \ref{fig:diff1} shows percentage difference of energy consumption between CDN and CDN-P2P for CDN server component with $\rho=[0.25,0.5,0.75,1]$.
@@ -612,7 +631,7 @@ Figure \ref{fig:diff2} shows percentage difference of energy consumption between
 The power saving that total system get is from $0.2\%$ to $0.9\%$.
 Figure \ref{fig:diffs2} reports percentage difference of energy consumption between CDN and CDN-P2P for total system with $\rho=0.75$.
 While CDN server part can save more energy, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
-For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-2} until fig.\ref{fig:4-4}.
+For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-3}.
 
 
 \subsection{Online Storage Case}\label{subsec:onlinestorage}
