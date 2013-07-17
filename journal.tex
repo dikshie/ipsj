@@ -652,6 +652,10 @@ Figures \ref{fig:lw-energy}, \ref{fig:req-energy}, and \ref{fig:wl-energy} show 
 From fig.\ref{fig:lw-energy}, \ref{fig:req-energy}, and \ref{fig:wl-energy} we found that increasing number of peers can decrease CDN server power consumption because CDN server can reduce bandwidth or work due to increasing of peers that exchange blocks. 
 We also found that router power consumption relatively flat. 
 This is because compensation of server bandwidth reduction by increasing number of peers.  
+Figure \ref{fig:diff-12} shows comparison energy consumption between request driven to lower bound strategy and water-leveling strategy to lower bound strategy.  
+Compare to water-leveling strategy, request driven strategy required more energy than water-leveling strategy because request driven strategy equalizes the server bandwidth across all the peers.
+Water-leveling strategy equalizes server bandwidth across all the files by taking file popularity into consideration thus minimize downloading time. 
+This minimization result near to lower-bound strategy.  
 
 %Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy fig.\ref{fig:diff2to1}, while water level strategy totally consume %around $2.3\%$ more energy compare to lower bound strategy fig.\ref{fig:diff3to1}.
 %Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have %cooling overhead $T=25$ fig.\ref{fig:difftocdn} for above case. 
