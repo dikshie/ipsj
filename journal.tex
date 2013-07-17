@@ -520,37 +520,6 @@ $T$ & $[20,25]$ correspond to COP value $[3.194,4.728]$\\\hline
 \label{fig:maindiff2}
 \end{figure*}
 
-\begin{figure*}[htp!]
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.45]{graphs/lw-energy.eps}
-	\caption{Power consumption for lower bound strategy.}
-	\label{fig:lw-energy}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.45]{graphs/req-energy.eps}
-	\caption{Power consumption for request driven strategy.}
-	\label{fig:req-energy}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.45]{graphs/wl-energy.eps}
-	\caption{Power consumption for water-leveling strategy.}
-	\label{fig:wl-energy}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.4\linewidth}
-	\includegraphics[scale=0.45]{graphs/diff-12.eps}
-	\caption{Power consumption difference between request driven and water-leveling strategy to lower-bound strategy.}
-	\label{fig:diff-12}
-\end{minipage}
-%\caption{main}
-\label{fig:powereachstrategy}
-\end{figure*}
 
 
 \subsection{Numerical Parameters}\label{sec:parameters}
@@ -581,30 +550,6 @@ $f_{t1} = f_{t2}$ is file size in online storage case.\\
 $T$ is air temperature supply from cooling in data center.  $T=20$ corresponds to $COP=3.194$ and $T=25$ corresponds to $COP=4.728$.\\
 
 
-
-\begin{figure*}[htp!]
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/pop.eps}
-	\caption{Comparison of average downloading time under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies.}
-	\label{fig:popsimulation}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/componentconsumption.eps}
-	\caption{Power consumption for server and router under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
-	\label{fig:componentpop}
-\end{minipage}
-\hfill
-\centering
-\begin{minipage}[b]{0.3\linewidth}
-	\includegraphics[scale=0.4]{graphs/totalconsumption.eps}
-	\caption{Total power consumption under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
-	\label{fig:totalpop}
-\end{minipage}
-\label{fig:popularity}
-\end{figure*}
 
 
 
@@ -641,21 +586,72 @@ Figure \ref{fig:diffs2} reports percentage difference of energy consumption betw
 While CDN server part can save more energy \ref{fig:diffs1}, due to peers high energy consumption then total energy saving in the system that we can get is small, from $0.2\%$ to $0.9\%$.
 For fig.\ref{fig:diff1}, \ref{fig:diff2}, \ref{fig:diffs1}, and \ref{fig:diffs2}, we only show graph for $T=20$ since the difference with $T=25$ is very small as shown in fig.\ref{fig:4-3}.
 
+\begin{figure*}[htp!]
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.45]{graphs/lw-energy.eps}
+	\caption{Power consumption for lower bound strategy.}
+	\label{fig:lw-energy}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.45]{graphs/req-energy.eps}
+	\caption{Power consumption for request driven strategy.}
+	\label{fig:req-energy}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.45]{graphs/wl-energy.eps}
+	\caption{Power consumption for water-leveling strategy.}
+	\label{fig:wl-energy}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.4\linewidth}
+	\includegraphics[scale=0.45]{graphs/diff-12.eps}
+	\caption{Power consumption difference between request driven and water-leveling strategy to lower-bound strategy.}
+	\label{fig:diff-12}
+\end{minipage}
+%\caption{main}
+\label{fig:powereachstrategy}
+\end{figure*}
+
+\begin{figure*}[htp!]
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/pop.eps}
+	\caption{Comparison of average downloading time under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies.}
+	\label{fig:popsimulation}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/componentconsumption.eps}
+	\caption{Power consumption for server and router under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
+	\label{fig:componentpop}
+\end{minipage}
+\hfill
+\centering
+\begin{minipage}[b]{0.3\linewidth}
+	\includegraphics[scale=0.4]{graphs/totalconsumption.eps}
+	\caption{Total power consumption under different server bandwidth allocation strategies when the peer arrival rate of less popular files varies. Server bandwidth $S=50$MBps.}
+	\label{fig:totalpop}
+\end{minipage}
+\label{fig:popularity}
+\end{figure*}
+
 
 \subsection{Online Storage Case}\label{subsec:onlinestorage}
 
 In peer-assisted online storage case, numerical simulation parameters that we used in this section same as \cite{Sun:2009:POS:1542245.1542249}.
 Its parameters explanation and values are shown in sect.\ref{sec:parameters}.
 
-When $S=150$ all of strategies are in server bandwidth surplus mode thus number of peers in the systems are same, while in $S=30$ all of strategies are server bandwidth deficit mode thus number of peers in $S=30$ bigger than number of peers on $S=150$ and number of peers in $S=30$ is also different for every strategies. 
-In request driven strategy, server bandwidth is equally divided across all the peers. 
-Popular files with more peers involved hence occupy more server bandwidth. 
-This behavior explained why more peers exist in request driven strategy.
-In water leveling strategy, server bandwidth is equally divided across all the files.  
-Fewer peers are involved in less popular files, each of these peers can obtain more server bandwidth.  
-This explains less peers compare to request driven but more peers compare to lower bound.
-
 Figures \ref{fig:lw-energy}, \ref{fig:req-energy}, and \ref{fig:wl-energy} show power consumption for every bandwidth strategy.
+From fig.\ref{fig:lw-energy}, \ref{fig:req-energy}, and \ref{fig:wl-energy} we found that increasing number of peers can decrease CDN server power consumption because CDN server can reduce bandwidth or work due to increasing of peers that exchange blocks. 
+We also found that router power consumption relatively flat. 
+This is because compensation of server bandwidth reduction by increasing number of peers.  
 
 %Request driven strategy totally consume around $12\%$ more energy compare to lower bound strategy fig.\ref{fig:diff2to1}, while water level strategy totally consume %around $2.3\%$ more energy compare to lower bound strategy fig.\ref{fig:diff3to1}.
 %Compare to CDN architecture, peer-assisted CDN online storage can save total energy around $0.45\%$ if we add cooling overhead $T=20$ and around $0.8\%$ if we have %cooling overhead $T=25$ fig.\ref{fig:difftocdn} for above case. 
