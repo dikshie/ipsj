@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  17 JUL 2013 00:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.7.10)  17 JUL 2013 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,7 +350,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 File: graphs/livesky.eps Graphic file (type eps)
 
-<graphs/livesky.eps> [2]
+<graphs/livesky.eps>
+Overfull \hbox (50.63062pt too wide) in paragraph at lines 171--172
+ [] 
+ []
+
+[2]
 File: graphs/fs2you-arch.eps Graphic file (type eps)
  <graphs/fs2you-arch.eps>
 Overfull \hbox (0.53964pt too wide) in paragraph at lines 222--223
@@ -393,11 +398,23 @@ File: graphs/diff-3-total.eps Graphic file (type eps)
  <graphs/diff-3-total.eps>
 File: graphs/lw-energy.eps Graphic file (type eps)
  <graphs/lw-energy.eps>
-File: graphs/req-energy.eps Graphic file (type eps)
+Overfull \hbox (7.80481pt too wide) in paragraph at lines 526--527
+[][] 
+ []
 
+File: graphs/req-energy.eps Graphic file (type eps)
 <graphs/req-energy.eps>
+Overfull \hbox (7.80481pt too wide) in paragraph at lines 533--534
+[][] 
+ []
+
 File: graphs/wl-energy.eps Graphic file (type eps)
- <graphs/wl-energy.eps>
+<graphs/wl-energy.eps>
+Overfull \hbox (7.80481pt too wide) in paragraph at lines 539--540
+[][] 
+ []
+
+
 Underfull \hbox (badness 1681) in paragraph at lines 549--574
 \T1/ptm/m/n/10 work in-duced power con-sump-tion the au-thor re-peat-edly
  []
@@ -417,9 +434,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--574
 
  []
 
-[5] [6]
+[5]
+Underfull \vbox (badness 2951) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 5274) has occurred while \output is active []
+
 File: graphs/pop.eps Graphic file (type eps)
- <graphs/pop.eps>
+
+<graphs/pop.eps>
 File: graphs/componentconsumption.eps Graphic file (type eps)
  <graphs/componentconsumption.eps>
 Underfull \hbox (badness 3977) in paragraph at lines 588--588
@@ -427,7 +453,11 @@ Underfull \hbox (badness 3977) in paragraph at lines 588--588
  []
 
 File: graphs/totalconsumption.eps Graphic file (type eps)
-<graphs/totalconsumption.eps> [7] [8] (./journal.bbl [9])
+<graphs/totalconsumption.eps> [7] [8]
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+
+(./journal.bbl [9])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -451,4 +481,4 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  44i,16n,42p,394b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on journal.dvi (10 pages, 69000 bytes).
+Output written on journal.dvi (10 pages, 69120 bytes).
