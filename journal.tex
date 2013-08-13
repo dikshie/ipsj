@@ -663,14 +663,15 @@ This minimization result near to lower-bound strategy.
 %Total energy consumption in every strategies depend on number peers.  
 
 File popularity has strong correlation with downloading performance. 
-We examine popularity by varying the peer arrival rate of less popular files.
-Specifically we linearly increase file popularity from $0.1$ to $1$ and we choose server bandwidth $S=50$MBps which is quite constraint and similar to FS2You case.
+We examine popularity by varying the peer arrival rate of less popular files while server has fix bandwidth.
+Specifically we linearly increase file popularity from $0.1$ to $1$ and we choose server bandwidth $S=50$MBps which is quite constraint.  %and similar to FS2You case.
 As shown in fig.\ref{fig:popsimulation} when file popularity increases, downloading performance decrease first and increases again as files become more popular.
-When file popularity is low there are fewer peers downloading the file and hence each of them can obtain relatively more sever bandwidth.
+When file popularity is low there are fewer peers downloading the file and hence each of them can obtain relatively more server bandwidth.
 When file popularity is high peers can enjoy high file sharing effectiveness and hence high average downloading rates.
 Semi popular files get the worst downloading performance in the system as difficulty in both file sharing among peers and requesting bandwidth from server.
 In request driven strategy, we do not find such as U-shaped curve due to server bandwidth strategy that is equally divided across all peers and not affected by file popularity.
 
+Figure \ref{fig:componentpop} shows that CDN server energy consumption is flat because we use fix server bandwidth to $S=50$MBps and router energy consumption is increasing due to increasing number of peers.  
 Figure \ref{fig:totalpop} shows total energy of system as function from file popularity.  
 More popular files imply having more peers in the system thus increases total energy.  
 While CDN server energy consumption is constant, router energy consumption is increases fig.\ref{fig:componentpop}. 
@@ -706,7 +707,7 @@ The saving in NaDa comes from underutilizing home gateway, avoidance of cooling 
 The comparison between CDN architecture and peer-to-peer architecture are discussed in \cite{baliga2007energy} and \cite{feldmann2010energy}.
 Both authors in \cite{baliga2007energy} and \cite{feldmann2010energy} agree that CDN architecture is more energy saving compare to peer-to-peer architecture. 
 Another interesting study of energy efficient in content delivery architectures is presented by Guan et al. \cite{5963557}.
-by Guan et al. \cite{5963557} comparing energy efficient of CDN architecture and CCN architecture.
+Guan et al. \cite{5963557} comparing energy efficient of CDN architecture and CCN architecture.
 The authors in \cite{5963557} conclude that CCN is more energy efficient in delivering popular content while the approach with optical bypass is more energy efficient in delivering infrequent accessed content.
 
 To the best of our knowledge, the study of energy in that considering peer-to-peer in CDN architecture is presented in \cite{6524219}.
